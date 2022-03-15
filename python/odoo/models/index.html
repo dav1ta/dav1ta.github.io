@@ -1,0 +1,1132 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Odoo Models - David</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#odoo-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="David" class="md-header__button md-logo" aria-label="David" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            David
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Odoo Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="David" class="md-nav__button md-logo" aria-label="David" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    David
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Recipes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Recipes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1">
+          Python Cookbook
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Cookbook" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Python Cookbook
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ipynb/cookbook/" class="md-nav__link">
+        Python Cookbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ipynb/cookbook2/" class="md-nav__link">
+        Part 2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Odoo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Odoo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Odoo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Odoo Models
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Odoo Models
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#odoo-simple-model" class="md-nav__link">
+    odoo simple model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-rec-name" class="md-nav__link">
+    custom rec name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-odoo-field-type" class="md-nav__link">
+    All Odoo field type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reserved-field" class="md-nav__link">
+    reserved field
+  </a>
+  
+    <nav class="md-nav" aria-label="reserved field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#odoo-has-some-reserved-fields" class="md-nav__link">
+    odoo has some reserved fields
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-working-with-active-field" class="md-nav__link">
+    when working with active field
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-constraints" class="md-nav__link">
+    Model Constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    Warning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computed-fields" class="md-nav__link">
+    computed fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-fields" class="md-nav__link">
+    related fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-dynamic-relations-using-reference-fields" class="md-nav__link">
+    Adding dynamic relations using  reference fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    inheritance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstract-models" class="md-nav__link">
+    abstract models
+  </a>
+  
+    <nav class="md-nav" aria-label="abstract models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#there-is-more" class="md-nav__link">
+    there is more
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../views/" class="md-nav__link">
+        Odoo Views
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server_side/" class="md-nav__link">
+        server side development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug/" class="md-nav__link">
+        Odoo debug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xml/" class="md-nav__link">
+        Odoo xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raw/" class="md-nav__link">
+        Advanced Back End
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips/" class="md-nav__link">
+        Some Tims
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#odoo-simple-model" class="md-nav__link">
+    odoo simple model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-rec-name" class="md-nav__link">
+    custom rec name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-odoo-field-type" class="md-nav__link">
+    All Odoo field type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reserved-field" class="md-nav__link">
+    reserved field
+  </a>
+  
+    <nav class="md-nav" aria-label="reserved field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#odoo-has-some-reserved-fields" class="md-nav__link">
+    odoo has some reserved fields
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-working-with-active-field" class="md-nav__link">
+    when working with active field
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-constraints" class="md-nav__link">
+    Model Constraints
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#warning" class="md-nav__link">
+    Warning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computed-fields" class="md-nav__link">
+    computed fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-fields" class="md-nav__link">
+    related fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-dynamic-relations-using-reference-fields" class="md-nav__link">
+    Adding dynamic relations using  reference fields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inheritance" class="md-nav__link">
+    inheritance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstract-models" class="md-nav__link">
+    abstract models
+  </a>
+  
+    <nav class="md-nav" aria-label="abstract models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#there-is-more" class="md-nav__link">
+    there is more
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="odoo-models">Odoo Models</h1>
+<h2 id="odoo-simple-model">odoo simple model</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Library Book&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">_order</span> <span class="o">=</span> <span class="s1">&#39;date_release desc, name&#39;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">_rec_name</span> <span class="o">=</span> <span class="s1">&#39;short_name&#39;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">short_name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Short Title&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">author_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many1many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Authors&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="custom-rec-name">custom rec name</h2>
+<ul>
+<li>set custom _rec_name for records,by overriding name_get method 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">name_get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="n">rec_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">record</span><span class="o">.</span><span class="n">date_release</span><span class="p">)</span>  
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">record</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">rec_name</span><span class="p">))</span>  
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">return</span> <span class="n">result</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">##</span>
+</code></pre></div></li>
+</ul>
+<h2 id="all-odoo-field-type">All Odoo field type</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Example</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;example&#39;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">short_name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Short Title&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">notes</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Internal Notes&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">state</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Selection</span><span class="p">(</span>  
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="p">[(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;Not Available&#39;</span><span class="p">),</span>  
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>          <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;Available&#39;</span><span class="p">),</span>  
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>          <span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">,</span> <span class="s1">&#39;Lost&#39;</span><span class="p">)],</span> <span class="s1">&#39;State&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">description</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Html</span><span class="p">(</span><span class="s1">&#39;Description&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">cover</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Binary</span><span class="p">(</span><span class="s1">&#39;Book Cover&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">out_of_print</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="s1">&#39;Out of Print?&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">date_updated</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Datetime</span><span class="p">(</span><span class="s1">&#39;Last Updated&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">pages</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="s1">&#39;Number of Pages&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="n">reader_rating</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span><span class="s1">&#39;Reader Average Rating&#39;</span><span class="p">,</span><span class="n">digits</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">monetary</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Monetary</span><span class="p">()</span>
+</code></pre></div>
+<p>We can use Function for Selection field()
+<code>field.Selection(some_func)</code></p>
+<h2 id="reserved-field">reserved field</h2>
+<h4 id="odoo-has-some-reserved-fields">odoo has some reserved fields</h4>
+<ul>
+<li>create_date</li>
+<li>create_uid   </li>
+<li>write_date  </li>
+<li>write_uid</li>
+<li>active</li>
+</ul>
+<h2 id="when-working-with-active-field">when working with active field</h2>
+<p><code>active = fields.Boolean('Active', default=True)</code>
+By default, only records with  active  set to  True  are visible. To retrieve them, we<br />
+need to use a domain filter with  [('active', '=', False)]. Alternatively, if the<br />
+'active_test': False  value is added to the environment's context, the ORM will<br />
+not filter out inactive records</p>
+<h2 id="model-constraints">Model Constraints</h2>
+<p>Models can have validations preventing them from entering undesired conditions.
+ - Odoo supports two different types of constraints:
+     * The ones checked at the database level 
+     * The ones checked at the server level</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>  
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="n">_sql_constraints</span> <span class="o">=</span> <span class="p">[</span>  
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="p">(</span><span class="s1">&#39;name_uniq&#39;</span><span class="p">,</span> <span class="s1">&#39;UNIQUE (name)&#39;</span><span class="p">,</span>  
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  <span class="s1">&#39;Book title must be unique.&#39;</span><span class="p">),</span>  
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  <span class="p">(</span><span class="s1">&#39;positive_page&#39;</span><span class="p">,</span> <span class="s1">&#39;CHECK(pages&gt;0)&#39;</span><span class="p">,</span>  
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  <span class="s1">&#39;No of pages must be positive&#39;</span><span class="p">)</span>  
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="p">]</span>  
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="c1"># ...  </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="nd">@api</span><span class="o">.</span><span class="n">constrains</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">)</span>  
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">def</span> <span class="nf">_check_release_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>            <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">date_release</span> <span class="ow">and</span>  
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  <span class="n">record</span><span class="o">.</span><span class="n">date_release</span> <span class="o">&gt;</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">():</span>  
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s1">&#39;Release date must be in the past&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<p>The  first step  creates a database constraint on the model's table. It is enforced at the<br />
+database level. The  _sql_constraints  model attribute accepts a list of constraints to<br />
+create. Each constraint is defined by a three-element tuple. These are listed as follows:</p>
+<ul>
+<li>A suffix to use for the constraint identifier. In our example, we used  name_uniq,<br />
+and the resulting constraint name is  library_book_name_uniq.</li>
+<li>The SQL to use in the PostgreSQL instruction to alter or create the database table.</li>
+<li>A message to report to the user when the constraint is violated</li>
+</ul>
+<h4 id="warning">Warning</h4>
+<p>If you are adding SQL constraints to the existing model through model
+inheritance, make sure you don't have rows that violate the constraints. If you
+have such rows, then SQL constraints will not be added and an error will be
+generated in the log. </p>
+<p>CHECK useage:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">_sql_constraints</span> <span class="o">=</span> <span class="p">[(</span> <span class="s1">&#39;check_credit_debit&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="s1">&#39;CHECK(credit + debit&gt;=0 AND credit * debit=0)&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="s1">&#39;Wrong credit or debit value in accounting entry!&#39;</span><span class="p">)]</span>
+</code></pre></div></p>
+<h2 id="computed-fields">computed fields</h2>
+<ul>
+<li>compute data on the fly</li>
+<li>it is possible to make this field searchable</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># ...  </span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">age_days</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Days Since Release&#39;</span><span class="p">,</span><span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_age&#39;</span><span class="p">,</span><span class="n">inverse</span><span class="o">=</span><span class="s1">&#39;_inverse_age&#39;</span><span class="p">,</span>  
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">search</span><span class="o">=</span><span class="s1">&#39;_search_age&#39;</span><span class="p">,</span><span class="n">store</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">compute_sudo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">)</span>  
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="k">def</span> <span class="nf">_compute_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>            <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">date_release</span><span class="p">:</span>  
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>                <span class="n">delta</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">book</span><span class="o">.</span><span class="n">date_release</span>  
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>                <span class="n">book</span><span class="o">.</span><span class="n">age_days</span> <span class="o">=</span> <span class="n">delta</span><span class="o">.</span><span class="n">days</span>  
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>            <span class="k">else</span><span class="p">:</span>  
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>                <span class="n">book</span><span class="o">.</span><span class="n">age_days</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>     <span class="k">def</span> <span class="nf">_inverse_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">):</span>  
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">book</span><span class="o">.</span><span class="n">age_days</span><span class="p">)</span>  
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>            <span class="n">book</span><span class="o">.</span><span class="n">date_release</span> <span class="o">=</span> <span class="n">d</span>
+</code></pre></div>
+<p>To add the method and implement the logic to write on the computed field, use the<br />
+following code:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">_inverse_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">):</span>  
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">book</span><span class="o">.</span><span class="n">age_days</span><span class="p">)</span>  
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>            <span class="n">book</span><span class="o">.</span><span class="n">date_release</span> <span class="o">=</span> <span class="n">d</span>
+</code></pre></div>
+<p>search on field 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">_search_age</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>  
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">value_days</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>  
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">value_date</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">value_days</span>  
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">operator_map</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;&gt;&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;=&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;=&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;&#39;</span><span class="p">:</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;=&#39;</span><span class="p">:</span> <span class="s1">&#39;&gt;=&#39;</span><span class="p">,}</span>  
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">new_op</span> <span class="o">=</span> <span class="n">operator_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="n">operator</span><span class="p">)</span>  
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="k">return</span> <span class="p">[(</span><span class="s1">&#39;date_release&#39;</span><span class="p">,</span> <span class="n">new_op</span><span class="p">,</span> <span class="n">value_date</span><span class="p">)]</span>
+</code></pre></div></p>
+<h2 id="related-fields">related fields</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">publisher_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span>  
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Publisher&#39;</span><span class="p">)</span>  
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">publisher_city</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Publisher City&#39;</span><span class="p">,</span><span class="n">related</span><span class="o">=</span><span class="s1">&#39;publisher_id.city&#39;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<p><em>Additionally, they support a related_sudo flag similar to compute_sudo; when set
+to True, the field chain is traversed without checking the user access rights.</em></p>
+<p><em>Using related fields in a create() method can affect performance, as the computation of
+these fields is delayed until the end of their creation. So, if you have a One2many relation,
+such as in sale.order and sale.order.line models, and you have a related field
+on the line model referring to a field on the order model, you should explicitly read the
+field on the order model during record creation, instead of using the related field shortcut,
+especially if there are a lot of lines.</em></p>
+<h2 id="adding-dynamic-relations-using-reference-fields">Adding dynamic relations using  reference fields</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">def</span> <span class="nf">_referencable_models</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="n">models</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;ir.model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">search</span><span class="p">([(</span><span class="s1">&#39;field_id.name&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;message_ids&#39;</span><span class="p">)])</span>  
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="k">return</span> <span class="p">[(</span><span class="n">x</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">models</span><span class="p">]</span>  
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="n">ref_doc_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Reference</span><span class="p">(</span><span class="n">selection</span><span class="o">=</span><span class="s1">&#39;_referencable_models&#39;</span><span class="p">,</span> 
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>                                    <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Reference Document&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Reference fields are similar to many-to-one fields, except that they allow the user to select
+the model to link to.
+The target model is selectable from a list that's provided by the selection attribute. The
+selection attribute must be a list of two element tuples, where the first is the model's
+internal identifier, and the second is a text description for it.</p>
+<p><code>[('res.users', 'User'), ('res.partner', 'Partner')]</code>
+However, rather than providing a fixed list, we can use most common models. For<br />
+simplicity, we are using all the models that have the messaging feature. Using the  _<br />
+referencable_models  method, we provided a model list dynamically.<br />
+Our recipe started by providing a function to browse all the model records that can be<br />
+referenced to dynamically build a list that will be provided to the  selection  attribute.  </p>
+<p>Although both forms are allowed, we declared the function name inside quotes, instead of<br />
+directly referencing the function without quotes. This is more flexible, and it allows for the<br />
+referenced function to be defined only later in the code, for example, which is something<br />
+that is not possible when using a direct reference.<br />
+The function needs the  @api.model  decorator because it operates on the model level,<br />
+and not on the record set level.  </p>
+<p>While this feature looks nice, it comes with a significant execution overhead. Displaying<br />
+the reference fields for a large number of records (for instance, in a list view) can create<br />
+heavy database loads as each value has to be looked up in a separate query. It is also unable<br />
+to take advantage of database referential integrity, unlike regular relation fields.</p>
+<h2 id="inheritance">inheritance</h2>
+<ul>
+<li>Class inheritance (extension)</li>
+<li>Prototype inheritance</li>
+<li>Delegation inheritance</li>
+<li>When a model class is defined with the  _inherit  attribute, it adds modifications to the<br />
+inherited model, rather than replacing it.</li>
+</ul>
+<p>This means that fields defined in the inheriting class are added or changed on the parent<br />
+model. At the database layer, the ORM is adding fields to the same database table.</p>
+<p>Fields are also incrementally modified. This means that if the field already exists in the<br />
+superclass, only the attributes declared in the inherited class are modified; the other ones<br />
+are kept as they are in the parent class.</p>
+<p>prototype inheritance:</p>
+<p>By using  _name  with the  _inherit  class attribute at the same time, you can copy the<br />
+definition of the model. When you use both attributes in the model, Odoo will copy the<br />
+model definition of  _inherit  and create a new model with the  _name  attribute.</p>
+<p>, Odoo will copy the definition of the  library.book  model and create<br />
+a new model,  library.book.copy.The new  library.book.copy  model has its<br />
+own database table with its own data that is totally independent from the  library.<br />
+book  parent model. Since it still inherits from the partner model, any subsequent<br />
+modifications to it will also affect the new model.</p>
+<p>Prototype inheritance copies all the properties of the parent class. It copies fields,<br />
+attributes, and methods. If you want to modify them in the child class, you can simply do<br />
+so by adding a new definition to the child class. For example, the  library.book  model<br />
+has the  _name_get  method. If you want to use a different version of  _name_get  in the<br />
+child, you need to redefine the method in the  library.book.copy  model.</p>
+<p>Prototype inheritance does not work if you use the same model name in the<br />
+_inherit  and  _name  attributes. If you do use the same model name in the<br />
+_inherit  and  _name  attributes, it will just behave like a normal extension<br />
+inheritance.</p>
+<p>delegation inheritance:
+The third type of inheritance is  Delegation inheritance. Instead of  _inherit, it uses<br />
+the  _inherits  class attribute. There are cases where, rather than modifying an existing<br />
+model, we want to create a new model based on an existing one to use the features it<br />
+already has. We can copy a model's definitions with prototype inheritance, but this will<br />
+generate duplicate data structures. If you want to copy a model's definitions without<br />
+duplicating data structures, then the answer lies in Odoo's delegation inheritance, which<br />
+uses the  _inherits  model attribute (note the additional  s).<br />
+Traditional inheritance is quite different from the concept in object-oriented<br />
+programming. Delegation inheritance, in turn, is similar, in that a new model can<br />
+be created to include the features from a parent model. It also supports polymorphic<br />
+inheritance, where we inherit from two or more other models.<br />
+We have a library with books. It's about time our library also has members. For a library<br />
+member, we need all the identification and address data that's found in the partner model,<br />
+and we also want it to retain some information pertaining to membership: a start date,<br />
+a termination date, and a card number.<br />
+Adding those fields to the partner model is not the best solution, since they will not be<br />
+used for partners that are not members. It would be great to extend the partner model<br />
+to a new model with some additional fields.</p>
+<p><em>It's important to note that delegation inheritance only works for fields, and not for<br />
+methods. So, if the partner model has a  do_something()  method, the members model<br />
+will not automatically inherit it</em></p>
+<p>here is a shortcut for this inheritance delegation. Instead of creating an  _inherits<br />
+dictionary, you can use the  delegate=True  attribute in the  Many2one  field definition.<br />
+This will work exactly like the  _inherits  option. The main advantage is that this is<br />
+simpler. In the given example, we have performed the same inheritance delegation as in<br />
+the previous one, but in this case, instead of creating an  _inherits  dictionary, we have<br />
+used the  delegate=True  option in the  partner_id  field:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">class</span> <span class="nc">LibraryMember</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.member&#39;</span>  
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="n">ondelete</span><span class="o">=</span><span class="s1">&#39;cascade&#39;</span><span class="p">,</span> <span class="n">delegate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="n">date_start</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Member Since&#39;</span><span class="p">)</span>  
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="n">date_end</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Termination Date&#39;</span><span class="p">)</span>  
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="n">member_number</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>  
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="n">date_of_birth</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Date of birth&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="abstract-models">abstract models</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span> <span class="nc">BaseArchive</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">AbstractModel</span><span class="p">):</span>  
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;base.archive&#39;</span>  
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  <span class="n">active</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="k">def</span> <span class="nf">do_archive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>            <span class="n">record</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">record</span><span class="o">.</span><span class="n">active</span>  
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>  
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;base.archive&#39;</span>
+</code></pre></div>
+<p>An abstract model is created by a class based on  models.AbstractModel, instead of<br />
+the usual  models.Model. It has all the attributes and capabilities of regular models; the<br />
+difference is that the ORM will not create an actual representation for it in the database.<br />
+This means that it can't have any data stored in it. It only serves as a template for a reusable<br />
+feature that is to be added to regular models.<br />
+Our archive abstract model is quite simple. It just adds the  active  field and a method to<br />
+toggle the value of the  active  flag, which we expect to be used later, via a button on the<br />
+user interface.<br />
+When a model class is defined with the  _inherit  attribute, it inherits the attribute<br />
+methods of those classes, and the attribute methods that are defined in the current class<br />
+add modifications to those inherited features.</p>
+<p>The mechanism at play here is the same as that of a regular model extension (as per<br />
+the  Adding features to a model using inheritance  recipe). You may have noticed that<br />
+_inherit  uses a list of model identifiers instead of a string with one model identifier.<br />
+In fact,  _inherit  can have both forms. Using the list form allows us to inherit from<br />
+<strong>multiple</strong> (usually  Abstract) classes. In this case, we are inheriting just one, so a text<br />
+string would be fine. A list was used instead, for illustration purposes.</p>
+<h3 id="there-is-more">there is more</h3>
+<p>A noteworthy built-in abstract model is  mail.thread, which is provided by the  mail<br />
+(Discuss)  add-on module. On models, it enables the discussion features that power the<br />
+message wall that's seen at the bottom of many forms.<br />
+Other than  AbstractModel, a third model type is available:  models.<br />
+TransientModel. This has a database representation like  models.Model, but the<br />
+records that are created there are supposed to be temporary and regularly purged by<br />
+a server-scheduled job. Other than that, transient models work just like regular models.<br />
+models.TransientModel  is useful for more complex user interactions, known as<br />
+wizards. The wizard is used to request inputs from the user. In  Chapter 8,  Advanced<br />
+Server-Side Development Techniques, we explore how to use these for advanced user<br />
+interaction</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../ipynb/cookbook2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Part 2" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Part 2
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../views/" class="md-footer__link md-footer__link--next" aria-label="Next: Odoo Views" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Odoo Views
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+    
+  </body>
+</html>
