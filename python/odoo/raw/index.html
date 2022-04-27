@@ -270,6 +270,95 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2">
+          Python Distilled
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Distilled" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python Distilled
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        python structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/classes/" class="md-nav__link">
+        classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -680,60 +769,60 @@
 
 <h1 id="advanced-back-end">Advanced Back End</h1>
 <h2 id="execute-raw-queries">execute raw queries</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> <span class="k">def</span> <span class="nf">average_book_occupation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s2">            SELECT</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s2">                lb.name,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s2">                avg((EXTRACT(epoch from age(return_date, rent_date)) / 86400))::int</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s2">            FROM</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s2">                library_book_rent AS lbr</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s2">            JOIN</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s2">                library_book as lb ON lb.id = lbr.book_id</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s2">            WHERE lbr.state = &#39;returned&#39;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s2">            GROUP BY lb.name;&quot;&quot;&quot;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a> <span class="k">def</span> <span class="nf">average_book_occupation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="s2">            SELECT</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="s2">                lb.name,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="s2">                avg((EXTRACT(epoch from age(return_date, rent_date)) / 86400))::int</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="s2">            FROM</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="s2">                library_book_rent AS lbr</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="s2">            JOIN</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="s2">                library_book as lb ON lb.id = lbr.book_id</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="s2">            WHERE lbr.state = &#39;returned&#39;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="s2">            GROUP BY lb.name;&quot;&quot;&quot;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="wizards">Wizards</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">fields</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">class</span> <span class="nc">LibraryRentWizard</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TransientModel</span><span class="p">):</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.rent.wizard&#39;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">borrower_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Borrower&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">book_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2many</span><span class="p">(</span><span class="s1">&#39;library.book&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Books&#39;</span><span class="p">)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="k">def</span> <span class="nf">add_book_rents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">rentModel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;library.book.rent&#39;</span><span class="p">]</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="k">for</span> <span class="n">wiz</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">wiz</span><span class="o">.</span><span class="n">book_ids</span><span class="p">:</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                <span class="n">rentModel</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                    <span class="s1">&#39;borrower_id&#39;</span><span class="p">:</span> <span class="n">wiz</span><span class="o">.</span><span class="n">borrower_id</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>                    <span class="s1">&#39;book_id&#39;</span><span class="p">:</span> <span class="n">book</span><span class="o">.</span><span class="n">id</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                <span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">fields</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">class</span> <span class="nc">LibraryRentWizard</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TransientModel</span><span class="p">):</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.rent.wizard&#39;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="n">borrower_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Borrower&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="n">book_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2many</span><span class="p">(</span><span class="s1">&#39;library.book&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Books&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="k">def</span> <span class="nf">add_book_rents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>        <span class="n">rentModel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;library.book.rent&#39;</span><span class="p">]</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>        <span class="k">for</span> <span class="n">wiz</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>            <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">wiz</span><span class="o">.</span><span class="n">book_ids</span><span class="p">:</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>                <span class="n">rentModel</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>                    <span class="s1">&#39;borrower_id&#39;</span><span class="p">:</span> <span class="n">wiz</span><span class="o">.</span><span class="n">borrower_id</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>                    <span class="s1">&#39;book_id&#39;</span><span class="p">:</span> <span class="n">book</span><span class="o">.</span><span class="n">id</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>                <span class="p">})</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&#39;library_rent_wizard_form&#39;</span> <span class="na">model=</span><span class="s">&#39;ir.ui.view&#39;</span><span class="nt">&gt;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;name&#39;</span><span class="nt">&gt;</span>library rent wizard form view<span class="nt">&lt;/field&gt;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;model&#39;</span><span class="nt">&gt;</span>library.rent.wizard<span class="nt">&lt;/field&gt;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;arch&#39;</span> <span class="na">type=</span><span class="s">&#39;xml&#39;</span><span class="nt">&gt;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="nt">&lt;form</span> <span class="na">string=</span><span class="s">&quot;Borrow books&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>            <span class="nt">&lt;sheet&gt;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                <span class="nt">&lt;group&gt;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;borrower_id&#39;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>                <span class="nt">&lt;/group&gt;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>                <span class="nt">&lt;group&gt;</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>                    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;book_ids&#39;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>                <span class="nt">&lt;/group&gt;</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            <span class="nt">&lt;/sheet&gt;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            <span class="nt">&lt;footer&gt;</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>                <span class="nt">&lt;button</span> <span class="na">string=</span><span class="s">&#39;Rent&#39;</span> <span class="na">name=</span><span class="s">&#39;add_book_rents&#39;</span> <span class="na">class=</span><span class="s">&#39;btn-primary&#39;</span> <span class="na">type=</span><span class="s">&#39;object&#39;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>                <span class="nt">&lt;button</span> <span class="na">string=</span><span class="s">&#39;Cancel&#39;</span> <span class="na">class=</span><span class="s">&#39;btn-default&#39;</span> <span class="na">special=</span><span class="s">&#39;cancel&#39;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>            <span class="nt">&lt;/footer&gt;</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        <span class="nt">&lt;/form&gt;</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="nt">&lt;/field&gt;</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nt">&lt;/record&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&#39;library_rent_wizard_form&#39;</span> <span class="na">model=</span><span class="s">&#39;ir.ui.view&#39;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;name&#39;</span><span class="nt">&gt;</span>library rent wizard form view<span class="nt">&lt;/field&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;model&#39;</span><span class="nt">&gt;</span>library.rent.wizard<span class="nt">&lt;/field&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;arch&#39;</span> <span class="na">type=</span><span class="s">&#39;xml&#39;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="nt">&lt;form</span> <span class="na">string=</span><span class="s">&quot;Borrow books&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>            <span class="nt">&lt;sheet&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>                <span class="nt">&lt;group&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>                    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;borrower_id&#39;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>                <span class="nt">&lt;/group&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>                <span class="nt">&lt;group&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>                    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&#39;book_ids&#39;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>                <span class="nt">&lt;/group&gt;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>            <span class="nt">&lt;/sheet&gt;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>            <span class="nt">&lt;footer&gt;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>                <span class="nt">&lt;button</span> <span class="na">string=</span><span class="s">&#39;Rent&#39;</span> <span class="na">name=</span><span class="s">&#39;add_book_rents&#39;</span> <span class="na">class=</span><span class="s">&#39;btn-primary&#39;</span> <span class="na">type=</span><span class="s">&#39;object&#39;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>                <span class="nt">&lt;button</span> <span class="na">string=</span><span class="s">&#39;Cancel&#39;</span> <span class="na">class=</span><span class="s">&#39;btn-default&#39;</span> <span class="na">special=</span><span class="s">&#39;cancel&#39;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>            <span class="nt">&lt;/footer&gt;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>        <span class="nt">&lt;/form&gt;</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>    <span class="nt">&lt;/field&gt;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="nt">&lt;/record&gt;</span>
 </code></pre></div>
 <p>Using the context to compute default values
 The wizard we are presenting requires the user to fill in the name of the member in the
@@ -748,62 +837,62 @@ happens when several items are selected in a tree view when the action is trigge
 In a form view, you get [active_id].
 - active_domain: This is an additional domain on which the wizard will operate</p>
 <h2 id="redirect-user-with-action">redirect user with action</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>  <span class="k">def</span> <span class="nf">add_book_rents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">rentModel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;library.book.rent&#39;</span><span class="p">]</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">for</span> <span class="n">wiz</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">wiz</span><span class="o">.</span><span class="n">book_ids</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>          <span class="n">rentModel</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="s1">&#39;borrower_id&#39;</span><span class="p">:</span> <span class="n">wiz</span><span class="o">.</span><span class="n">borrower_id</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="s1">&#39;book_id&#39;</span><span class="p">:</span> <span class="n">book</span><span class="o">.</span><span class="n">id</span><span class="p">})</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">borrowers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapped</span><span class="p">(</span><span class="s1">&#39;borrower_id&#39;</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">action</span> <span class="o">=</span> <span class="n">borrowers</span><span class="o">.</span><span class="n">get_formview_action</span><span class="p">()</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">borrowers</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;domain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">borrowers</span><span class="o">.</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">ids</span><span class="p">))]</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;view_mode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tree,form&#39;</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="k">return</span> <span class="n">action</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>  <span class="k">def</span> <span class="nf">add_book_rents</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">rentModel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;library.book.rent&#39;</span><span class="p">]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="k">for</span> <span class="n">wiz</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>      <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">wiz</span><span class="o">.</span><span class="n">book_ids</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>          <span class="n">rentModel</span><span class="o">.</span><span class="n">create</span><span class="p">({</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>        <span class="s1">&#39;borrower_id&#39;</span><span class="p">:</span> <span class="n">wiz</span><span class="o">.</span><span class="n">borrower_id</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>        <span class="s1">&#39;book_id&#39;</span><span class="p">:</span> <span class="n">book</span><span class="o">.</span><span class="n">id</span><span class="p">})</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="n">borrowers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapped</span><span class="p">(</span><span class="s1">&#39;borrower_id&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="n">action</span> <span class="o">=</span> <span class="n">borrowers</span><span class="o">.</span><span class="n">get_formview_action</span><span class="p">()</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">borrowers</span><span class="o">.</span><span class="n">ids</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;domain&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">borrowers</span><span class="o">.</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="n">ids</span><span class="p">))]</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>    <span class="n">action</span><span class="p">[</span><span class="s1">&#39;view_mode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;tree,form&#39;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="k">return</span> <span class="n">action</span>
 </code></pre></div>
 <h2 id="create-fake-wizard-for-onchange">create fake wizard for onchange</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">return_all_books</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ensure_one</span><span class="p">()</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        <span class="n">wizard</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;library.return.wizard&#39;</span><span class="p">]</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="k">with</span> <span class="n">Form</span><span class="p">(</span><span class="n">wizard</span><span class="p">)</span> <span class="k">as</span> <span class="n">return_form</span><span class="p">:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>            <span class="n">return_form</span><span class="o">.</span><span class="n">borrower_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">partner_id</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>            <span class="n">record</span> <span class="o">=</span> <span class="n">return_form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            <span class="n">record</span><span class="o">.</span><span class="n">books_returns</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">return_all_books</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">ensure_one</span><span class="p">()</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">wizard</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;library.return.wizard&#39;</span><span class="p">]</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="k">with</span> <span class="n">Form</span><span class="p">(</span><span class="n">wizard</span><span class="p">)</span> <span class="k">as</span> <span class="n">return_form</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>            <span class="n">return_form</span><span class="o">.</span><span class="n">borrower_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">partner_id</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>            <span class="n">record</span> <span class="o">=</span> <span class="n">return_form</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>            <span class="n">record</span><span class="o">.</span><span class="n">books_returns</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="create-sql-view">create sql view</h2>
 <h3 id="create-a-new-model-with-the-_auto-class-attribute-set-to-false">Create a new model with the <code>_auto</code> class attribute set to False:</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">class</span> <span class="nc">LibraryBookRentStatistics</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book.rent.statistics&#39;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  <span class="n">_auto</span> <span class="o">=</span> <span class="kc">False</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  <span class="n">book_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;library.book&#39;</span><span class="p">,</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>  <span class="n">rent_count</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s2">&quot;Times borrowed&quot;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  <span class="n">average_occupation</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Average Occupation (DAYS)&quot;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  <span class="n">tools</span><span class="o">.</span><span class="n">drop_view_if_exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_table</span><span class="p">)</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="s2">CREATE OR REPLACE VIEW library_book_rent_</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="s2">statistics AS (</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="s2">SELECT</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="s2">min(lbr.id) as id,</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="s2">lbr.book_id as book_id,</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="s2">count(lbr.id) as rent_count,</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="s2">avg((EXTRACT(epoch from age(return_date,</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="s2">rent_date)) / 86400))::int as average_occupation</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="s2">FROM</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="s2">library_book_rent AS lbr</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="s2">JOIN</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="s2">library_book as lb ON lb.id = lbr.book_id</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="s2">WHERE lbr.state = &#39;returned&#39;</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="s2">GROUP BY lbr.book_id</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="s2">);</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>  <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span> <span class="nc">LibraryBookRentStatistics</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>  <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book.rent.statistics&#39;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>  <span class="n">_auto</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  <span class="n">book_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;library.book&#39;</span><span class="p">,</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Book&#39;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>  <span class="n">rent_count</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s2">&quot;Times borrowed&quot;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>  <span class="n">average_occupation</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>  <span class="n">string</span><span class="o">=</span><span class="s2">&quot;Average Occupation (DAYS)&quot;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>  <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>  <span class="n">tools</span><span class="o">.</span><span class="n">drop_view_if_exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_table</span><span class="p">)</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="s2">CREATE OR REPLACE VIEW library_book_rent_</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="s2">statistics AS (</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="s2">SELECT</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="s2">min(lbr.id) as id,</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="s2">lbr.book_id as book_id,</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="s2">count(lbr.id) as rent_count,</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="s2">avg((EXTRACT(epoch from age(return_date,</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="s2">rent_date)) / 86400))::int as average_occupation</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="s2">FROM</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="s2">library_book_rent AS lbr</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="s2">JOIN</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="s2">library_book as lb ON lb.id = lbr.book_id</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="s2">WHERE lbr.state = &#39;returned&#39;</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="s2">GROUP BY lbr.book_id</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="s2">);</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a>  <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cr</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </code></pre></div>
 
               

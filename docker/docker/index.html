@@ -268,6 +268,95 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2">
+          Python Distilled
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Distilled" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python Distilled
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/" class="md-nav__link">
+        python structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/classes/" class="md-nav__link">
+        classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -903,10 +992,10 @@ the class definition—they’re fundamentally different things.</p>
 <p>create new containter from old</p>
 </li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">CONTAINER_ID</span><span class="o">=</span><span class="k">$(</span>docker container run -d -p <span class="m">80</span>:80 --name proxy nginx<span class="k">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker commit
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>--author <span class="s2">&quot;Full Name Email&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>--message <span class="s2">&quot;Add curl&quot;</span> <span class="s2">&quot;</span><span class="nv">$CONTAINER_ID</span><span class="s2">&quot;</span> host/nginx-curl:0.0.1
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nv">CONTAINER_ID</span><span class="o">=</span><span class="k">$(</span>docker container run -d -p <span class="m">80</span>:80 --name proxy nginx<span class="k">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>docker commit
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>--author <span class="s2">&quot;Full Name Email&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>--message <span class="s2">&quot;Add curl&quot;</span> <span class="s2">&quot;</span><span class="nv">$CONTAINER_ID</span><span class="s2">&quot;</span> host/nginx-curl:0.0.1
 </code></pre></div>
 - inspect container 
   - <code>docker container inspect proxy</code></p>
@@ -937,8 +1026,8 @@ the class definition—they’re fundamentally different things.</p>
 </li>
 <li>
 <p>copy files from host:container
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker container cp ./data/*.html proxy:/usr/share/nginx/html
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>docker container cp ./data/css proxy:/usr/share/nginx/html/css
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>docker container cp ./data/*.html proxy:/usr/share/nginx/html
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>docker container cp ./data/css proxy:/usr/share/nginx/html/css
 </code></pre></div></p>
 </li>
 <li>check changes inf docker <ul>
@@ -974,9 +1063,9 @@ the class definition—they’re fundamentally different things.</p>
 <h3 id="http-access-linux-only">Http access Linux only</h3>
 <p>search same file for windows</p>
 <p>open <em>/etc/docker/daemon.json</em> file and paste , change this with your container ip and port</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="nt">&quot;insecure-registries&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;172.17.0.2:8086&quot;</span><span class="p">]</span><span class="w"></span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>      <span class="nt">&quot;insecure-registries&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;172.17.0.2:8086&quot;</span><span class="p">]</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
 </code></pre></div>
 <p>restart docker</p>
 <p><code>sudo systemctl restart docker</code></p>

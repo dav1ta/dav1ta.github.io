@@ -270,6 +270,95 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2">
+          Python Distilled
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Distilled" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python Distilled
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        python structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/classes/" class="md-nav__link">
+        classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -638,31 +727,31 @@
 
 <h1 id="odoo-xml">Odoo xml</h1>
 <h2 id="delete-from-xml">delete from xml</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;delete</span> <span class="na">model=</span><span class="s">&quot;library.book.category&quot;</span> <span class="na">id=</span><span class="s">&quot;book_category_</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s">to_delete&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">&lt;delete</span> <span class="na">model=</span><span class="s">&quot;library.book.category&quot;</span> <span class="na">search=</span><span class="s">&quot;[(&#39;name&#39;,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">&#39;ilike&#39;, &#39;Test&#39;)]&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;delete</span> <span class="na">model=</span><span class="s">&quot;library.book.category&quot;</span> <span class="na">id=</span><span class="s">&quot;book_category_</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="s">to_delete&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">&lt;delete</span> <span class="na">model=</span><span class="s">&quot;library.book.category&quot;</span> <span class="na">search=</span><span class="s">&quot;[(&#39;name&#39;,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="s">&#39;ilike&#39;, &#39;Test&#39;)]&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 <p>avoid this if possible</p>
 <h2 id="xml-functions">xml functions</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@api</span><span class="o">.</span><span class="n">model</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">def</span> <span class="nf">_update_book_price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="n">all_books</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search</span><span class="p">([])</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">all_books</span><span class="p">:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">book</span><span class="o">.</span><span class="n">cost_price</span> <span class="o">+=</span> <span class="mi">10</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nd">@api</span><span class="o">.</span><span class="n">model</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">def</span> <span class="nf">_update_book_price</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>  <span class="n">all_books</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search</span><span class="p">([])</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>  <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">all_books</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="n">book</span><span class="o">.</span><span class="n">cost_price</span> <span class="o">+=</span> <span class="mi">10</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;function</span> <span class="na">model=</span><span class="s">&quot;library.book&quot;</span> <span class="na">name=</span><span class="s">&quot;_update_book_price&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">&lt;function</span> <span class="na">model=</span><span class="s">&quot;library.book&quot;</span> <span class="na">name=</span><span class="s">&quot;_update_book_price&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 <h3 id="pass-parameter">pass parameter</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nd">@api</span><span class="o">.</span><span class="n">model</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">def</span> <span class="nf">update_book_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">amount_to_increase</span><span class="p">):</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="n">category_books</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search</span><span class="p">([(</span><span class="s1">&#39;category_id&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">category</span><span class="o">.</span><span class="n">id</span><span class="p">)])</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">category_books</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">book</span><span class="o">.</span><span class="n">cost_price</span> <span class="o">+=</span> <span class="n">amount_to_increase</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nd">@api</span><span class="o">.</span><span class="n">model</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">def</span> <span class="nf">update_book_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">amount_to_increase</span><span class="p">):</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>  <span class="n">category_books</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">search</span><span class="p">([(</span><span class="s1">&#39;category_id&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">category</span><span class="o">.</span><span class="n">id</span><span class="p">)])</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">category_books</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">book</span><span class="o">.</span><span class="n">cost_price</span> <span class="o">+=</span> <span class="n">amount_to_increase</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;function</span> <span class="na">model=</span><span class="s">&quot;library.book&quot;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="na">name=</span><span class="s">&quot;update_book_price&quot;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="na">eval=</span><span class="s">&quot;(ref(&#39;category_xml_id&#39;), 20)&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nt">&lt;function</span> <span class="na">model=</span><span class="s">&quot;library.book&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="na">name=</span><span class="s">&quot;update_book_price&quot;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="na">eval=</span><span class="s">&quot;(ref(&#39;category_xml_id&#39;), 20)&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 
               

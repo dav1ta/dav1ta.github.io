@@ -270,6 +270,95 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2">
+          Python Distilled
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Distilled" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python Distilled
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        python structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/classes/" class="md-nav__link">
+        classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -816,48 +905,48 @@
 
 <h1 id="odoo-models">Odoo Models</h1>
 <h2 id="odoo-simple-model">odoo simple model</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Library Book&#39;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">_order</span> <span class="o">=</span> <span class="s1">&#39;date_release desc, name&#39;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">_rec_name</span> <span class="o">=</span> <span class="s1">&#39;short_name&#39;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">short_name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Short Title&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">author_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many1many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Authors&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="n">_description</span> <span class="o">=</span> <span class="s1">&#39;Library Book&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="n">_order</span> <span class="o">=</span> <span class="s1">&#39;date_release desc, name&#39;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">_rec_name</span> <span class="o">=</span> <span class="s1">&#39;short_name&#39;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="n">short_name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Short Title&#39;</span><span class="p">,</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="n">author_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many1many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Authors&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="custom-rec-name">custom rec name</h2>
 <ul>
 <li>set custom _rec_name for records,by overriding name_get method 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">name_get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="n">rec_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">record</span><span class="o">.</span><span class="n">date_release</span><span class="p">)</span>  
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">record</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">rec_name</span><span class="p">))</span>  
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="k">return</span> <span class="n">result</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">##</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">name_get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="n">rec_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> (</span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">record</span><span class="o">.</span><span class="n">date_release</span><span class="p">)</span>  
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">record</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">rec_name</span><span class="p">))</span>  
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="k">return</span> <span class="n">result</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="c1">##</span>
 </code></pre></div></li>
 </ul>
 <h2 id="all-odoo-field-type">All Odoo field type</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Example</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;example&#39;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">short_name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Short Title&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">notes</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Internal Notes&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">state</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Selection</span><span class="p">(</span>  
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="p">[(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;Not Available&#39;</span><span class="p">),</span>  
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>          <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;Available&#39;</span><span class="p">),</span>  
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>          <span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">,</span> <span class="s1">&#39;Lost&#39;</span><span class="p">)],</span> <span class="s1">&#39;State&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">description</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Html</span><span class="p">(</span><span class="s1">&#39;Description&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="n">cover</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Binary</span><span class="p">(</span><span class="s1">&#39;Book Cover&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">out_of_print</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="s1">&#39;Out of Print?&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="n">date_updated</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Datetime</span><span class="p">(</span><span class="s1">&#39;Last Updated&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">pages</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="s1">&#39;Number of Pages&#39;</span><span class="p">)</span>  
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="n">reader_rating</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span><span class="s1">&#39;Reader Average Rating&#39;</span><span class="p">,</span><span class="n">digits</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">monetary</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Monetary</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Example</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;example&#39;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="n">short_name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Short Title&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">notes</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Internal Notes&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="n">state</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Selection</span><span class="p">(</span>  
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="p">[(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;Not Available&#39;</span><span class="p">),</span>  
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>          <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;Available&#39;</span><span class="p">),</span>  
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>          <span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">,</span> <span class="s1">&#39;Lost&#39;</span><span class="p">)],</span> <span class="s1">&#39;State&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="n">description</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Html</span><span class="p">(</span><span class="s1">&#39;Description&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>    <span class="n">cover</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Binary</span><span class="p">(</span><span class="s1">&#39;Book Cover&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="n">out_of_print</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="s1">&#39;Out of Print?&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>    <span class="n">date_updated</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Datetime</span><span class="p">(</span><span class="s1">&#39;Last Updated&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>    <span class="n">pages</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="s1">&#39;Number of Pages&#39;</span><span class="p">)</span>  
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>    <span class="n">reader_rating</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span><span class="s1">&#39;Reader Average Rating&#39;</span><span class="p">,</span><span class="n">digits</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>  
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>    <span class="n">monetary</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Monetary</span><span class="p">()</span>
 </code></pre></div>
 <p>We can use Function for Selection field()
 <code>field.Selection(some_func)</code></p>
@@ -881,26 +970,26 @@ not filter out inactive records</p>
  - Odoo supports two different types of constraints:
      * The ones checked at the database level 
      * The ones checked at the server level</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>  
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="n">_sql_constraints</span> <span class="o">=</span> <span class="p">[</span>  
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="p">(</span><span class="s1">&#39;name_uniq&#39;</span><span class="p">,</span> <span class="s1">&#39;UNIQUE (name)&#39;</span><span class="p">,</span>  
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  <span class="s1">&#39;Book title must be unique.&#39;</span><span class="p">),</span>  
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  <span class="p">(</span><span class="s1">&#39;positive_page&#39;</span><span class="p">,</span> <span class="s1">&#39;CHECK(pages&gt;0)&#39;</span><span class="p">,</span>  
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  <span class="s1">&#39;No of pages must be positive&#39;</span><span class="p">)</span>  
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="p">]</span>  
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>  
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>  <span class="n">_sql_constraints</span> <span class="o">=</span> <span class="p">[</span>  
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="p">(</span><span class="s1">&#39;name_uniq&#39;</span><span class="p">,</span> <span class="s1">&#39;UNIQUE (name)&#39;</span><span class="p">,</span>  
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>  <span class="s1">&#39;Book title must be unique.&#39;</span><span class="p">),</span>  
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>  <span class="p">(</span><span class="s1">&#39;positive_page&#39;</span><span class="p">,</span> <span class="s1">&#39;CHECK(pages&gt;0)&#39;</span><span class="p">,</span>  
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>  <span class="s1">&#39;No of pages must be positive&#39;</span><span class="p">)</span>  
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="p">]</span>  
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="n">date_release</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Release Date&#39;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="c1"># ...  </span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="nd">@api</span><span class="o">.</span><span class="n">constrains</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">)</span>  
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">def</span> <span class="nf">_check_release_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>            <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">date_release</span> <span class="ow">and</span>  
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  <span class="n">record</span><span class="o">.</span><span class="n">date_release</span> <span class="o">&gt;</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">():</span>  
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s1">&#39;Release date must be in the past&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="c1"># ...  </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>  <span class="nd">@api</span><span class="o">.</span><span class="n">constrains</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">)</span>  
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="k">def</span> <span class="nf">_check_release_date</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>            <span class="k">if</span> <span class="n">record</span><span class="o">.</span><span class="n">date_release</span> <span class="ow">and</span>  
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>  <span class="n">record</span><span class="o">.</span><span class="n">date_release</span> <span class="o">&gt;</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">():</span>  
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s1">&#39;Release date must be in the past&#39;</span><span class="p">)</span>
 </code></pre></div></p>
 <p>The  first step  creates a database constraint on the model's table. It is enforced at the<br />
 database level. The  _sql_constraints  model attribute accepts a list of constraints to<br />
@@ -917,58 +1006,58 @@ inheritance, make sure you don't have rows that violate the constraints. If you
 have such rows, then SQL constraints will not be added and an error will be
 generated in the log. </p>
 <p>CHECK useage:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">_sql_constraints</span> <span class="o">=</span> <span class="p">[(</span> <span class="s1">&#39;check_credit_debit&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="s1">&#39;CHECK(credit + debit&gt;=0 AND credit * debit=0)&#39;</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="s1">&#39;Wrong credit or debit value in accounting entry!&#39;</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">_sql_constraints</span> <span class="o">=</span> <span class="p">[(</span> <span class="s1">&#39;check_credit_debit&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="s1">&#39;CHECK(credit + debit&gt;=0 AND credit * debit=0)&#39;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="s1">&#39;Wrong credit or debit value in accounting entry!&#39;</span><span class="p">)]</span>
 </code></pre></div></p>
 <h2 id="computed-fields">computed fields</h2>
 <ul>
 <li>compute data on the fly</li>
 <li>it is possible to make this field searchable</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># ...  </span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">age_days</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Days Since Release&#39;</span><span class="p">,</span><span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_age&#39;</span><span class="p">,</span><span class="n">inverse</span><span class="o">=</span><span class="s1">&#39;_inverse_age&#39;</span><span class="p">,</span>  
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">search</span><span class="o">=</span><span class="s1">&#39;_search_age&#39;</span><span class="p">,</span><span class="n">store</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">compute_sudo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">)</span>  
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="k">def</span> <span class="nf">_compute_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>            <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">date_release</span><span class="p">:</span>  
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>                <span class="n">delta</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">book</span><span class="o">.</span><span class="n">date_release</span>  
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>                <span class="n">book</span><span class="o">.</span><span class="n">age_days</span> <span class="o">=</span> <span class="n">delta</span><span class="o">.</span><span class="n">days</span>  
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>            <span class="k">else</span><span class="p">:</span>  
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>                <span class="n">book</span><span class="o">.</span><span class="n">age_days</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>     <span class="k">def</span> <span class="nf">_inverse_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">):</span>  
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">book</span><span class="o">.</span><span class="n">age_days</span><span class="p">)</span>  
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>            <span class="n">book</span><span class="o">.</span><span class="n">date_release</span> <span class="o">=</span> <span class="n">d</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1"># ...  </span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="n">age_days</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Float</span><span class="p">(</span><span class="n">string</span><span class="o">=</span><span class="s1">&#39;Days Since Release&#39;</span><span class="p">,</span><span class="n">compute</span><span class="o">=</span><span class="s1">&#39;_compute_age&#39;</span><span class="p">,</span><span class="n">inverse</span><span class="o">=</span><span class="s1">&#39;_inverse_age&#39;</span><span class="p">,</span>  
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="n">search</span><span class="o">=</span><span class="s1">&#39;_search_age&#39;</span><span class="p">,</span><span class="n">store</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">compute_sudo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">)</span>  
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>    <span class="k">def</span> <span class="nf">_compute_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>            <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">date_release</span><span class="p">:</span>  
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>                <span class="n">delta</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">book</span><span class="o">.</span><span class="n">date_release</span>  
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>                <span class="n">book</span><span class="o">.</span><span class="n">age_days</span> <span class="o">=</span> <span class="n">delta</span><span class="o">.</span><span class="n">days</span>  
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>            <span class="k">else</span><span class="p">:</span>  
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>                <span class="n">book</span><span class="o">.</span><span class="n">age_days</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>     <span class="k">def</span> <span class="nf">_inverse_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">):</span>  
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">book</span><span class="o">.</span><span class="n">age_days</span><span class="p">)</span>  
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a>            <span class="n">book</span><span class="o">.</span><span class="n">date_release</span> <span class="o">=</span> <span class="n">d</span>
 </code></pre></div>
 <p>To add the method and implement the logic to write on the computed field, use the<br />
 following code:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">_inverse_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">):</span>  
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">book</span><span class="o">.</span><span class="n">age_days</span><span class="p">)</span>  
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>            <span class="n">book</span><span class="o">.</span><span class="n">date_release</span> <span class="o">=</span> <span class="n">d</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span> <span class="nf">_inverse_age</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>        <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">filtered</span><span class="p">(</span><span class="s1">&#39;date_release&#39;</span><span class="p">):</span>  
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">book</span><span class="o">.</span><span class="n">age_days</span><span class="p">)</span>  
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>            <span class="n">book</span><span class="o">.</span><span class="n">date_release</span> <span class="o">=</span> <span class="n">d</span>
 </code></pre></div>
 <p>search on field 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">_search_age</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>  
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">value_days</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>  
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="n">value_date</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">value_days</span>  
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">operator_map</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;&gt;&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;=&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;=&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;&#39;</span><span class="p">:</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;=&#39;</span><span class="p">:</span> <span class="s1">&#39;&gt;=&#39;</span><span class="p">,}</span>  
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">new_op</span> <span class="o">=</span> <span class="n">operator_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="n">operator</span><span class="p">)</span>  
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="k">return</span> <span class="p">[(</span><span class="s1">&#39;date_release&#39;</span><span class="p">,</span> <span class="n">new_op</span><span class="p">,</span> <span class="n">value_date</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">_search_age</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>  
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="n">today</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>  
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="n">value_days</span> <span class="o">=</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>  
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="n">value_date</span> <span class="o">=</span> <span class="n">today</span> <span class="o">-</span> <span class="n">value_days</span>  
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    <span class="n">operator_map</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;&gt;&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;=&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;=&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;&#39;</span><span class="p">:</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;=&#39;</span><span class="p">:</span> <span class="s1">&#39;&gt;=&#39;</span><span class="p">,}</span>  
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    <span class="n">new_op</span> <span class="o">=</span> <span class="n">operator_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">operator</span><span class="p">,</span> <span class="n">operator</span><span class="p">)</span>  
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    <span class="k">return</span> <span class="p">[(</span><span class="s1">&#39;date_release&#39;</span><span class="p">,</span> <span class="n">new_op</span><span class="p">,</span> <span class="n">value_date</span><span class="p">)]</span>
 </code></pre></div></p>
 <h2 id="related-fields">related fields</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">publisher_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span>  
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Publisher&#39;</span><span class="p">)</span>  
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="n">publisher_city</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Publisher City&#39;</span><span class="p">,</span><span class="n">related</span><span class="o">=</span><span class="s1">&#39;publisher_id.city&#39;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">publisher_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span>  
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>        <span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Publisher&#39;</span><span class="p">)</span>  
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">publisher_city</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Publisher City&#39;</span><span class="p">,</span><span class="n">related</span><span class="o">=</span><span class="s1">&#39;publisher_id.city&#39;</span><span class="p">,</span><span class="n">readonly</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <p><em>Additionally, they support a related_sudo flag similar to compute_sudo; when set
 to True, the field chain is traversed without checking the user access rights.</em></p>
@@ -979,15 +1068,15 @@ on the line model referring to a field on the order model, you should explicitly
 field on the order model during record creation, instead of using the related field shortcut,
 especially if there are a lot of lines.</em></p>
 <h2 id="adding-dynamic-relations-using-reference-fields">Adding dynamic relations using  reference fields</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">def</span> <span class="nf">_referencable_models</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="n">models</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;ir.model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">search</span><span class="p">([(</span><span class="s1">&#39;field_id.name&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;message_ids&#39;</span><span class="p">)])</span>  
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="k">return</span> <span class="p">[(</span><span class="n">x</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">models</span><span class="p">]</span>  
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="n">ref_doc_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Reference</span><span class="p">(</span><span class="n">selection</span><span class="o">=</span><span class="s1">&#39;_referencable_models&#39;</span><span class="p">,</span> 
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>                                    <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Reference Document&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>    <span class="k">def</span> <span class="nf">_referencable_models</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>        <span class="n">models</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;ir.model&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">search</span><span class="p">([(</span><span class="s1">&#39;field_id.name&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">,</span> <span class="s1">&#39;message_ids&#39;</span><span class="p">)])</span>  
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>        <span class="k">return</span> <span class="p">[(</span><span class="n">x</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">models</span><span class="p">]</span>  
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>    <span class="n">ref_doc_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Reference</span><span class="p">(</span><span class="n">selection</span><span class="o">=</span><span class="s1">&#39;_referencable_models&#39;</span><span class="p">,</span> 
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>                                    <span class="n">string</span><span class="o">=</span><span class="s1">&#39;Reference Document&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Reference fields are similar to many-to-one fields, except that they allow the user to select
 the model to link to.
@@ -1069,26 +1158,26 @@ This will work exactly like the  _inherits  option. The main advantage is that t
 simpler. In the given example, we have performed the same inheritance delegation as in<br />
 the previous one, but in this case, instead of creating an  _inherits  dictionary, we have<br />
 used the  delegate=True  option in the  partner_id  field:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">class</span> <span class="nc">LibraryMember</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.member&#39;</span>  
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="n">ondelete</span><span class="o">=</span><span class="s1">&#39;cascade&#39;</span><span class="p">,</span> <span class="n">delegate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="n">date_start</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Member Since&#39;</span><span class="p">)</span>  
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="n">date_end</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Termination Date&#39;</span><span class="p">)</span>  
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="n">member_number</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>  
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    <span class="n">date_of_birth</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Date of birth&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">class</span> <span class="nc">LibraryMember</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.member&#39;</span>  
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    <span class="n">partner_id</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2one</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="n">ondelete</span><span class="o">=</span><span class="s1">&#39;cascade&#39;</span><span class="p">,</span> <span class="n">delegate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="n">date_start</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Member Since&#39;</span><span class="p">)</span>  
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>    <span class="n">date_end</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Termination Date&#39;</span><span class="p">)</span>  
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>    <span class="n">member_number</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>  
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>    <span class="n">date_of_birth</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Date</span><span class="p">(</span><span class="s1">&#39;Date of birth&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="abstract-models">abstract models</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span> <span class="nc">BaseArchive</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">AbstractModel</span><span class="p">):</span>  
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;base.archive&#39;</span>  
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  <span class="n">active</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="k">def</span> <span class="nf">do_archive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>            <span class="n">record</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">record</span><span class="o">.</span><span class="n">active</span>  
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>  
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;base.archive&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">class</span> <span class="nc">BaseArchive</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">AbstractModel</span><span class="p">):</span>  
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;base.archive&#39;</span>  
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>  <span class="n">active</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>    <span class="k">def</span> <span class="nf">do_archive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>            <span class="n">record</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">record</span><span class="o">.</span><span class="n">active</span>  
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>  
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>  <span class="n">_inherit</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;base.archive&#39;</span>
 </code></pre></div>
 <p>An abstract model is created by a class based on  models.AbstractModel, instead of<br />
 the usual  models.Model. It has all the attributes and capabilities of regular models; the<br />
@@ -1132,7 +1221,7 @@ interaction</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../../ipynb/cookbook2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Part 2" rel="prev">
+        <a href="../../tips/io/" class="md-footer__link md-footer__link--prev" aria-label="Previous: IO" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1141,7 +1230,7 @@ interaction</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Part 2
+              IO
             </div>
           </div>
         </a>

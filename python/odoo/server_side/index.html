@@ -270,6 +270,95 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2">
+          Python Distilled
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Distilled" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python Distilled
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        python structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/classes/" class="md-nav__link">
+        classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -779,49 +868,49 @@
 <h1 id="server-side-development">server side development</h1>
 <h2 id="model-methods">model methods</h2>
 <h3 id="apimodel">api.model</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="c1"># [...]  </span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="n">state</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Selection</span><span class="p">([(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;Unavailable&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;Available&#39;</span><span class="p">),</span>  
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="p">(</span><span class="s1">&#39;borrowed&#39;</span><span class="p">,</span> <span class="s1">&#39;Borrowed&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">,</span> <span class="s1">&#39;Lost&#39;</span><span class="p">)],</span>  
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;draft&quot;</span><span class="p">)</span>  
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="k">def</span> <span class="nf">is_allowed_transition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">old_state</span><span class="p">,</span> <span class="n">new_state</span><span class="p">):</span>  
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="n">allowed</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">),</span>  
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;borrowed&#39;</span><span class="p">),</span>  
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="p">(</span><span class="s1">&#39;borrowed&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">),</span>  
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;lost&#39;</span><span class="p">),</span>  
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  <span class="p">(</span><span class="s1">&#39;borrowed&#39;</span><span class="p">,</span> <span class="s1">&#39;lost&#39;</span><span class="p">),</span>  
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  <span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">)]</span>  
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="k">return</span> <span class="p">(</span><span class="n">old_state</span><span class="p">,</span> <span class="n">new_state</span><span class="p">)</span> <span class="ow">in</span> <span class="n">allowed</span>  
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="k">def</span> <span class="nf">change_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_state</span><span class="p">):</span>  
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>            <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">is_allowed_transition</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">state</span><span class="p">,</span><span class="n">new_state</span><span class="p">):</span>  
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                <span class="n">book</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">new_state</span>  
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            <span class="k">else</span><span class="p">:</span>  
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>                <span class="k">continue</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="k">def</span> <span class="nf">make_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">change_state</span><span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">)</span>  
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="k">def</span> <span class="nf">make_borrowed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">change_state</span><span class="p">(</span><span class="s1">&#39;borrowed&#39;</span><span class="p">)</span>  
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="k">def</span> <span class="nf">make_lost</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">change_state</span><span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="c1"># [...]  </span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>  <span class="n">state</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Selection</span><span class="p">([(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;Unavailable&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;Available&#39;</span><span class="p">),</span>  
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>  <span class="p">(</span><span class="s1">&#39;borrowed&#39;</span><span class="p">,</span> <span class="s1">&#39;Borrowed&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">,</span> <span class="s1">&#39;Lost&#39;</span><span class="p">)],</span>  
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>  <span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;draft&quot;</span><span class="p">)</span>  
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  <span class="k">def</span> <span class="nf">is_allowed_transition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">old_state</span><span class="p">,</span> <span class="n">new_state</span><span class="p">):</span>  
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="n">allowed</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">),</span>  
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>  <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;borrowed&#39;</span><span class="p">),</span>  
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>  <span class="p">(</span><span class="s1">&#39;borrowed&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">),</span>  
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>  <span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">,</span> <span class="s1">&#39;lost&#39;</span><span class="p">),</span>  
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>  <span class="p">(</span><span class="s1">&#39;borrowed&#39;</span><span class="p">,</span> <span class="s1">&#39;lost&#39;</span><span class="p">),</span>  
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>  <span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">,</span> <span class="s1">&#39;available&#39;</span><span class="p">)]</span>  
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>        <span class="k">return</span> <span class="p">(</span><span class="n">old_state</span><span class="p">,</span> <span class="n">new_state</span><span class="p">)</span> <span class="ow">in</span> <span class="n">allowed</span>  
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="k">def</span> <span class="nf">change_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_state</span><span class="p">):</span>  
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>            <span class="k">if</span> <span class="n">book</span><span class="o">.</span><span class="n">is_allowed_transition</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">state</span><span class="p">,</span><span class="n">new_state</span><span class="p">):</span>  
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>                <span class="n">book</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">new_state</span>  
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>            <span class="k">else</span><span class="p">:</span>  
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>                <span class="k">continue</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="k">def</span> <span class="nf">make_available</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">change_state</span><span class="p">(</span><span class="s1">&#39;available&#39;</span><span class="p">)</span>  
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="k">def</span> <span class="nf">make_borrowed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">change_state</span><span class="p">(</span><span class="s1">&#39;borrowed&#39;</span><span class="p">)</span>  
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>    <span class="k">def</span> <span class="nf">make_lost</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">change_state</span><span class="p">(</span><span class="s1">&#39;lost&#39;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;form&gt;</span>  
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>     <span class="nt">&lt;button</span> <span class="na">name=</span><span class="s">&quot;make_available&quot;</span> <span class="na">string=</span><span class="s">&quot;Make Available&quot;</span>  <span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>  
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>     <span class="nt">&lt;button</span> <span class="na">name=</span><span class="s">&quot;make_borrowed&quot;</span> <span class="na">string=</span><span class="s">&quot;Make Borrowed&quot;</span>  <span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>  
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>     <span class="nt">&lt;button</span> <span class="na">name=</span><span class="s">&quot;make_lost&quot;</span> <span class="na">string=</span><span class="s">&quot;Make Lost&quot;</span>  <span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>  
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;state&quot;</span> <span class="na">widget=</span><span class="s">&quot;statusbar&quot;</span><span class="nt">/&gt;</span>  
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">&lt;/form&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;form&gt;</span>  
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>     <span class="nt">&lt;button</span> <span class="na">name=</span><span class="s">&quot;make_available&quot;</span> <span class="na">string=</span><span class="s">&quot;Make Available&quot;</span>  <span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>  
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>     <span class="nt">&lt;button</span> <span class="na">name=</span><span class="s">&quot;make_borrowed&quot;</span> <span class="na">string=</span><span class="s">&quot;Make Borrowed&quot;</span>  <span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>  
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>     <span class="nt">&lt;button</span> <span class="na">name=</span><span class="s">&quot;make_lost&quot;</span> <span class="na">string=</span><span class="s">&quot;Make Lost&quot;</span>  <span class="na">type=</span><span class="s">&quot;object&quot;</span><span class="nt">/&gt;</span>  
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;state&quot;</span> <span class="na">widget=</span><span class="s">&quot;statusbar&quot;</span><span class="nt">/&gt;</span>  
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nt">&lt;/form&gt;</span>
 </code></pre></div>
 <h2 id="errors">Errors</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">odoo.tools.translate</span> <span class="kn">import</span> <span class="n">_</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">odoo.exceptions</span> <span class="kn">import</span> <span class="n">UserError</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">msg</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;message that will be translated&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">raise</span> <span class="n">UserError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">odoo.tools.translate</span> <span class="kn">import</span> <span class="n">_</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">odoo.exceptions</span> <span class="kn">import</span> <span class="n">UserError</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">msg</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;message that will be translated&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">raise</span> <span class="n">UserError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="selfenv">self.env</h2>
 <p>The  Environment  class plays a central role in Odoo development:<br />
@@ -842,15 +931,15 @@ a modified context  recipe in  Chapter 8,  Advanced Server-Side Development<br /
 Techniques, for more on this</p>
 <h2 id="create">Create</h2>
 <p>create also can handle multiple params
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">categ1</span> <span class="o">=</span> <span class="p">{</span>  
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Category 1&#39;</span><span class="p">,</span>  
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Description for Category 1&#39;</span>  
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>  
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">categ2</span> <span class="o">=</span> <span class="p">{</span>  
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Category 2&#39;</span><span class="p">,</span>  
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Description for Category 2&#39;</span>  
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>  
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">multiple_records</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;library.book.category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">([</span><span class="n">categ1</span><span class="p">,</span> <span class="n">categ2</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">categ1</span> <span class="o">=</span> <span class="p">{</span>  
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Category 1&#39;</span><span class="p">,</span>  
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Description for Category 1&#39;</span>  
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>  
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">categ2</span> <span class="o">=</span> <span class="p">{</span>  
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Category 2&#39;</span><span class="p">,</span>  
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="s1">&#39;Description for Category 2&#39;</span>  
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>  
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">multiple_records</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;library.book.category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">create</span><span class="p">([</span><span class="n">categ1</span><span class="p">,</span> <span class="n">categ2</span><span class="p">])</span>
 </code></pre></div></p>
 <h2 id="three-ways-to-update-recordset">three ways to update recordset</h2>
 <ul>
@@ -859,20 +948,20 @@ Techniques, for more on this</p>
 <li>write</li>
 </ul>
 <h2 id="combining-recordsets">Combining Recordsets</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">#merge</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">result</span> <span class="o">=</span> <span class="n">recordset1</span> <span class="o">+</span> <span class="n">recordset2</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># no dublicate</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">recordset1</span> <span class="o">|</span> <span class="n">recordset2</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">#commont records</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">result</span> <span class="o">=</span> <span class="n">recordset1</span> <span class="o">&amp;</span> <span class="n">recordset2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">#merge</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">result</span> <span class="o">=</span> <span class="n">recordset1</span> <span class="o">+</span> <span class="n">recordset2</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1"># no dublicate</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">recordset1</span> <span class="o">|</span> <span class="n">recordset2</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c1">#commont records</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">result</span> <span class="o">=</span> <span class="n">recordset1</span> <span class="o">&amp;</span> <span class="n">recordset2</span>
 </code></pre></div>
 <h2 id="filter">filter</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">book</span><span class="p">):</span>  
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">author_ids</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>  
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="k">return</span> <span class="kc">True</span>  
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">return</span> <span class="kc">False</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;dd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="nf">function</span><span class="p">(</span><span class="n">book</span><span class="p">):</span>  
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">author_ids</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>  
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="k">return</span> <span class="kc">True</span>  
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;dd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
 </code></pre></div>
 <p>actually, you need to filter a recordset based on the fact that the value of a field is  truthy<br />
 in the Python sense (non-empty strings, non-zero numbers, non-empty containers, and<br />
@@ -889,28 +978,28 @@ overhead </p>
 <p><code>return books.sorted(key='release_date')</code>
 this sort uses pythons native sort</p>
 <h2 id="override-write-and-create-and-unlink-method">override write and create and unlink method</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>  
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_has_groups</span><span class="p">(</span><span class="s1">&#39;my_library.acl_book_librarian&#39;</span><span class="p">):</span>  
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="k">if</span> <span class="s1">&#39;manager_remarks&#39;</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>  
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>            <span class="k">raise</span> <span class="n">UserError</span><span class="p">(</span>  
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>            <span class="s1">&#39;You are not allowed to modify &#39;</span>  
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a> <span class="s1">&#39;manager_remarks&#39;</span><span class="p">)</span>  
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LibraryBook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>  
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>  
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_has_groups</span><span class="p">(</span><span class="s1">&#39;my_library.acl_book_librarian&#39;</span><span class="p">):</span>  
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>        <span class="k">if</span> <span class="s1">&#39;manager_remarks&#39;</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>  
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>            <span class="k">raise</span> <span class="n">UserError</span><span class="p">(</span>  
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>            <span class="s1">&#39;You are not allowed to modify &#39;</span>  
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a> <span class="s1">&#39;manager_remarks&#39;</span><span class="p">)</span>  
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LibraryBook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>  
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="k">def</span> <span class="nf">unlink</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="c1"># your logic  </span>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>  <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LibraryBook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>  
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_has_groups</span><span class="p">(</span><span class="s1">&#39;my_library.acl_book_librarian&#39;</span><span class="p">):</span>  
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>        <span class="k">if</span> <span class="s1">&#39;manager_remarks&#39;</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>  
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>            <span class="k">raise</span> <span class="n">UserError</span><span class="p">(</span>  
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>            <span class="s1">&#39;You are not allowed to modify &#39;</span>  
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a> <span class="s1">&#39;manager_remarks&#39;</span><span class="p">)</span>  
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>    <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LibraryBook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>  
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>  
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_has_groups</span><span class="p">(</span><span class="s1">&#39;my_library.acl_book_librarian&#39;</span><span class="p">):</span>  
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>        <span class="k">if</span> <span class="s1">&#39;manager_remarks&#39;</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>  
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>            <span class="k">raise</span> <span class="n">UserError</span><span class="p">(</span>  
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>            <span class="s1">&#39;You are not allowed to modify &#39;</span>  
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a> <span class="s1">&#39;manager_remarks&#39;</span><span class="p">)</span>  
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LibraryBook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>  
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="k">def</span> <span class="nf">unlink</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="c1"># your logic  </span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a>  <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LibraryBook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="name_get-and-name_search-customizing-how-records-are-searched">name_get and name_search Customizing how records are searched</h2>
 <p>The  Defining the model representation and order  recipe in  Chapter 3,  Creating Odoo<br />
@@ -919,30 +1008,30 @@ representation of the record in various places, including in the widget that's u
 display  Many2one  relations in the web client.<br />
 This recipe will show you how to search for a book in the  Many2one  widget by title,<br />
 author, or ISBN by redefining  name_search.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>  
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">)</span>  
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">isbn</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;ISBN&#39;</span><span class="p">)</span>  
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="n">author_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Authors&#39;</span><span class="p">)</span>  
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="k">def</span> <span class="nf">name_get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>            <span class="n">authors</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">author_ids</span><span class="o">.</span><span class="n">mapped</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>  
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>            <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">authors</span><span class="p">))</span>  
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">book</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>  
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="k">return</span> <span class="n">result</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">class</span> <span class="nc">LibraryBook</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>  
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="n">_name</span> <span class="o">=</span> <span class="s1">&#39;library.book&#39;</span>  
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;Title&#39;</span><span class="p">)</span>  
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>    <span class="n">isbn</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">(</span><span class="s1">&#39;ISBN&#39;</span><span class="p">)</span>  
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>    <span class="n">author_ids</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Many2many</span><span class="p">(</span><span class="s1">&#39;res.partner&#39;</span><span class="p">,</span> <span class="s1">&#39;Authors&#39;</span><span class="p">)</span>  
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="k">def</span> <span class="nf">name_get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>  
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>        <span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>  
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>            <span class="n">authors</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="n">author_ids</span><span class="o">.</span><span class="n">mapped</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>  
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>            <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> (</span><span class="si">%s</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">authors</span><span class="p">))</span>  
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">book</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>  
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>    <span class="k">return</span> <span class="n">result</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="k">def</span> <span class="nf">_name_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="n">operator</span><span class="o">=</span><span class="s1">&#39;ilike&#39;</span><span class="p">,</span>  
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>                            <span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">name_get_uid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="n">args</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">args</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">args</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">operator</span> <span class="o">==</span> <span class="s1">&#39;ilike&#39;</span><span class="p">):</span>  
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>            <span class="n">args</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">,(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span> 
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>                            <span class="p">(</span><span class="s1">&#39;isbn&#39;</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>                            <span class="p">(</span><span class="s1">&#39;author_ids.name&#39;</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>  
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="p">]</span>  
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LibraryBook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_name_search</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="n">operator</span><span class="p">,</span>  
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>                                                    <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span> <span class="n">name_get_uid</span><span class="o">=</span><span class="n">name_get_uid</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>    <span class="nd">@api</span><span class="o">.</span><span class="n">model</span>  
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="k">def</span> <span class="nf">_name_search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="n">operator</span><span class="o">=</span><span class="s1">&#39;ilike&#39;</span><span class="p">,</span>  
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>                            <span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">name_get_uid</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>        <span class="n">args</span> <span class="o">=</span> <span class="p">[]</span> <span class="k">if</span> <span class="n">args</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">args</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>        <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">operator</span> <span class="o">==</span> <span class="s1">&#39;ilike&#39;</span><span class="p">):</span>  
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>            <span class="n">args</span> <span class="o">+=</span> <span class="p">[</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="s1">&#39;|&#39;</span><span class="p">,(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span> 
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>                            <span class="p">(</span><span class="s1">&#39;isbn&#39;</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">name</span><span class="p">),</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>                            <span class="p">(</span><span class="s1">&#39;author_ids.name&#39;</span><span class="p">,</span> <span class="n">operator</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>  
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">]</span>  
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">LibraryBook</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_name_search</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="n">operator</span><span class="p">,</span>  
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>                                                    <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span> <span class="n">name_get_uid</span><span class="o">=</span><span class="n">name_get_uid</span><span class="p">)</span>
 </code></pre></div></p>
 <p>The default implementation of  name_search()  actually only calls the  <em>name</em><br />
 search()  method, which does the real job. This  _name_search()  method has an<br />
