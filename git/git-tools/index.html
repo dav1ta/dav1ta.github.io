@@ -13,7 +13,7 @@
     
     
       
-        <title>aactivator - David</title>
+        <title>Git tools - David</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aactivator" class="md-skip">
+        <a href="#interactive-staging" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              aactivator
+              Git tools
             
           </span>
         </div>
@@ -521,12 +521,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -549,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git/" class="md-nav__link">
+      <a href="../git/" class="md-nav__link">
         Git
       </a>
     </li>
@@ -563,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-branch/" class="md-nav__link">
+      <a href="../git-branch/" class="md-nav__link">
         Git branch
       </a>
     </li>
@@ -577,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/git-patch/" class="md-nav__link">
+      <a href="../git-patch/" class="md-nav__link">
         Git patch
       </a>
     </li>
@@ -589,11 +591,180 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../git/git-tools/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Git tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Git tools
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-staging" class="md-nav__link">
+    interactive staging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stashing-and-cleaning" class="md-nav__link">
+    stashing and cleaning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-grep" class="md-nav__link">
+    git grep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-log-searching-commit-where-change-introduced" class="md-nav__link">
+    Git Log Searching - commit where change introduced
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-multiple-commit-messages" class="md-nav__link">
+    Changing Multiple Commit Messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#split-commit" class="md-nav__link">
+    split commit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nuclear-option-filter-branch" class="md-nav__link">
+    The Nuclear Option: filter-branch
+  </a>
+  
+    <nav class="md-nav" aria-label="The Nuclear Option: filter-branch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#removing-a-file-from-every-commit" class="md-nav__link">
+    Removing a File from Every Commit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-email-addresses-globally" class="md-nav__link">
+    Changing Email Addresses Globally
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-reset" class="md-nav__link">
+    git reset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflicts" class="md-nav__link">
+    conflicts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-blame" class="md-nav__link">
+    git blame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    binary search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submodules" class="md-nav__link">
+    submodules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-repo-with-submodules" class="md-nav__link">
+    cloning repo with submodules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-bundle" class="md-nav__link">
+    creating bundle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replacing" class="md-nav__link">
+    replacing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credential-storage" class="md-nav__link">
+    credential storage
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -656,14 +827,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
@@ -686,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pre-commit/" class="md-nav__link">
+      <a href="../../tools/pre-commit/" class="md-nav__link">
         pre-commit
       </a>
     </li>
@@ -698,52 +867,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          aactivator
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tools/aactivator/" class="md-nav__link">
         aactivator
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#auto-activate-python-env-for-specific-project" class="md-nav__link">
-    Auto Activate Python env For Specific project
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -772,8 +900,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -782,8 +908,140 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#auto-activate-python-env-for-specific-project" class="md-nav__link">
-    Auto Activate Python env For Specific project
+  <a href="#interactive-staging" class="md-nav__link">
+    interactive staging
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stashing-and-cleaning" class="md-nav__link">
+    stashing and cleaning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-grep" class="md-nav__link">
+    git grep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-log-searching-commit-where-change-introduced" class="md-nav__link">
+    Git Log Searching - commit where change introduced
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-multiple-commit-messages" class="md-nav__link">
+    Changing Multiple Commit Messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#split-commit" class="md-nav__link">
+    split commit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nuclear-option-filter-branch" class="md-nav__link">
+    The Nuclear Option: filter-branch
+  </a>
+  
+    <nav class="md-nav" aria-label="The Nuclear Option: filter-branch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#removing-a-file-from-every-commit" class="md-nav__link">
+    Removing a File from Every Commit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-email-addresses-globally" class="md-nav__link">
+    Changing Email Addresses Globally
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-reset" class="md-nav__link">
+    git reset
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflicts" class="md-nav__link">
+    conflicts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-blame" class="md-nav__link">
+    git blame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    binary search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submodules" class="md-nav__link">
+    submodules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloning-repo-with-submodules" class="md-nav__link">
+    cloning repo with submodules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-bundle" class="md-nav__link">
+    creating bundle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replacing" class="md-nav__link">
+    replacing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credential-storage" class="md-nav__link">
+    credential storage
   </a>
   
 </li>
@@ -802,14 +1060,151 @@
                 
 
 
-<h1 id="aactivator">aactivator</h1>
-<h2 id="auto-activate-python-env-for-specific-project">Auto Activate Python env For Specific project</h2>
+  <h1>Git tools</h1>
+
+<p>Say you want to see what is in your experiment branch that hasn’t yet been merged into your master
+branch. You can ask Git to show you a log of just those commits with master..experiment — that
+means “all commits reachable from experiment that aren’t reachable from master.” For the sake of
+brevity and clarity in these examples, the letters of the commit objects from the diagram are used
+in place of the actual log output in the order that they would display:</p>
+<p><code>git log master..experiment</code>
+f, on the other hand, you want to see the opposite — all commits in master that aren’t in
+experiment — you can reverse the branch names. experiment..master shows you everything in master
+not reachable from experiment:</p>
+<p><code>git log experiment..master</code></p>
+<p>This is useful if you want to keep the experiment branch up to date and preview what you’re about
+to merge. Another frequent use of this syntax is to see what you’re about to push to a remote:
+<code>git log origin/master..HEAD</code></p>
+<h2 id="interactive-staging">interactive staging</h2>
+<p><code>git add -i</code></p>
+<h2 id="stashing-and-cleaning">stashing and cleaning</h2>
+<p><code>git stash</code>
+<code>git stash list</code></p>
+<p>apply last
+<code>git stash apply</code>
+<code>git stash apply stash@{2}</code></p>
+<p>reaply and stage too
+<code>git stash apply --index</code></p>
+<p>stash but not include index</p>
+<p><code>git stash --keep-index</code></p>
+<p>if you have problem reapplying stash
+  we can</p>
+<p><code>git stash branch newbranch</code></p>
+<h2 id="_1"></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>gpg --list-keys
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>gpg --gen-key
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>git config --global user.signingkey 0A46826A
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>git tag -s v1.5 -m <span class="s1">&#39;my signed 1.5 tag</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="s1">git show v1.5</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="s1">git commit -a -S -m &#39;</span>Signed commit<span class="err">&#39;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>git log --show-signature -1
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>git merge --verify-signatures non-verify
+</code></pre></div>
+<h2 id="git-grep">git grep</h2>
+<p>by line number and show line</p>
 <ul>
-<li>create symlink to interpeter in project root
-<code>ln -s ~/Desktop/env/bin/activate .activate.sh</code></li>
-<li>create deactivate script
-<code>echo deactivate &gt; .deactivate.sh</code></li>
+<li>git grep -n gmtime_r</li>
 </ul>
+<p>not show lines</p>
+<ul>
+<li>git grep --count gmtime_r
+search in c file</li>
+<li>git grep -p gmtime_r *.c</li>
+</ul>
+<h2 id="git-log-searching-commit-where-change-introduced">Git Log Searching - commit where change introduced</h2>
+<p>git log -S ZLIB_BUF_MAX --oneline</p>
+<p>git log -L :git_deflate_bound:zlib.c</p>
+<h2 id="changing-multiple-commit-messages">Changing Multiple Commit Messages</h2>
+<p>git rebase -i HEAD~3
+git commit --amend</p>
+<h2 id="split-commit">split commit</h2>
+<p>git reset HEAD^
+$ git add README
+$ git commit -m 'Update README formatting'
+$ git add lib/simplegit.rb
+$ git commit -m 'Add blame'
+$ git rebase --continue</p>
+<h2 id="the-nuclear-option-filter-branch">The Nuclear Option: filter-branch</h2>
+<p>There is another history-rewriting option that you can use if you need to rewrite a larger number of
+commits in some scriptable way — for instance, changing your email address globally or removing
+a file from every commit. The command is filter-branch, and it can rewrite huge swaths of your
+history, so you probably shouldn’t use it unless your project isn’t yet public and other people
+haven’t based work off the commits you’re about to rewrite. However, it can be very useful. You’ll
+learn a few of the common uses so you can get an idea of some of the things it’s capable of</p>
+<h3 id="removing-a-file-from-every-commit">Removing a File from Every Commit</h3>
+<p>git filter-branch --tree-filter 'rm -f passwords.txt' HEAD</p>
+<h2 id="changing-email-addresses-globally">Changing Email Addresses Globally</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a> git filter-branch --commit-filter <span class="s1">&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="s1">if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;schacon@localhost&quot; ];</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="s1">then</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="s1">GIT_AUTHOR_NAME=&quot;Scott Chacon&quot;;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="s1">GIT_AUTHOR_EMAIL=&quot;schacon@example.com&quot;;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="s1">git commit-tree &quot;$@&quot;;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="s1">else</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="s1">git commit-tree &quot;$@&quot;;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="s1">fi&#39;</span> HEAD
+</code></pre></div>
+<h2 id="git-reset">git reset</h2>
+<p>git reset --soft HEAD^
+reset last commit preserve stage</p>
+<p>git reset HEAD^
+reset last commit needs stage</p>
+<p>git reset --hard HEAD^</p>
+<p>worktree also be reseted to prev commit</p>
+<h2 id="conflicts">conflicts</h2>
+<p>git checkout --conflict=diff3 hello.rb
+git merge -s ours mundo</p>
+<h2 id="git-blame">git blame</h2>
+<p>git blame -L 69,82 Makefile</p>
+<h2 id="binary-search">binary search</h2>
+<p>Annotating a file helps if you know where the issue is to begin with. If you don’t know what is
+breaking, and there have been dozens or hundreds of commits since the last state where you know
+the code worked, you’ll likely turn to git bisect for help. The bisect command does a binary search
+through your commit history to help you identify as quickly as possible which commit introduced
+an issue</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>git bisect start
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>git bisect bad
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>git bisect good
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>git bisect run test-error.sh
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>got bisect reset
+</code></pre></div>
+<h2 id="submodules">submodules</h2>
+<p>git submodule add https://github.com/chaconinc/DbConnector</p>
+<p>.gitmodules
+[submodule "DbConnector"]
+path = DbConnector
+url = https://github.com/chaconinc/DbConnector</p>
+<p>If you have multiple submodules, you’ll have multiple entries in this file. It’s important to note that
+this file is version-controlled with your other files, like your .gitignore file. It’s pushed and pulled
+with the rest of your project. This is how other people who clone this project know where to get the
+submodule projects from.</p>
+<p>git diff --cached DbConnector
+not tracks</p>
+<p>git diff --cached --submodule</p>
+<h2 id="cloning-repo-with-submodules">cloning repo with submodules</h2>
+<p><code>git submodule init</code>
+<code>git sumbodule update</code></p>
+<h2 id="creating-bundle">creating bundle</h2>
+<p>git bundle create po.bundle HEAD master
+it clone repo.bundle repo</p>
+<h2 id="replacing">replacing</h2>
+<p>git replace 81a708d c6e1e9</p>
+<h2 id="credential-storage">credential storage</h2>
+<p><code>git config --global credential.helper cache</code></p>
+<ul>
+<li>default _ passoword every time</li>
+<li>cache - keeps in memory </li>
+<li>store - saves to plain text</li>
+<li>git credential manager in linux .</li>
+</ul>
+<p>[credential]
+helper = store --file /mnt/thumbdrive/.git-credentials
+helper = cache --timeout 30000</p>
 
               
             </article>
@@ -823,7 +1218,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../pre-commit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: pre-commit" rel="prev">
+        <a href="../git-patch/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Git patch" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -832,11 +1227,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              pre-commit
+              Git patch
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../../docker/docker/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Docker
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

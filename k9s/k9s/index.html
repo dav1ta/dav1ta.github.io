@@ -13,7 +13,7 @@
     
     
       
-        <title>aactivator - David</title>
+        <title>Kubernetes - David</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aactivator" class="md-skip">
+        <a href="#starting-kubernetes-cluster" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              aactivator
+              Kubernetes
             
           </span>
         </div>
@@ -626,11 +626,174 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../k9s/k9s/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kubernetes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Kubernetes
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#starting-kubernetes-cluster" class="md-nav__link">
+    starting kubernetes cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-status" class="md-nav__link">
+    get status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes-node-ip" class="md-nav__link">
+    kubernetes node ip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-cluster-info" class="md-nav__link">
+    check cluster info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-nodes" class="md-nav__link">
+    get nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-pods" class="md-nav__link">
+    get pods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-kubectl-namespaces" class="md-nav__link">
+    get kubectl namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-pods-by-namespaces" class="md-nav__link">
+    list pods by namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-pod" class="md-nav__link">
+    run pod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#describe-kubernetes-pod" class="md-nav__link">
+    describe kubernetes pod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-deployment" class="md-nav__link">
+    create deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripbe-deployment" class="md-nav__link">
+    descripbe deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-deployment" class="md-nav__link">
+    scale deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wide-pods-details" class="md-nav__link">
+    wide pods details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-deoployment" class="md-nav__link">
+    create deoployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-load-balancer" class="md-nav__link">
+    create load balancer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-deployment" class="md-nav__link">
+    update deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubectl-apply-deployment" class="md-nav__link">
+    kubectl apply deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-from-file" class="md-nav__link">
+    delete from file
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -656,14 +819,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
@@ -686,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pre-commit/" class="md-nav__link">
+      <a href="../../tools/pre-commit/" class="md-nav__link">
         pre-commit
       </a>
     </li>
@@ -698,52 +859,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          aactivator
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tools/aactivator/" class="md-nav__link">
         aactivator
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#auto-activate-python-env-for-specific-project" class="md-nav__link">
-    Auto Activate Python env For Specific project
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -772,8 +892,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -782,8 +900,134 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#auto-activate-python-env-for-specific-project" class="md-nav__link">
-    Auto Activate Python env For Specific project
+  <a href="#starting-kubernetes-cluster" class="md-nav__link">
+    starting kubernetes cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-status" class="md-nav__link">
+    get status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes-node-ip" class="md-nav__link">
+    kubernetes node ip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-cluster-info" class="md-nav__link">
+    check cluster info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-nodes" class="md-nav__link">
+    get nodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-pods" class="md-nav__link">
+    get pods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-kubectl-namespaces" class="md-nav__link">
+    get kubectl namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-pods-by-namespaces" class="md-nav__link">
+    list pods by namespaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-pod" class="md-nav__link">
+    run pod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#describe-kubernetes-pod" class="md-nav__link">
+    describe kubernetes pod
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-deployment" class="md-nav__link">
+    create deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripbe-deployment" class="md-nav__link">
+    descripbe deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-deployment" class="md-nav__link">
+    scale deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wide-pods-details" class="md-nav__link">
+    wide pods details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-deoployment" class="md-nav__link">
+    create deoployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-load-balancer" class="md-nav__link">
+    create load balancer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-deployment" class="md-nav__link">
+    update deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubectl-apply-deployment" class="md-nav__link">
+    kubectl apply deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-from-file" class="md-nav__link">
+    delete from file
   </a>
   
 </li>
@@ -802,14 +1046,79 @@
                 
 
 
-<h1 id="aactivator">aactivator</h1>
-<h2 id="auto-activate-python-env-for-specific-project">Auto Activate Python env For Specific project</h2>
+  <h1>Kubernetes</h1>
+
+<h2 id="starting-kubernetes-cluster">starting kubernetes cluster</h2>
+<p><code>minikube start --driver=docker</code></p>
+<h2 id="get-status">get status</h2>
+<p><code>minikube status</code></p>
+<h2 id="kubernetes-node-ip">kubernetes node ip</h2>
+<p><code>minikube ip</code></p>
+<h2 id="check-cluster-info">check cluster info</h2>
+<p><code>kubectl cluster-info</code></p>
+<h2 id="get-nodes">get nodes</h2>
+<p><code>kubectl get nodes</code></p>
+<h2 id="get-pods">get pods</h2>
+<p><code>kubectl get pods</code></p>
+<h2 id="get-kubectl-namespaces">get kubectl namespaces</h2>
+<p><code>kubectl get namespaces</code></p>
+<h2 id="list-pods-by-namespaces">list pods by namespaces</h2>
+<p><code>kubectl get pods --namespace=kube-system</code></p>
+<h2 id="run-pod">run pod</h2>
+<p><code>kubectl run nginx --image=nginx</code></p>
+<h2 id="describe-kubernetes-pod">describe kubernetes pod</h2>
+<p><code>kubectl describe pod nginx</code></p>
+<h2 id="create-deployment">create deployment</h2>
+<p><code>kubectl create deployment nginx-deployment --image=nginx</code></p>
+<h2 id="descripbe-deployment">descripbe deployment</h2>
+<p><code>kubectl describe deployment nginx-deployment</code></p>
+<h2 id="scale-deployment">scale deployment</h2>
+<p><code>kubectl scale deployment nginx-deployment --replicas=2</code></p>
+<h2 id="wide-pods-details">wide pods details</h2>
+<p><code>kubectl get pods -o wide</code></p>
+<h2 id="create-deoployment">create deoployment</h2>
 <ul>
-<li>create symlink to interpeter in project root
-<code>ln -s ~/Desktop/env/bin/activate .activate.sh</code></li>
-<li>create deactivate script
-<code>echo deactivate &gt; .deactivate.sh</code></li>
+<li>kubectl create deployment my-deployment  --image ragaca</li>
+<li>kubectl get pods</li>
+<li>kubectl expose my-deployment --port 3000</li>
+<li>kubectl get services</li>
+<li>kubectl delete svc my-deployment</li>
 </ul>
+<h2 id="create-load-balancer">create load balancer</h2>
+<ul>
+<li>kubectl expose deployment my-deployment --type=LoadBalancer --port 3000</li>
+</ul>
+<h2 id="update-deployment">update deployment</h2>
+<ul>
+<li>kubectl set image deployment my-deployment my-deployment=nginx:2.0</li>
+<li>kubectl rollout status my-deployment</li>
+</ul>
+<h2 id="kubectl-apply-deployment">kubectl apply deployment</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx-deployment</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>  <span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>  <span class="nt">selector</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="nt">matchLabels</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>  <span class="nt">template</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>      <span class="nt">labels</span><span class="p">:</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>        <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>      <span class="nt">containers</span><span class="p">:</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:1.14.2</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>        <span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
+</code></pre></div>
+<p>kubectl apply -f deployment.yaml</p>
+<h2 id="delete-from-file">delete from file</h2>
+<p>k delete -f service.yaml -f deployment.yaml</p>
 
               
             </article>
@@ -823,7 +1132,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../pre-commit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: pre-commit" rel="prev">
+        <a href="../../docker/docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -832,11 +1141,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              pre-commit
+              Docker
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../../aws/aws/" class="md-footer__link md-footer__link--next" aria-label="Next: AWS" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              AWS
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
