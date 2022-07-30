@@ -1,0 +1,1847 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>data types - David</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#numerics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="David" class="md-header__button md-logo" aria-label="David" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            David
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              data types
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="David" class="md-nav__button md-logo" aria-label="David" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    David
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Recipes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Recipes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Recipes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1">
+          Python Cookbook
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Cookbook" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Python Cookbook
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ipynb/cookbook/" class="md-nav__link">
+        Python Cookbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ipynb/cookbook2/" class="md-nav__link">
+        Second half
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2">
+          Python Distilled
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Distilled" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python Distilled
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/" class="md-nav__link">
+        python structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/classes/" class="md-nav__link">
+        classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/tips/builtin/" class="md-nav__link">
+        builtins
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_3" type="checkbox" id="__nav_2_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_3">
+          Fluent Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fluent Python" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fluent Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/fluent/data-model/" class="md-nav__link">
+        data model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/fluent/data-structures/" class="md-nav__link">
+        data structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/fluent/dict-set/" class="md-nav__link">
+        dict vs set
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/fluent/object-references/" class="md-nav__link">
+        object references
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/fluent/record-like-data/" class="md-nav__link">
+        records
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/fluent/text-vs-byts/" class="md-nav__link">
+        string and bytes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Odoo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Odoo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Odoo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/odoo/models/" class="md-nav__link">
+        Odoo Models
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/odoo/views/" class="md-nav__link">
+        Odoo Views
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/odoo/server_side/" class="md-nav__link">
+        server side development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/odoo/debug/" class="md-nav__link">
+        Odoo debug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/odoo/xml/" class="md-nav__link">
+        Odoo xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/odoo/raw/" class="md-nav__link">
+        Advanced Back End
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/odoo/tips/" class="md-nav__link">
+        Some Tims
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Perfomance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Perfomance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Perfomance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/profiling/profile/" class="md-nav__link">
+        profiling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git-branch/" class="md-nav__link">
+        Git branch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git-patch/" class="md-nav__link">
+        Git patch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git-tools/" class="md-nav__link">
+        Git tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k9s/k9s/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/aws/" class="md-nav__link">
+        AWS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Posgresql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Posgresql" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Posgresql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          data types
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        data types
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numerics" class="md-nav__link">
+    NUMERICS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serials" class="md-nav__link">
+    Serials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-series-function" class="md-nav__link">
+    generate series function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textuals" class="md-nav__link">
+    Textuals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-functions" class="md-nav__link">
+    String Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitting-strings-into-arrays-tables-or" class="md-nav__link">
+    Splitting Strings into Arrays, Tables, or
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-expressions-and-pattern-matching" class="md-nav__link">
+    Regular Expressions and Pattern Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temportals" class="md-nav__link">
+    Temportals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-overlapping" class="md-nav__link">
+    date overlapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-sicing-and-splicing" class="md-nav__link">
+    array sicing and splicing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-containment-checks" class="md-nav__link">
+    Array Containment Checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dateranges" class="md-nav__link">
+    dateranges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contains-and-contained-in-operators" class="md-nav__link">
+    Contains and contained in operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    json
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-json" class="md-nav__link">
+    output json
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-json" class="md-nav__link">
+    Binary JSON
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    editing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    XML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fulltext-search" class="md-nav__link">
+    fulltext search
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsvectors" class="md-nav__link">
+    TSVectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsqueries" class="md-nav__link">
+    TSQueries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranking" class="md-nav__link">
+    ranking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qustom-weitht-rank" class="md-nav__link">
+    qustom weitht rank
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strip-vectors" class="md-nav__link">
+    strip vectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-full-text-seatch" class="md-nav__link">
+    JSON full text seatch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-data-types" class="md-nav__link">
+    custom data types
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postgresql/" class="md-nav__link">
+        overall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post/" class="md-nav__link">
+        additional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../psql/" class="md-nav__link">
+        psql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/pre-commit/" class="md-nav__link">
+        pre-commit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/aactivator/" class="md-nav__link">
+        aactivator
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agile/agile/" class="md-nav__link">
+        Agile
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numerics" class="md-nav__link">
+    NUMERICS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serials" class="md-nav__link">
+    Serials
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-series-function" class="md-nav__link">
+    generate series function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textuals" class="md-nav__link">
+    Textuals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-functions" class="md-nav__link">
+    String Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitting-strings-into-arrays-tables-or" class="md-nav__link">
+    Splitting Strings into Arrays, Tables, or
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-expressions-and-pattern-matching" class="md-nav__link">
+    Regular Expressions and Pattern Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temportals" class="md-nav__link">
+    Temportals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-overlapping" class="md-nav__link">
+    date overlapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    Arrays
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-sicing-and-splicing" class="md-nav__link">
+    array sicing and splicing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#array-containment-checks" class="md-nav__link">
+    Array Containment Checks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dateranges" class="md-nav__link">
+    dateranges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contains-and-contained-in-operators" class="md-nav__link">
+    Contains and contained in operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    json
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-json" class="md-nav__link">
+    output json
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-json" class="md-nav__link">
+    Binary JSON
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    editing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    XML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fulltext-search" class="md-nav__link">
+    fulltext search
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsvectors" class="md-nav__link">
+    TSVectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tsqueries" class="md-nav__link">
+    TSQueries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ranking" class="md-nav__link">
+    ranking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qustom-weitht-rank" class="md-nav__link">
+    qustom weitht rank
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strip-vectors" class="md-nav__link">
+    strip vectors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-full-text-seatch" class="md-nav__link">
+    JSON full text seatch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-data-types" class="md-nav__link">
+    custom data types
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>data types</h1>
+
+<h2 id="numerics">NUMERICS</h2>
+<p>You will find your everyday integers, decimals, and floating-point numbers</p>
+<h2 id="serials">Serials</h2>
+<p>CREATE SEQUENCE s START 1;
+CREATE TABLE stuff(id bigint DEFAULT nextval('s') PRIMARY KEY, name
+text);
+WARNING
+If you rename a table that has a serial based on a sequence, PostgreSQL will not
+automatically rename the sequence object. To avoid confusion, you should
+Serial and its bigger sibling, bigserial, are auto-incrementing integers often
+used as primary keys of tables in which a natural key is not apparent. This
+data type goes by different names in different database products, with
+autonumber being the most common alternative moniker. When you create a
+table and specify a column as serial, PostgreSQL first creates an integer
+column and then creates a sequence object named
+table_name_column_name_seq located in the same schema as the table. It
+then sets the default of the new integer column to read its value from the
+sequence. If you drop the column, PostgreSQL also drops the companion
+sequence objec
+CREATE SEQUENCE s START 1;
+CREATE TABLE stuff(id bigint DEFAULT nextval('s') PRIMARY KEY, name
+text);</p>
+<h2 id="generate-series-function">generate series function</h2>
+<p>SELECT x FROM generate_series(1,51,13) As x;</p>
+<h2 id="textuals">Textuals</h2>
+<h2 id="string-functions">String Functions</h2>
+<p>rtrim, ltrim, trim, btrim lpad, rpad</p>
+<h2 id="splitting-strings-into-arrays-tables-or">Splitting Strings into Arrays, Tables, or</h2>
+<p>Substrings
+SELECT split_part('abc.123.z45','.',2) As x;
+SELECT unnest(string_to_array('abc.123.z45', '.')) As x;</p>
+<h2 id="regular-expressions-and-pattern-matching">Regular Expressions and Pattern Matching</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">SELECT</span> <span class="n">regexp_replace</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="s1">&#39;6197306254&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="s1">&#39;([0-9]{3})([0-9]{3})([0-9]{4})&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">E</span><span class="s1">&#39;\(\\1\) \\2-\\3&#39;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">)</span> <span class="k">As</span> <span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">x</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">SELECT</span> <span class="k">unnest</span><span class="p">(</span><span class="n">regexp_matches</span><span class="p">(</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="s1">&#39;Cell (619) 852-5083. Work (619)123-4567 , Casa 619-730-6254. Bésame</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="s1">mucho.&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">E</span><span class="s1">&#39;[(]{0,1}[0-9]{3}[)-.]{0,1}[\\s]{0,1}[0-9]{3}[-.]{0,1}[0-9]{4}&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">)</span> <span class="k">As</span> <span class="n">x</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="temportals">Temportals</h2>
+<p>time timestamp date itnterval tsrange tszrange</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">SELECT</span> <span class="s1">&#39;2012-02-10 11:00 PM&#39;</span><span class="p">::</span><span class="k">timestamp</span> <span class="o">+</span> <span class="nb">interval</span> <span class="s1">&#39;1 hour&#39;</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">SELECT</span> <span class="s1">&#39;23 hours 20 minutes&#39;</span><span class="p">::</span><span class="nb">interval</span> <span class="o">+</span> <span class="s1">&#39;1 hour&#39;</span><span class="p">::</span><span class="nb">interval</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">SELECT</span> <span class="s1">&#39;2012-02-10 11:00 PM&#39;</span><span class="p">::</span><span class="n">timestamptz</span> <span class="o">-</span> <span class="nb">interval</span> <span class="s1">&#39;1 hour&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="date-overlapping">date overlapping</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">(</span><span class="s1">&#39;2012-10-25 10:00 AM&#39;</span><span class="p">::</span><span class="k">timestamp</span><span class="p">,</span> <span class="s1">&#39;2012-10-25 2:00</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="s1">PM&#39;</span><span class="p">::</span><span class="k">timestamp</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">OVERLAPS</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">(</span><span class="s1">&#39;2012-10-25 11:00 AM&#39;</span><span class="p">::</span><span class="k">timestamp</span><span class="p">,</span><span class="s1">&#39;2012-10-26 2:00</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="s1">PM&#39;</span><span class="p">::</span><span class="k">timestamp</span><span class="p">)</span> <span class="k">AS</span> <span class="n">x</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">(</span><span class="s1">&#39;2012-10-25&#39;</span><span class="p">::</span><span class="nb">date</span><span class="p">,</span><span class="s1">&#39;2012-10-26&#39;</span><span class="p">::</span><span class="nb">date</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="k">OVERLAPS</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p">(</span><span class="s1">&#39;2012-10-26&#39;</span><span class="p">::</span><span class="nb">date</span><span class="p">,</span><span class="s1">&#39;2012-10-27&#39;</span><span class="p">::</span><span class="nb">date</span><span class="p">)</span> <span class="k">As</span> <span class="n">y</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="arrays">Arrays</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">SELECT</span> <span class="nb">ARRAY</span><span class="p">[</span><span class="mi">2001</span><span class="p">,</span> <span class="mi">2002</span><span class="p">,</span> <span class="mi">2003</span><span class="p">]</span> <span class="k">As</span> <span class="n">yrs</span><span class="p">;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">SELECT</span> <span class="nb">array</span><span class="p">(</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">date_part</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">log_ts</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="k">FROM</span> <span class="n">logs</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">date_part</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">log_ts</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">);</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">You</span> <span class="n">can</span> <span class="k">cast</span> <span class="n">a</span> <span class="n">string</span> <span class="n">representation</span> <span class="k">of</span> <span class="n">an</span> <span class="nb">array</span> <span class="k">to</span> <span class="n">an</span> <span class="nb">array</span> <span class="k">with</span> <span class="n">syntax</span> <span class="k">of</span> <span class="n">the</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="n">form</span><span class="p">:</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="k">SELECT</span> <span class="s1">&#39;{Alex,Sonia}&#39;</span><span class="p">::</span><span class="nb">text</span><span class="p">[]</span> <span class="k">As</span> <span class="n">name</span><span class="p">,</span> <span class="s1">&#39;{46,43}&#39;</span><span class="p">::</span><span class="nb">smallint</span><span class="p">[]</span> <span class="k">As</span> <span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="k">SELECT</span> <span class="n">array_agg</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">t</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="k">FROM</span> <span class="p">(</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;{Alex,Sonia}&#39;</span><span class="p">::</span><span class="nb">text</span><span class="p">[]),</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="p">(</span><span class="s1">&#39;{46,43}&#39;</span><span class="p">::</span><span class="nb">text</span><span class="p">[]</span> <span class="p">)</span> <span class="p">)</span> <span class="k">As</span> <span class="n">f</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="k">SELECT</span> <span class="n">string_to_array</span><span class="p">(</span><span class="s1">&#39;CA.MA.TX&#39;</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="k">As</span> <span class="n">estados</span><span class="p">;</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="k">SELECT</span> <span class="k">unnest</span><span class="p">(</span><span class="s1">&#39;{XOX,OXO,XOX}&#39;</span><span class="p">::</span><span class="nb">char</span><span class="p">(</span><span class="mi">3</span><span class="p">)[])</span> <span class="k">As</span> <span class="n">tic_tac_toe</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="array-sicing-and-splicing">array sicing and splicing</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">SELECT</span> <span class="n">fact_subcats</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="k">FROM</span> <span class="n">census</span><span class="p">.</span><span class="n">lu_fact_types</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">SELECT</span> <span class="n">fact_subcats</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">||</span> <span class="n">fact_subcats</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="k">FROM</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">census</span><span class="p">.</span><span class="n">lu_fact_types</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="k">SELECT</span> <span class="s1">&#39;{1,2,3}&#39;</span><span class="p">::</span><span class="nb">integer</span><span class="p">[]</span> <span class="o">||</span> <span class="mi">4</span> <span class="o">||</span> <span class="mi">5</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="array-containment-checks">Array Containment Checks</h2>
+<p>SELECT fact_subcats
+FROM census.lu_fact_types
+WHERE fact_suThe equality operator (=) returns true only if elements in all the arrays are
+equal and in the same order. If you don’t care about order of elements, and
+just need to know whether all the elements in one array appear as a subset of
+the other array, use the containment operators (@&gt; , &lt;@). Example 5-23
+demonstrates the difference between the contains (@&gt;) and contained by (@&lt;)
+operatorsbcats &amp;&amp; '{OCCUPANCY STATUS,For rent}'::varchar[];</p>
+<p>SELECT '{1,2,3}'::int[] @&gt; '{3,2}'::int[] AS contains;</p>
+<h2 id="dateranges">dateranges</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">employment</span> <span class="p">(</span><span class="n">id</span> <span class="nb">serial</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span> <span class="n">employee</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">period</span> <span class="n">daterange</span><span class="p">);</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">ix_employment_period</span> <span class="k">ON</span> <span class="n">employment</span> <span class="k">USING</span> <span class="n">gist</span> <span class="p">(</span><span class="k">period</span><span class="p">);</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">employment</span> <span class="p">(</span><span class="n">employee</span><span class="p">,</span><span class="k">period</span><span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="k">VALUES</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">(</span><span class="s1">&#39;Alex&#39;</span><span class="p">,</span><span class="s1">&#39;[2012-04-24, infinity)&#39;</span><span class="p">::</span><span class="n">daterange</span><span class="p">),</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">(</span><span class="s1">&#39;Sonia&#39;</span><span class="p">,</span><span class="s1">&#39;[2011-04-24, 2012-06-01)&#39;</span><span class="p">::</span><span class="n">daterange</span><span class="p">),</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">(</span><span class="s1">&#39;Leo&#39;</span><span class="p">,</span><span class="s1">&#39;[2012-06-20, 2013-04-20)&#39;</span><span class="p">::</span><span class="n">daterange</span><span class="p">),</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">(</span><span class="s1">&#39;Regina&#39;</span><span class="p">,</span><span class="s1">&#39;[2012-06-20, 2013-04-20)&#39;</span><span class="p">::</span><span class="n">daterange</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="contains-and-contained-in-operators">Contains and contained in operators</h2>
+<p>In the contains operator (@&gt;), the first argument is a range and the second is a
+value. If the second is within the first, the contains operator returns true.
+Example 5-27 demonstrates its use.</p>
+<p>SELECT employee FROM employment WHERE period @&gt; CURRENT_DATE GROUP BY</p>
+<h2 id="json">json</h2>
+<p>PostgreSQL provides JSON (JavaScript Object Notation) and many support
+functions. JSON has become the most popular data interchange format for
+web applications</p>
+<p>CREATE TABLE persons (id serial PRIMARY KEY, person json);</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">SELECT</span> <span class="n">person</span><span class="o">-&gt;</span><span class="s1">&#39;name&#39;</span> <span class="k">FROM</span> <span class="n">persons</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">SELECT</span> <span class="n">person</span><span class="o">-&gt;</span><span class="s1">&#39;spouse&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;parents&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;father&#39;</span> <span class="k">FROM</span> <span class="n">persons</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">SELECT</span> <span class="n">person</span><span class="o">#&gt;</span><span class="nb">array</span><span class="p">[</span><span class="s1">&#39;spouse&#39;</span><span class="p">,</span><span class="s1">&#39;parents&#39;</span><span class="p">,</span><span class="s1">&#39;father&#39;</span><span class="p">]</span> <span class="k">FROM</span> <span class="n">persons</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="k">SELECT</span> <span class="n">person</span><span class="o">-&gt;</span><span class="s1">&#39;children&#39;</span><span class="o">-&gt;</span><span class="mi">0</span><span class="o">-&gt;</span><span class="s1">&#39;name&#39;</span> <span class="k">FROM</span> <span class="n">persons</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="k">SELECT</span> <span class="n">person</span><span class="o">#&gt;</span><span class="nb">array</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">,</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">FROM</span> <span class="n">persons</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="k">SELECT</span> <span class="n">person</span><span class="o">-&gt;</span><span class="s1">&#39;spouse&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;parents&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;father&#39;</span> <span class="k">FROM</span> <span class="n">persons</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">SELECT</span> <span class="n">person</span><span class="o">#&gt;&gt;</span><span class="nb">array</span><span class="p">[</span><span class="s1">&#39;children&#39;</span><span class="p">,</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="k">FROM</span> <span class="n">persons</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">SELECT</span> <span class="n">json_array_elements</span><span class="p">(</span><span class="n">person</span><span class="o">-&gt;</span><span class="s1">&#39;children&#39;</span><span class="p">)</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;name&#39;</span> <span class="k">As</span> <span class="n">name</span> <span class="k">FROM</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">persons</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="output-json">output json</h2>
+<p>SELECT row_to_json(f) As x
+FROM (
+SELECT id, json_array_elements(person-&gt;'children')-&gt;&gt;'name' As cname
+FROM persons
+) As f;</p>
+<h2 id="binary-json">Binary JSON</h2>
+<p>jsonb new in PostgreSQL 9.4 is the jsonb data type. It is handled through the same
+operators as those for the json type, and similarly named functions, plus
+several additional ones. jsonb performance is much better than json
+performance because jsonb doesn’t need to be reparsed during operations.
+There are a couple of key differences between the jsonb and json data types:</p>
+<p>jsonb columns can be directly indexed using the GIN index method
+(covered in “Indexes”), whereas json requires a functional index to
+extractCREATE TABLE persons_b (id serial PRIMARY KEY, person jsonb); key elements.</p>
+<p>SELECT person As b FROM persons_b WHERE id = 1;
+SELECT person As j FROM persons WHERE id = 1;</p>
+<h3 id="editing">editing</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">UPDATE</span> <span class="n">persons_b</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">SET</span> <span class="n">person</span> <span class="o">=</span> <span class="n">person</span> <span class="o">||</span> <span class="s1">&#39;{&quot;address&quot;: &quot;Somewhere in San Diego, CA&quot;}&#39;</span><span class="p">::</span><span class="n">jsonb</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="k">WHERE</span> <span class="n">person</span> <span class="o">@&gt;</span> <span class="s1">&#39;{&quot;name&quot;:&quot;Sonia&quot;}&#39;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">RETURNING</span> <span class="n">person</span><span class="p">;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="k">UPDATE</span> <span class="n">persons_b</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="k">SET</span> <span class="n">person</span> <span class="o">=</span> <span class="n">person</span> <span class="o">-</span> <span class="s1">&#39;address&#39;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="k">WHERE</span> <span class="n">person</span> <span class="o">@&gt;</span> <span class="s1">&#39;{&quot;name&quot;:&quot;Sonia&quot;}&#39;</span><span class="p">;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="k">UPDATE</span> <span class="n">persons_b</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="k">SET</span> <span class="n">person</span> <span class="o">=</span> <span class="n">person</span> <span class="o">#-</span> <span class="s1">&#39;{children,1,girl}&#39;</span><span class="p">::</span><span class="nb">text</span><span class="p">[]</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="k">WHERE</span> <span class="n">person</span> <span class="o">@&gt;</span> <span class="s1">&#39;{&quot;name&quot;:&quot;Sonia&quot;}&#39;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="n">RETURNING</span> <span class="n">person</span><span class="o">-&gt;</span><span class="s1">&#39;children&#39;</span><span class="o">-&gt;</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="err">{</span><span class="ss">&quot;name&quot;</span><span class="p">:</span> <span class="ss">&quot;Azaleah&quot;</span><span class="p">,</span> <span class="ss">&quot;phones&quot;</span><span class="p">:</span> <span class="p">[]</span><span class="err">}</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="k">UPDATE</span> <span class="n">persons_b</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="k">SET</span> <span class="n">person</span> <span class="o">=</span> <span class="n">jsonb_set</span><span class="p">(</span><span class="n">person</span><span class="p">,</span><span class="s1">&#39;{children,1,gender}&#39;</span><span class="p">::</span><span class="nb">text</span><span class="p">[],</span><span class="s1">&#39;&quot;F&quot;&#39;</span><span class="p">::</span><span class="n">jsonb</span><span class="p">,</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="k">true</span><span class="p">)</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="k">WHERE</span> <span class="n">person</span> <span class="o">@&gt;</span> <span class="s1">&#39;{&quot;name&quot;:&quot;Sonia&quot;}&#39;</span>
+</code></pre></div>
+<h3 id="xml">XML</h3>
+<h3 id="fulltext-search">fulltext search</h3>
+<p>To search textual data by keywords, you have at your disposal the like or
+ilike (case insensitive) commands. You can also avail yourself of powerful
+regular expression and Soundex searches. But both of these methods stop
+short of offering natural language−based match conditions. For example, if
+you’re looking for LGBT movies and type that abbreviation into your search,
+you’re going to miss movies described as lesbian, gay, bisexual, or
+transgendered. If you type in the search term lots of steamy sex scenes, you
+may end up with nothing unless the description very closely matches what
+you typed in.
+FTS is a suite of tools that adds a modicum of “intelligence” to your searches.
+Though it’s far from being able to read your mind, it can find words that are
+close in meaning, rather than spelling. FTS is packaged into PostgreSQL,
+with no additional installation necessary.</p>
+<p>CREATE EXTENSION hunspell_en_us SCHEMA pg_catalog;</p>
+<h2 id="tsvectors">TSVectors</h2>
+<p>A text column must be vectorized before FTS can search against it. The
+resultant vector column is a tsvector data type. To create a tsvector from text,
+you must specify the FTS configuration to use. The vectorization reduces the
+original text to a set of word skeletons, referred to as lexemes, by removing
+stop words. For each lexeme, the TSVector records where in the original text
+it appears. The more frequently a lexeme appears, the higher the weight. Each
+lexeme therefore is imbued with at least one position, much like a vector in
+the physical sense.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>SELECT
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>c.name,
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>CASE
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>WHEN c.name =&#39;default&#39; THEN to_tsvector(f.t)
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>ELSE to_tsvector(c.name::regconfig,f.t)
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>END As vect
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>FROM (
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>SELECT &#39;Just dancing in the rain. I like to dance.&#39;::text) As f(t), (
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>VALUES (&#39;default&#39;),(&#39;english&#39;),(&#39;english_hunspell&#39;),(&#39;simple&#39;)
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>) As c(name);
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">film</span> <span class="k">ADD</span> <span class="k">COLUMN</span> <span class="n">fts</span> <span class="n">tsvector</span><span class="p">;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">UPDATE</span> <span class="n">film</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">SET</span> <span class="n">fts</span> <span class="o">=</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">setweight</span><span class="p">(</span><span class="n">to_tsvector</span><span class="p">(</span><span class="k">COALESCE</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)),</span><span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="o">||</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="n">setweight</span><span class="p">(</span><span class="n">to_tsvector</span><span class="p">(</span><span class="k">COALESCE</span><span class="p">(</span><span class="n">description</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)),</span><span class="s1">&#39;B&#39;</span><span class="p">);</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="n">ix_film_fts_gin</span> <span class="k">ON</span> <span class="n">film</span> <span class="k">USING</span> <span class="n">gin</span> <span class="p">(</span><span class="n">fts</span><span class="p">);</span>
+</code></pre></div>
+ectorizes the title and description columns and stores the
+vector in a newly created tsvector column. To speed up searches, we add a
+GIN index on the tsvector column. GIN is a lossless index. You can also add
+a GiST index on a vector column. GiST is lossy and slower to search but
+builds quicker and takes up less disk space. We explore indexes in more
+detail in “Indexes”.</p>
+<p>Should data change in one of the basis columns forming the tsvector, you
+must re-vectorize. To avoid having to manually run to_tsvector every time
+data changes, create a trigger that responds to updates. In the trigger, use the
+handy tsvector_update_trigger function as shown in</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">trig_tsv_film_iu</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">BEFORE</span> <span class="k">INSERT</span> <span class="k">OR</span> <span class="k">UPDATE</span> <span class="k">OF</span> <span class="n">title</span><span class="p">,</span> <span class="n">description</span> <span class="k">ON</span> <span class="n">film</span> <span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">EXECUTE</span> <span class="k">PROCEDURE</span> <span class="n">tsvector_update_trigger</span><span class="p">(</span><span class="n">fts</span><span class="p">,</span><span class="s1">&#39;pg_catalog.english&#39;</span><span class="p">,</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="n">title</span><span class="p">,</span><span class="n">description</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="tsqueries">TSQueries</h2>
+<p>SELECT to_tsquery('business &amp; analytics');</p>
+<h2 id="_1"></h2>
+<p>We have created a tsvector from our text; we have created a tsquery from our
+search terms. Now, we can perform an FTS. We do so by using the @@
+operator</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">SELECT</span> <span class="k">left</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span> <span class="k">As</span> <span class="n">title</span><span class="p">,</span> <span class="k">left</span><span class="p">(</span><span class="n">description</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span> <span class="k">as</span> <span class="n">description</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">FROM</span> <span class="n">film</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="k">WHERE</span> <span class="n">fts</span> <span class="o">@@</span> <span class="n">to_tsquery</span><span class="p">(</span><span class="s1">&#39;hunter &amp; (scientist | chef)&#39;</span><span class="p">)</span> <span class="k">AND</span> <span class="n">title</span> <span class="o">&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="n">title</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">SELECT</span> <span class="k">left</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span> <span class="k">As</span> <span class="n">title</span><span class="p">,</span> <span class="k">left</span><span class="p">(</span><span class="n">description</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span> <span class="k">as</span> <span class="n">description</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">FROM</span> <span class="n">film</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">WHERE</span> <span class="n">fts</span> <span class="o">@@</span> <span class="n">to_tsquery</span><span class="p">(</span><span class="s1">&#39;hunter &lt;4&gt; (scientist | chef)&#39;</span><span class="p">)</span> <span class="k">AND</span> <span class="n">title</span> <span class="o">&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="ranking">ranking</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">SELECT</span> <span class="n">title</span><span class="p">,</span> <span class="k">left</span><span class="p">(</span><span class="n">description</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span> <span class="k">As</span> <span class="n">description</span><span class="p">,</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">ts_rank</span><span class="p">(</span><span class="n">fts</span><span class="p">,</span><span class="n">ts</span><span class="p">)::</span><span class="nb">numeric</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="k">AS</span> <span class="n">r</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="k">FROM</span> <span class="n">film</span><span class="p">,</span> <span class="n">to_tsquery</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">,</span><span class="s1">&#39;love &amp; (wait | indian | mad)&#39;</span><span class="p">)</span> <span class="k">AS</span> <span class="n">ts</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="k">WHERE</span> <span class="n">fts</span> <span class="o">@@</span> <span class="n">ts</span> <span class="k">AND</span> <span class="n">title</span> <span class="o">&gt;</span> <span class="s1">&#39;&#39;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">r</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="qustom-weitht-rank">qustom weitht rank</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">SELECT</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">left</span><span class="p">(</span><span class="n">title</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span> <span class="k">As</span> <span class="n">title</span><span class="p">,</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="n">ts_rank</span><span class="p">(</span><span class="s1">&#39;{0,0,0,1}&#39;</span><span class="p">::</span><span class="nb">numeric</span><span class="p">[],</span><span class="n">fts</span><span class="p">,</span><span class="n">ts</span><span class="p">)::</span><span class="nb">numeric</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="k">AS</span> <span class="n">r</span><span class="p">,</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="n">ts_rank_cd</span><span class="p">(</span><span class="s1">&#39;{0,0,0,1}&#39;</span><span class="p">::</span><span class="nb">numeric</span><span class="p">[],</span><span class="n">fts</span><span class="p">,</span><span class="n">ts</span><span class="p">)::</span><span class="nb">numeric</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="k">As</span> <span class="n">rcd</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="k">FROM</span> <span class="n">film</span><span class="p">,</span> <span class="n">to_tsquery</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">,</span> <span class="s1">&#39;love &amp; (wait | indian | mad )&#39;</span><span class="p">)</span> <span class="k">AS</span> <span class="n">ts</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="k">WHERE</span> <span class="n">fts</span> <span class="o">@@</span> <span class="n">ts</span> <span class="k">AND</span> <span class="n">title</span> <span class="o">&gt;</span> <span class="s1">&#39;&#39;</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="k">ORDER</span> <span class="k">BY</span> <span class="n">r</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="strip-vectors">strip vectors</h2>
+<p>SELECT strip(fts)
+FROM film
+WHERE film_id = 1;</p>
+<p>Keep in mind that although a stripped vector is faster to search and takes up
+less disk space, many operators and functions cannot be used in conjunction
+with them. For instance, because a stripped vector has no markers, distance
+operators cannot be used</p>
+<h2 id="json-full-text-seatch">JSON full text seatch</h2>
+<p>SELECT to_tsvector(person)
+FROM persons WHERE id=1;</p>
+<p>SELECT ts_headline(person-&gt;'spouse'-&gt;'parents', 'rafael'::tsquery)
+FROM persons_b WHERE id=1;</p>
+<h2 id="custom-data-types">custom data types</h2>
+<p>CREATE TABLE chickens (id integer PRIMARY KEY);
+CREATE TABLE ducks (id integer PRIMARY KEY, chickens chickens[]);
+CREATE TABLE turkeys (id integer PRIMARY KEY, ducks ducks[]);
+INSERT INTO ducks VALUES (1, ARRAY[ROW(1)::chickens, ROW(1)::chickens]);
+INSERT INTO turkeys VALUES (1, array(SELECT d FROM ducks d));</p>
+<p>CREATE TYPE complex_number AS (r double precision, i double precision);</p>
+<p>CREATE TABLE circuits (circuit_id serial PRIMARY KEY, ac_volt
+complex_number);</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../aws/aws/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AWS" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              AWS
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../postgresql/" class="md-footer__link md-footer__link--next" aria-label="Next: overall" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              overall
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+    
+  </body>
+</html>
