@@ -1,0 +1,1698 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>pytest - David</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parametrized-tests" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="David" class="md-header__button md-logo" aria-label="David" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            David
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              pytest
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="David" class="md-nav__button md-logo" aria-label="David" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    David
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Books
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Books" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Books
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1">
+          Python Cookbook
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Cookbook" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Python Cookbook
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ipynb/cookbook/" class="md-nav__link">
+        Python Cookbook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ipynb/cookbook2/" class="md-nav__link">
+        Second half
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2">
+          Python Distilled
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python Distilled" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python Distilled
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/" class="md-nav__link">
+        python structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/modules/" class="md-nav__link">
+        modules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/classes/" class="md-nav__link">
+        classes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/io/" class="md-nav__link">
+        IO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tips/builtin/" class="md-nav__link">
+        builtins
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_3" type="checkbox" id="__nav_2_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_3">
+          Fluent Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fluent Python" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Fluent Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fluent/data-model/" class="md-nav__link">
+        data model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fluent/data-structures/" class="md-nav__link">
+        data structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fluent/dict-set/" class="md-nav__link">
+        dict vs set
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fluent/object-references/" class="md-nav__link">
+        object references
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fluent/record-like-data/" class="md-nav__link">
+        records
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fluent/text-vs-byts/" class="md-nav__link">
+        string and bytes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_4" type="checkbox" id="__nav_2_1_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_4">
+          Clean Code
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Clean Code" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Clean Code
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python_clean_code/" class="md-nav__link">
+        clean code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decorators/" class="md-nav__link">
+        decorators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../descriptors/" class="md-nav__link">
+        descriptors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iterators/" class="md-nav__link">
+        iterators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design_code/" class="md-nav__link">
+        code design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design_patterns/" class="md-nav__link">
+        design patterns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solid/" class="md-nav__link">
+        solid
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          pytest
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        pytest
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parametrized-tests" class="md-nav__link">
+    Parametrized tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-coverage" class="md-nav__link">
+    Code coverage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-pytest-cov" class="md-nav__link">
+    install pytest-cov
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mock-objects" class="md-nav__link">
+    mock objects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mock-types" class="md-nav__link">
+    mock types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutation-testing" class="md-nav__link">
+    mutation testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    edge cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tdd" class="md-nav__link">
+    Tdd
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_5" type="checkbox" id="__nav_2_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_5">
+          Clean Code examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Clean Code examples" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Clean Code examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/chap4/" class="md-nav__link">
+        chap4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/chap5/" class="md-nav__link">
+        chap5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/chap6/" class="md-nav__link">
+        chap6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/chap7/" class="md-nav__link">
+        chap7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/chap8/" class="md-nav__link">
+        chap8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code/chap9/" class="md-nav__link">
+        chap9
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Odoo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Odoo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Odoo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odoo/models/" class="md-nav__link">
+        Odoo Models
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odoo/views/" class="md-nav__link">
+        Odoo Views
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odoo/server_side/" class="md-nav__link">
+        server side development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odoo/debug/" class="md-nav__link">
+        Odoo debug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odoo/xml/" class="md-nav__link">
+        Odoo xml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odoo/raw/" class="md-nav__link">
+        Advanced Back End
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../odoo/tips/" class="md-nav__link">
+        Some Tims
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Perfomance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Perfomance" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Perfomance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../profiling/profile/" class="md-nav__link">
+        profiling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/git-branch/" class="md-nav__link">
+        Git branch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/git-patch/" class="md-nav__link">
+        Git patch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../git/git-tools/" class="md-nav__link">
+        Git tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../k9s/k9s/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aws/aws/" class="md-nav__link">
+        AWS
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Posgresql
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Posgresql" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Posgresql
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../postgresql/data_types/" class="md-nav__link">
+        data types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../postgresql/postgresql/" class="md-nav__link">
+        overall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../postgresql/post/" class="md-nav__link">
+        additional
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../postgresql/psql/" class="md-nav__link">
+        psql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/pre-commit/" class="md-nav__link">
+        pre-commit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/aactivator/" class="md-nav__link">
+        aactivator
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../agile/agile/" class="md-nav__link">
+        Agile
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parametrized-tests" class="md-nav__link">
+    Parametrized tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-coverage" class="md-nav__link">
+    Code coverage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-pytest-cov" class="md-nav__link">
+    install pytest-cov
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mock-objects" class="md-nav__link">
+    mock objects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mock-types" class="md-nav__link">
+    mock types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mutation-testing" class="md-nav__link">
+    mutation testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    edge cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tdd" class="md-nav__link">
+    Tdd
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>pytest</h1>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">test_simple_rejected</span><span class="p">():</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>  <span class="n">merge_request</span> <span class="o">=</span> <span class="n">MergeRequest</span><span class="p">()</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>  <span class="n">merge_request</span><span class="o">.</span><span class="n">downvote</span><span class="p">(</span><span class="s2">&quot;maintainer&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>  <span class="k">assert</span> <span class="n">merge_request</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">MergeRequestStatus</span><span class="o">.</span><span class="n">REJECTED</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">def</span> <span class="nf">test_just_created_is_pending</span><span class="p">():</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>  <span class="k">assert</span> <span class="n">MergeRequest</span><span class="p">()</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">MergeRequestStatus</span><span class="o">.</span><span class="n">PENDING</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="k">def</span> <span class="nf">test_pending_awaiting_review</span><span class="p">():</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>  <span class="n">merge_request</span> <span class="o">=</span> <span class="n">MergeRequest</span><span class="p">()</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>  <span class="n">merge_request</span><span class="o">.</span><span class="n">upvote</span><span class="p">(</span><span class="s2">&quot;core-dev&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>  <span class="k">assert</span> <span class="n">merge_request</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">MergeRequestStatus</span><span class="o">.</span><span class="n">PENDING</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">test_invalid_types</span><span class="p">():</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>  <span class="n">merge_request</span> <span class="o">=</span> <span class="n">MergeRequest</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>  <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="n">merge_request</span><span class="o">.</span><span class="n">upvote</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;invalid-object&quot;</span><span class="p">})</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span> <span class="nf">test_cannot_vote_on_closed_merge_request</span><span class="p">():</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>  <span class="n">merge_request</span> <span class="o">=</span> <span class="n">MergeRequest</span><span class="p">()</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>  <span class="n">merge_request</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>  <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="n">MergeRequestException</span><span class="p">,</span> <span class="n">merge_request</span><span class="o">.</span><span class="n">upvote</span><span class="p">,</span> <span class="s2">&quot;dev1&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>  <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>  <span class="n">MergeRequestException</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>  <span class="n">match</span><span class="o">=</span><span class="s2">&quot;can&#39;t vote on a closed merge request&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>  <span class="p">):</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>  <span class="n">merge_request</span><span class="o">.</span><span class="n">downvote</span><span class="p">(</span><span class="s2">&quot;dev1&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="parametrized-tests">Parametrized tests</h2>
+<p>Running parameterized tests with pytest is better, not only because it provides
+a cleaner API, but also because each combination of the test with its parameters
+generates a new test case (a new function).</p>
+<p>An important recommendation when using parametrization is that each parameter
+(every iteration) should correspond to only one testing scenario. That means you
+should not mix different test conditions into the same parameter. If you need to test
+for the combination of different parameters, then use different parameterizations
+stacked up. Stacking up this decorator will create as many test conditions as the
+cartesian product of all the values in the decorators</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">))</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">def</span> <span class="nf">my_test</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</code></pre></div>
+<p>Will run for the values (x=1, y=a), (x=1, y=b), (x=2, y=a), and (x=2, y=b)</p>
+<p>One of the great things about pytest is how it facilitates creating reusable features
+so that we can feed our tests with data or objects to test more effectively and without
+repetition.</p>
+<p>For example, we might want to create a MergeRequest object in a particular state
+and use that object in multiple tests. We define our object as a fixture by creating
+a function and applying the @pytest.fixture decorator. The tests that want to use
+that fixture will have to have a parameter with the same name as the function that's
+defined, and pytest will make sure that it's provided:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">def</span> <span class="nf">rejected_mr</span><span class="p">():</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>  <span class="n">merge_request</span> <span class="o">=</span> <span class="n">MergeRequest</span><span class="p">()</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="n">merge_request</span><span class="o">.</span><span class="n">downvote</span><span class="p">(</span><span class="s2">&quot;dev1&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>  <span class="n">merge_request</span><span class="o">.</span><span class="n">upvote</span><span class="p">(</span><span class="s2">&quot;dev2&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>  <span class="n">merge_request</span><span class="o">.</span><span class="n">upvote</span><span class="p">(</span><span class="s2">&quot;dev3&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>  <span class="n">merge_request</span><span class="o">.</span><span class="n">downvote</span><span class="p">(</span><span class="s2">&quot;dev4&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>  <span class="k">return</span> <span class="n">merge_request</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="k">def</span> <span class="nf">test_simple_rejected</span><span class="p">(</span><span class="n">rejected_mr</span><span class="p">):</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>  <span class="k">assert</span> <span class="n">rejected_mr</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">MergeRequestStatus</span><span class="o">.</span><span class="n">REJECTED</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="k">def</span> <span class="nf">test_rejected_with_approvals</span><span class="p">(</span><span class="n">rejected_mr</span><span class="p">):</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>  <span class="n">rejected_mr</span><span class="o">.</span><span class="n">upvote</span><span class="p">(</span><span class="s2">&quot;dev2&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>  <span class="n">rejected_mr</span><span class="o">.</span><span class="n">upvote</span><span class="p">(</span><span class="s2">&quot;dev3&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>  <span class="k">assert</span> <span class="n">rejected_mr</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">MergeRequestStatus</span><span class="o">.</span><span class="n">REJECTED</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="k">def</span> <span class="nf">test_rejected_to_pending</span><span class="p">(</span><span class="n">rejected_mr</span><span class="p">):</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>  <span class="n">rejected_mr</span><span class="o">.</span><span class="n">upvote</span><span class="p">(</span><span class="s2">&quot;dev1&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a>  <span class="k">assert</span> <span class="n">rejected_mr</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">MergeRequestStatus</span><span class="o">.</span><span class="n">PENDING</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="k">def</span> <span class="nf">test_rejected_to_approved</span><span class="p">(</span><span class="n">rejected_mr</span><span class="p">):</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a>  <span class="n">rejected_mr</span><span class="o">.</span><span class="n">upvote</span><span class="p">(</span><span class="s2">&quot;dev1&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a>  <span class="n">rejected_mr</span><span class="o">.</span><span class="n">upvote</span><span class="p">(</span><span class="s2">&quot;dev2&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a>  <span class="k">assert</span> <span class="n">rejected_mr</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">MergeRequestStatus</span><span class="o">.</span><span class="n">APPROVED</span>
+</code></pre></div>
+<h2 id="code-coverage">Code coverage</h2>
+<p>what lines are executed during testing</p>
+<h2 id="install-pytest-cov">install pytest-cov</h2>
+<p>PYTHONPATH=src pytest \
+--cov-report term-missing \
+--cov=coverage_1 \
+tests/test_coverage_1.py</p>
+<h2 id="mock-objects">mock objects</h2>
+<p>There are cases where our code is not the only thing that will be present in the
+context of our tests. After all, the systems we design and build have to do something
+real, and that usually means connecting to external services (databases, storage
+services, external APIs, cloud services, and so on). Because they need to have those
+side effects, they're inevitable. As much as we abstract our code, program toward
+interfaces, and isolate code from external factors to minimize side effects, they will be
+present in our tests, and we need an effective way to handle that.</p>
+<p>Mock objects are one of the best tactics used to protect our unit tests against
+undesirable side effects (as seen earlier in this chapter). Our code might need to
+perform an HTTP request or send a notification email, but we surely don't want that
+to happen in our unit tests. Unit tests should target the logic of our code, and run
+quickly, as we want to run them quite often, which means we cannot afford latency.
+Therefore, real unit tests don't use any actual service—they don't connect to any
+database, they don't issue HTTP requests, and basically, they do nothing other than
+exercise the logic of the production code</p>
+<p>The unittest module provides a tool for patching our objects at unittest.mock.
+patch.</p>
+<h2 id="mock-types">mock types</h2>
+<p>The standard library provides Mock and MagicMock objects in the unittest.mock
+module.</p>
+<p>he latter does the same, but it also
+supports magic methods.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nd">@mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s2">&quot;mock_2.requests&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">def</span> <span class="nf">test_build_notification_sent</span><span class="p">(</span><span class="n">mock_requests</span><span class="p">):</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>  <span class="n">build_date</span> <span class="o">=</span> <span class="s2">&quot;2018-01-01T00:00:01&quot;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>  <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="s2">&quot;mock_2.BuildStatus.build_date&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">return_value</span><span class="o">=</span><span class="n">build_date</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="p">):</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="n">BuildStatus</span><span class="o">.</span><span class="n">notify</span><span class="p">(</span><span class="mi">123</span><span class="p">,</span> <span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>  <span class="n">expected_payload</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>    <span class="s2">&quot;built_at&quot;</span><span class="p">:</span> <span class="n">build_date</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>    <span class="p">}</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>  <span class="n">mock_requests</span><span class="o">.</span><span class="n">post</span><span class="o">.</span><span class="n">assert_called_with</span><span class="p">(</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>    <span class="n">STATUS_ENDPOINT</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">expected_payload</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">autouse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">def</span> <span class="nf">no_requests</span><span class="p">():</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>  <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s2">&quot;requests.post&quot;</span><span class="p">):</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="k">yield</span>
+</code></pre></div>
+<h2 id="mutation-testing">mutation testing</h2>
+<p>We know that tests are the formal verification method we have to ensure that our
+code is correct. And what makes sure that the test is correct? The production code,
+you might think, and yes, in a way this is correct. We can think of the main code as a
+counterbalance for our tests.
+The point in writing unit tests is that we are protecting ourselves against bugs and
+testing for failure scenarios we don't want to happen in production. It's good that the
+tests pass, but it would be bad if they pass for the wrong reasons. That is, we can use
+unit tests as an automatic regression tool—if someone introduces a bug in the code,
+later on, we expect at least one of our tests to catch it and fail. If this doesn't happen,
+either there is a test missing, or the ones we had are not doing the right checks.</p>
+<p>This is the idea behind mutation testing. With a mutation testing tool, the code will
+be modified to new versions (called mutants) that are variations of the original code,
+but with some of its logic altered (for example, operators are swapped, conditions
+are inverted).</p>
+<p>PYTHONPATH=src mut.py \
+--target src/mutation_testing_${CASE}.py \
+--unit-test tests/test_mutation_testing_${CASE}.py \
+--operator AOD <code># delete arithmetic operator</code>\
+--operator AOR <code># replace arithmetic operator</code> \
+--operator COD <code># delete conditional operator</code> \
+--operator COI <code># insert conditional operator</code> \
+--operator CRP <code># replace constant</code> \
+--operator ROR <code># replace relational operator</code> \
+--show-mutants</p>
+<p>if remaining_days &gt; 0: ...</p>
+<p>i we have something like this in code add test
+especially for 0</p>
+<h2 id="edge-cases">edge cases</h2>
+<p>add tests for edge cases</p>
+<h2 id="tdd">Tdd</h2>
+<p>test written before production code</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../solid/" class="md-footer__link md-footer__link--prev" aria-label="Previous: solid" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              solid
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../code/chap4/" class="md-footer__link md-footer__link--next" aria-label="Next: chap4" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              chap4
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+    
+  </body>
+</html>
