@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../data_types/">
       
-        <link rel="next" href="python/classes/classes/">
+      
+        <link rel="next" href="../list_tuple/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
-        <title>Elibrary</title>
+        <title>Dict & Set - Elibrary</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,11 +70,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#hello" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Elibrary" class="md-header__button md-logo" aria-label="Elibrary" data-md-component="logo">
+    <a href="../../.." title="Elibrary" class="md-header__button md-logo" aria-label="Elibrary" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -105,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Dict & Set
             
           </span>
         </div>
@@ -179,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Elibrary" class="md-nav__button md-logo" aria-label="Elibrary" data-md-component="logo">
+    <a href="../../.." title="Elibrary" class="md-nav__button md-logo" aria-label="Elibrary" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -194,27 +191,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -223,31 +202,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hello" class="md-nav__link">
-    HELLO
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -256,17 +210,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -279,7 +235,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -326,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/classes/classes/" class="md-nav__link">
+      <a href="../../classes/classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -346,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/classes/data_model/" class="md-nav__link">
+      <a href="../../classes/data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -366,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/classes/descriptors/" class="md-nav__link">
+      <a href="../../classes/descriptors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -386,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/classes/iterators/" class="md-nav__link">
+      <a href="../../classes/iterators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/context_managers/context_managers/" class="md-nav__link">
+      <a href="../../context_managers/context_managers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -432,17 +388,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
@@ -455,7 +413,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Data Types
@@ -468,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data_types/data_types/" class="md-nav__link">
+      <a href="../data_types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -486,9 +444,16 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="python/data_types/dic_set/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -497,6 +462,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -508,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data_types/list_tuple/" class="md-nav__link">
+      <a href="../list_tuple/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -528,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data_types/object/" class="md-nav__link">
+      <a href="../object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -556,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/decorators/decorators/" class="md-nav__link">
+      <a href="../../decorators/decorators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/functions/" class="md-nav__link">
+      <a href="../../functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/modules/builtins/" class="md-nav__link">
+      <a href="../../modules/builtins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/modules/io/" class="md-nav__link">
+      <a href="../../modules/io/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/modules/modules/" class="md-nav__link">
+      <a href="../../modules/modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/code_design/" class="md-nav__link">
+      <a href="../../structure/code_design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/dessign_patterns/" class="md-nav__link">
+      <a href="../../structure/dessign_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/" class="md-nav__link">
+      <a href="../../structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -792,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/practices/" class="md-nav__link">
+      <a href="../../structure/practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -812,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/solid/" class="md-nav__link">
+      <a href="../../structure/solid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/structure/" class="md-nav__link">
+      <a href="../../structure/structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -860,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/testing/pytest_fixtures.py" class="md-nav__link">
+      <a href="../../testing/pytest_fixtures.py" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -921,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="postgresql/tricks/" class="md-nav__link">
+      <a href="../../../postgresql/tricks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gitlab/install/" class="md-nav__link">
+      <a href="../../../gitlab/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/architecture/" class="md-nav__link">
+      <a href="../../../kubernetes/architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1063,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/backup/" class="md-nav__link">
+      <a href="../../../kubernetes/backup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1083,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/deployments/" class="md-nav__link">
+      <a href="../../../kubernetes/deployments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1103,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/image-security/" class="md-nav__link">
+      <a href="../../../kubernetes/image-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/lifecycle/" class="md-nav__link">
+      <a href="../../../kubernetes/lifecycle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/maintanence/" class="md-nav__link">
+      <a href="../../../kubernetes/maintanence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1163,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/monitoring/" class="md-nav__link">
+      <a href="../../../kubernetes/monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/namespaces/" class="md-nav__link">
+      <a href="../../../kubernetes/namespaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1203,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/newtwork/" class="md-nav__link">
+      <a href="../../../kubernetes/newtwork/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/pods/" class="md-nav__link">
+      <a href="../../../kubernetes/pods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/replicasets/" class="md-nav__link">
+      <a href="../../../kubernetes/replicasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/roles/" class="md-nav__link">
+      <a href="../../../kubernetes/roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1283,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/security/" class="md-nav__link">
+      <a href="../../../kubernetes/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1303,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/services/" class="md-nav__link">
+      <a href="../../../kubernetes/services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/sheduler/" class="md-nav__link">
+      <a href="../../../kubernetes/sheduler/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1384,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming/code_review/" class="md-nav__link">
+      <a href="../../../programming/code_review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming/algorithms/" class="md-nav__link">
+      <a href="../../../programming/algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1424,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming/ai/" class="md-nav__link">
+      <a href="../../../programming/ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming/orm_sql/" class="md-nav__link">
+      <a href="../../../programming/orm_sql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1483,21 +1449,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hello" class="md-nav__link">
-    HELLO
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1511,9 +1462,48 @@
                   
 
 
-  <h1>Home</h1>
+  <h1>Dict & Set</h1>
 
-<h2 id="hello">HELLO</h2>
+<p>dict vs set
+what is hashable</p>
+<p>An object is hashable if it has a hash value which never changes during its lifetime (it needs a hash() method), and can be compared to other objects (it needs an eq() method). Hashable objects which compare equal must have the same hash value. [...]</p>
+<p>User-defined types are hashable by default because their hash code is their id() and the eq() method inherited from the object class simply compares the object ids. If an object implements a custom eq() which takes into account its internal state, it will be hashable only if its hash() always returns the same hash code. In practice, this requires that eq() and hash() only take into account instance attributes that never change during the life of the object.
+missing keys with setdefault</p>
+<p>d.get(k, default) my_dict.setdefault(key, []).append(new_value)
+missing with missinng</p>
+<p>o subclass dict or any other mapping type and add a missing method. Both solutions are covered next.</p>
+<p>The missing method is only called by getitem (i.e., for the d[k] operator). The presence of a missing method has no effect on the behavior of other methods that look up keys, such as get or contains (which implements the in operator). This is why the default_factory of defaultdict works only with getitem, as noted in the warning at the end of the previous section.
+subclass builtin</p>
+<p>A better way to create a user-defined mapping type is to subclass collections.UserDict instead of dict (as we’ll do in Example 3-8). Here we subclass dict just to show that missing is supported by the built-in dict.getitem method
+dict variations</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>collections.OrderedDict
+collections.ChainMap
+ChainMap(locals(), globals(), vars(builtins))
+collections.Counter
+</code></pre></div></td></tr></table></div>
+<p>custom mapping</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>collections.UserDict
+typing.TypedDict The collections.UserDict class behaves like a dict, but it is slower because it is implemented in Python, not in C. We’ll cover it in more detail next
+</code></pre></div></td></tr></table></div>
+<p>Set Theory</p>
+<p>Set elements must be hashable. The set type is not hashable, so you can’t build a set with nested set instances. But frozenset is hashable, so you can have frozenset elements inside a set.</p>
+<p>n CPython built for a 64-bit CPU, each bucket in a set has two fields: a 64-bit hash code, and a 64-bit pointer to the element value—which is a Python object stored elsewhere in memory. Because buckets have a fixed size, access to an individual bucket is done by offset. There is no field for the indexes from 0 to 7 The hash() built-in function works directly with built-in types and falls back to calling hash for user-defined types. If two objects compare equal, their hash codes must also be equal, otherwise the hash table algorithm does not work. For example, because 1 == 1.0 is True, hash(1) == hash(1.0) must also be True, even though the internal representation of an int and a float are very different. Also, to be effective as hash table indexes, hash codes should scatter around the index space as much as possible. This means that, ideally, objects that are similar but not equal should have hash codes that differ widely. Example 3-17 is the output of a script to compare the bit patterns of hash codes. Note how the hashes of 1 and 1.0 are the same, but those of 1.0001, 1.0002, and 1.0003 are very different.
+salt value of hash</p>
+<p>Starting with Python 3.3, a random salt value is included when computing hash codes for str, bytes, and datetime objects, as documented in Issue 13703—Hash collision security issue. The salt value is constant within a Python process but varies between interpreter runs. With PEP-456, Python 3.4 adopted the SipHash cryptographic function to compute hash codes for str and bytes objects. The random salt and SipHash are security measures to prevent DoS attacks. Details are in a note in the documentation for the hash special method.
+hasing in python</p>
+<p>As mentioned earlier, the hash table for a set starts with 8 empty buckets. As elements are added, Python makes sure at least ⅓ of the buckets are empty—doubling the size of the hash table when more space is needed. The hash code field of each bucket is initialized with -1, which means “no hash code”</p>
+<p>iven the literal {'Mon', 'Tue', 'Wed', 'Thu', 'Fri'}, Python gets the hash code for the first element, 'Mon'. For example, here is a realistic hash code for 'Mon'—you’ll probably get a different result because of the random salt Python uses to compute the hash code of string</p>
+<p>Python takes the modulus of the hash code with the table size to find a hash table index. Here the table size is 8, and the modulus is 3:</p>
+<p>Probing consists of computing the index from the hash, then looking at the corresponding bucket in the hash table. In this case, Python looks at the bucket at offset 3 and finds -1 in the hash code field, marking an empty bucke</p>
+<p>Python stores the hash code of the new element, 4199492796428269555, in the hash code field at offset 3, and a pointer to the string object 'Mon' in the element field. Figure 3-5 shows the current state of the hash table</p>
+<p>For the second element, 'Tue', steps 1, 2, 3 above are repeated. The hash code for 'Tue' is 2414279730484651250, and the resulting index is 2.</p>
+<p>When adding 'Wed' to the set, Python computes the hash -5145319347887138165 and index 3. Python probes bucket 3 and sees that it is already taken. But the hash code stored there, 4199492796428269555 is different. As discussed in “Hashes and equality”, if two objects have different hashes, then their value is also different. This is an index collision. Python then probes the next bucket and finds it empty. So 'Wed' ends up at index 4, as shown in Figure 3-7.</p>
+<p>Adding the next element, 'Thu', is boring: there’s no collision, and it lands in its natural bucket, at index 7. Placing 'Fri' is more interesting. Its hash, 7021641685991143771 implies index 3, which is taken by 'Mon'. Probing the next bucket—4— Python finds the hash for 'Wed' stored there. The hash codes don’t match, so this is another index collision. Python probes the next bucket. It’s empty, so 'Fri' ends up at index 5. The end state of the hash table is shown in Figure 3-8.</p>
+<p>ahsh table for the set {'Mon', 'Tue', 'Wed', 'Thu', 'Fri'}. It is now 62.5% full—close to the ⅔ threshold.</p>
 
 
 
@@ -1551,10 +1541,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>

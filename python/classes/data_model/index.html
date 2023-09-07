@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../classes/">
       
-        <link rel="next" href="python/classes/classes/">
+      
+        <link rel="next" href="../descriptors/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
-        <title>Elibrary</title>
+        <title>Data Model - Elibrary</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -44,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hello" class="md-skip">
+        <a href="#python-data-model" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Elibrary" class="md-header__button md-logo" aria-label="Elibrary" data-md-component="logo">
+    <a href="../../.." title="Elibrary" class="md-header__button md-logo" aria-label="Elibrary" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -105,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Data Model
             
           </span>
         </div>
@@ -179,7 +181,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Elibrary" class="md-nav__button md-logo" aria-label="Elibrary" data-md-component="logo">
+    <a href="../../.." title="Elibrary" class="md-nav__button md-logo" aria-label="Elibrary" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -194,27 +196,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -223,31 +207,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hello" class="md-nav__link">
-    HELLO
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -256,17 +215,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -279,7 +240,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -290,17 +251,19 @@
                 
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
@@ -313,7 +276,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Classes
@@ -326,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/classes/classes/" class="md-nav__link">
+      <a href="../classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,9 +307,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="python/classes/data_model/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Data Model
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -355,6 +338,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structure" class="md-nav__link">
+    Data Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutable-sequences-vs-immutable" class="md-nav__link">
+    Mutable Sequences vs Immutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-comps-versus-map-and-filter" class="md-nav__link">
+    List Comps Versus map and filter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -366,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/classes/descriptors/" class="md-nav__link">
+      <a href="../descriptors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -386,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/classes/iterators/" class="md-nav__link">
+      <a href="../iterators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/context_managers/context_managers/" class="md-nav__link">
+      <a href="../../context_managers/context_managers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data_types/data_types/" class="md-nav__link">
+      <a href="../../data_types/data_types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data_types/dic_set/" class="md-nav__link">
+      <a href="../../data_types/dic_set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data_types/list_tuple/" class="md-nav__link">
+      <a href="../../data_types/list_tuple/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -528,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/data_types/object/" class="md-nav__link">
+      <a href="../../data_types/object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -556,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/decorators/decorators/" class="md-nav__link">
+      <a href="../../decorators/decorators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/functions/" class="md-nav__link">
+      <a href="../../functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/modules/builtins/" class="md-nav__link">
+      <a href="../../modules/builtins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/modules/io/" class="md-nav__link">
+      <a href="../../modules/io/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -670,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/modules/modules/" class="md-nav__link">
+      <a href="../../modules/modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/code_design/" class="md-nav__link">
+      <a href="../../structure/code_design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/dessign_patterns/" class="md-nav__link">
+      <a href="../../structure/dessign_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/" class="md-nav__link">
+      <a href="../../structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -792,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/practices/" class="md-nav__link">
+      <a href="../../structure/practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -812,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/solid/" class="md-nav__link">
+      <a href="../../structure/solid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/structure/structure/" class="md-nav__link">
+      <a href="../../structure/structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -860,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python/testing/pytest_fixtures.py" class="md-nav__link">
+      <a href="../../testing/pytest_fixtures.py" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -921,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="postgresql/tricks/" class="md-nav__link">
+      <a href="../../../postgresql/tricks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +1019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="gitlab/install/" class="md-nav__link">
+      <a href="../../../gitlab/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/architecture/" class="md-nav__link">
+      <a href="../../../kubernetes/architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1063,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/backup/" class="md-nav__link">
+      <a href="../../../kubernetes/backup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1083,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/deployments/" class="md-nav__link">
+      <a href="../../../kubernetes/deployments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1103,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/image-security/" class="md-nav__link">
+      <a href="../../../kubernetes/image-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1123,7 +1160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/lifecycle/" class="md-nav__link">
+      <a href="../../../kubernetes/lifecycle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/maintanence/" class="md-nav__link">
+      <a href="../../../kubernetes/maintanence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1163,7 +1200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/monitoring/" class="md-nav__link">
+      <a href="../../../kubernetes/monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/namespaces/" class="md-nav__link">
+      <a href="../../../kubernetes/namespaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1203,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/newtwork/" class="md-nav__link">
+      <a href="../../../kubernetes/newtwork/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1223,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/pods/" class="md-nav__link">
+      <a href="../../../kubernetes/pods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/replicasets/" class="md-nav__link">
+      <a href="../../../kubernetes/replicasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/roles/" class="md-nav__link">
+      <a href="../../../kubernetes/roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1283,7 +1320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/security/" class="md-nav__link">
+      <a href="../../../kubernetes/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1303,7 +1340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/services/" class="md-nav__link">
+      <a href="../../../kubernetes/services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="kubernetes/sheduler/" class="md-nav__link">
+      <a href="../../../kubernetes/sheduler/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1384,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming/code_review/" class="md-nav__link">
+      <a href="../../../programming/code_review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming/algorithms/" class="md-nav__link">
+      <a href="../../../programming/algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1424,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming/ai/" class="md-nav__link">
+      <a href="../../../programming/ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming/orm_sql/" class="md-nav__link">
+      <a href="../../../programming/orm_sql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1482,6 +1519,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1490,9 +1529,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hello" class="md-nav__link">
-    HELLO
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-structure" class="md-nav__link">
+    Data Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mutable-sequences-vs-immutable" class="md-nav__link">
+    Mutable Sequences vs Immutable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-comps-versus-map-and-filter" class="md-nav__link">
+    List Comps Versus map and filter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1511,9 +1577,382 @@
                   
 
 
-  <h1>Home</h1>
-
-<h2 id="hello">HELLO</h2>
+<h1 id="python-data-model">Python Data Model</h1>
+<p>When using a framework, we spend a lot of time coding methods that are called by the framework. The same happens when we leverage the Python Data Model. The Python interpreter invokes special methods to perform basic object operations, often triggered by special syntax. The special method names are always written with leading and trailing double underscores (i.e., <code>__getitem__</code>). For example, the syntax <code>obj[key]</code> is supported by the <code>__getitem__</code> special method. In order to evaluate <code>my_collection[key]</code>, the interpreter calls <code>my_collection.getitem(key)</code>.</p>
+<p>The special method names allow your objects to implement, support, and interact with fundamental language constructs such as:</p>
+<ul>
+<li>Collections</li>
+<li>Attribute access</li>
+<li>Iteration (including asynchronous iteration using <code>async for</code>)</li>
+<li>Operator overloading</li>
+<li>Function and method invocation</li>
+<li>String representation and formatting</li>
+<li>Asynchronous programming using <code>await</code></li>
+<li>Object creation and destruction</li>
+<li>Managed contexts (including asynchronous context managers using <code>async with</code>)</li>
+</ul>
+<h2 id="example">Example</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">collections</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">Card</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Card&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;rank&#39;</span><span class="p">,</span> <span class="s1">&#39;suit&#39;</span><span class="p">])</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">class</span> <span class="nc">FrenchDeck</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">ranks</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;JQKA&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="n">suits</span> <span class="o">=</span> <span class="s1">&#39;spades diamonds clubs hearts&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_cards</span> <span class="o">=</span> <span class="p">[</span><span class="n">Card</span><span class="p">(</span><span class="n">rank</span><span class="p">,</span> <span class="n">suit</span><span class="p">)</span> <span class="k">for</span> <span class="n">suit</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">suits</span> <span class="k">for</span> <span class="n">rank</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ranks</span><span class="p">]</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cards</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">):</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cards</span><span class="p">[</span><span class="n">position</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Special Methods</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__iter__</code></td>
+<td>Iterable</td>
+</tr>
+<tr>
+<td><code>__len__</code></td>
+<td>Sized</td>
+</tr>
+<tr>
+<td><code>__contains__</code></td>
+<td>Container</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Strings/bytes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__repr__</code></td>
+<td>String representation</td>
+</tr>
+<tr>
+<td><code>__str__</code></td>
+<td>String representation</td>
+</tr>
+<tr>
+<td><code>__format__</code></td>
+<td>Formatting</td>
+</tr>
+<tr>
+<td><code>__bytes__</code></td>
+<td>Bytes representation</td>
+</tr>
+<tr>
+<td><code>__fspath__</code></td>
+<td>File path representation</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Number</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__abs__</code></td>
+<td>Absolute value</td>
+</tr>
+<tr>
+<td><code>__bool__</code></td>
+<td>Boolean value</td>
+</tr>
+<tr>
+<td><code>__complex__</code></td>
+<td>Complex number</td>
+</tr>
+<tr>
+<td><code>__int__</code></td>
+<td>Integer representation</td>
+</tr>
+<tr>
+<td><code>__float__</code></td>
+<td>Float representation</td>
+</tr>
+<tr>
+<td><code>__hash__</code></td>
+<td>Hash value</td>
+</tr>
+<tr>
+<td><code>__index__</code></td>
+<td>Indexing</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Collections</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__len__</code></td>
+<td>Length</td>
+</tr>
+<tr>
+<td><code>__getitem__</code></td>
+<td>Item access</td>
+</tr>
+<tr>
+<td><code>__setitem__</code></td>
+<td>Item assignment</td>
+</tr>
+<tr>
+<td><code>__delitem__</code></td>
+<td>Item deletion</td>
+</tr>
+<tr>
+<td><code>__contains__</code></td>
+<td>Membership test</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Iteration</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__iter__</code></td>
+<td>Iteration</td>
+</tr>
+<tr>
+<td><code>__aiter__</code></td>
+<td>Asynchronous iteration</td>
+</tr>
+<tr>
+<td><code>__next__</code></td>
+<td>Next item</td>
+</tr>
+<tr>
+<td><code>__anext__</code></td>
+<td>Asynchronous next item</td>
+</tr>
+<tr>
+<td><code>__reversed__</code></td>
+<td>Reversed iteration</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Callable or coroutine</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__call__</code></td>
+<td>Function or method invocation</td>
+</tr>
+<tr>
+<td><code>__await__</code></td>
+<td>Asynchronous await</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Context managers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__enter__</code></td>
+<td>Context manager enter</td>
+</tr>
+<tr>
+<td><code>__aenter__</code></td>
+<td>Asynchronous context manager enter</td>
+</tr>
+<tr>
+<td><code>__exit__</code></td>
+<td>Context manager exit</td>
+</tr>
+<tr>
+<td><code>__aexit__</code></td>
+<td>Asynchronous context manager exit</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Instance creation and destruction</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__new__</code></td>
+<td>Object creation</td>
+</tr>
+<tr>
+<td><code>__init__</code></td>
+<td>Object initialization</td>
+</tr>
+<tr>
+<td><code>__del__</code></td>
+<td>Object destruction</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Attribute management</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__getattr__</code></td>
+<td>Attribute retrieval</td>
+</tr>
+<tr>
+<td><code>__getattribute__</code></td>
+<td>Attribute access</td>
+</tr>
+<tr>
+<td><code>__setattr__</code></td>
+<td>Attribute assignment</td>
+</tr>
+<tr>
+<td><code>__delattr__</code></td>
+<td>Attribute deletion</td>
+</tr>
+<tr>
+<td><code>__dir__</code></td>
+<td>Directory listing</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Attribute descriptors</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__get__</code></td>
+<td>Descriptor get</td>
+</tr>
+<tr>
+<td><code>__set__</code></td>
+<td>Descriptor set</td>
+</tr>
+<tr>
+<td><code>__delete__</code></td>
+<td>Descriptor deletion</td>
+</tr>
+<tr>
+<td><code>__set_name__</code></td>
+<td>Descriptor set name</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Class services</td>
+<td></td>
+</tr>
+<tr>
+<td><code>__prepare__</code></td>
+<td>Class creation</td>
+</tr>
+<tr>
+<td><code>__init_subclass__</code></td>
+<td>Subclass initialization</td>
+</tr>
+<tr>
+<td><code>__instancecheck__</code></td>
+<td>Instance check</td>
+</tr>
+<tr>
+<td><code>__subclasscheck__</code></td>
+<td>Subclass check</td>
+</tr>
+</tbody>
+</table>
+<p>Why <code>len</code> is not a method</p>
+<p><code>len</code> runs very fast when <code>x</code> is a built-in type. No method is called for built-in types in CPython; length is simply read from a field from the C struct. <code>len</code> is not called as methods, but in our Python objects, it works as normal.</p>
+<h3 id="data-structure">Data Structure</h3>
+<p>Every Python object in a C struct has two fields:</p>
+<ul>
+<li><code>ob_refcnt</code> and <code>ob_fval</code>: reference count and pointer value.</li>
+</ul>
+<h3 id="mutable-sequences-vs-immutable">Mutable Sequences vs Immutable</h3>
+<ul>
+<li>Mutable: list, bytearray, array.array, collections.deque, and memoryview.</li>
+<li>Immutable: tuple, str, and bytes.</li>
+</ul>
+<p><strong>TIP</strong>
+In Python code, line breaks are ignored inside pairs of [], {}, or (). So you can build multiline lists, listcomps, genexps, dictionaries, and the like without using the ugly \ line continuation escape. Also, when those delimiters are used to define a literal with a comma-separated series of items, a trailing comma will be ignored. So, for example, when coding a multi-line list literal, it is thoughtful to put a comma after the last item.</p>
+<h3 id="list-comps-versus-map-and-filter">List Comps Versus <code>map</code> and <code>filter</code></h3>
+<p><code>map</code> and <code>filter</code> were faster, but nowadays they are the same.</p>
+<p><strong>Tuple</strong> is not just immutable lists.
+It can be used as immutable lists or records with no field names (1,2) lat long.</p>
+<p>If you write internationalized software, <code>_</code> is not a good dummy variable because it is traditionally used as an alias to the <code>gettext.gettext</code> function, as recommended in the <code>gettext</code> module documentation. Otherwise, it’s a conventional name for a placeholder variable to be ignored.</p>
+<p><strong>Tuple as Immutable List</strong>
+1. Clarity: You know it never changes.
+2. Performance: It uses less memory.</p>
+<p>Are tuples more efficient than lists?</p>
+<p>Raymond Hettinger answers:
+- To evaluate a tuple, Python generates bytecode in constant one operation, but for a list, it pushes every element as a separate constant to data stacks and builds the list.
+- Hashable tuple: <code>tuple(t)</code> returns a reference to the same <code>t</code>. No need to copy; the list makes a copy anyway.
+- For fixed length, exact memory is allocated. The list has room to spare for the future.
+- References to items of a tuple are stored in an array with the tuple struct itself. The list holds a pointer to the array of references stored elsewhere and makes the CPU cache less effective. But it is necessary because of the need to make room.</p>
+<p><strong>Slicing</strong>
+<code>seq[start:stop:step]</code> - Python calls <code>seq.getitem(slice(start, stop, step))</code>.</p>
+<p><strong>Building a List of Objects</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>my_list = [[]] * 3 # same board appended, one changes everyone changes
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>board = [[&#39;_&#39;] * 3 for i in range(3)] # no problem
+</code></pre></div></td></tr></table></div></p>
+<p><strong>When List is Not the Answer</strong>
+If it contains the same type, maybe <code>array.array</code> will be better. You can dump it to a binary file directly, and it's memory-efficient.</p>
+<p><strong>Queue</strong>
+Why don't use List as a queue? Because every item has to be shifted in memory.</p>
+<p>Use <code>collections.deque</code> instead; it is thread-safe and has the <code>maxlen</code> attribute.
+There are more queues:
+- <code>queue</code>: <code>SimpleQueue</code>, <code>Queue</code>, <code>LifoQueue</code>, and <code>PriorityQueue</code>.
+- <code>multiprocessing</code>: <code>SimpleQueue</code> and bounded <code>Queue</code> - very similar to those in the <code>queue</code> package but designed for interprocess communication. A specialized <code>multiprocessing.JoinableQueue</code>.
+- <code>asyncio</code>: Provides <code>Queue</code>, <code>LifoQueue</code>, <code>PriorityQueue</code>, and <code>JoinableQueue</code>.
+- <code>heap</code>: <code>heappush</code>, <code>heappop</code>.</p>
+<p><strong>Flat vs Container Sequence</strong>
+Flat is all the same type.</p>
+<p><strong><code>hash()</code></strong>
+Calling <code>hash(t)</code> on a tuple is a quick way to assert that its value is fixed. A <code>TypeError</code> will be raised if <code>t</code> contains mutable items.</p>
+<p><strong>Decode vs Encode</strong>
+Imagine <code>str</code> is human-readable bytes; don't. Bytes need decoding; string encoding.</p>
 
 
 
@@ -1551,10 +1990,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
