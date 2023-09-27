@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
@@ -219,14 +219,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
+          
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
@@ -253,14 +255,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
+          
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
             
   
@@ -395,14 +399,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
+          
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
@@ -557,14 +563,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
         
+          
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
             
   
@@ -659,14 +667,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
         
+          
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
             
   
@@ -850,14 +860,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
+          
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
@@ -1088,14 +1100,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
+          
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
@@ -1149,14 +1163,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
+          
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
@@ -1490,14 +1506,16 @@
     
     
     
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
+          
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
@@ -1923,6 +1941,329 @@ This can lead to better data locality and cache utilization.</p>
 </code></pre></div></td></tr></table></div>
 <h2 id="12-monitoring-and-logging">12. Monitoring and Logging</h2>
 <p>Keeping an eye on the logs and using tools like <code>pg_stat_activity</code> and <code>pgBadger</code> can provide insights into slow queries and other performance issues.</p>
+<h1 id="more-tricks">More Tricks</h1>
+<p><strong>Slow Query 1:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">talent</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">talent</span><span class="p">.</span><span class="n">foreign_id</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">talent</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 1:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">talent</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">talent</span><span class="p">.</span><span class="n">foreign_id</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 2:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span><span class="p">,</span><span class="w"> </span><span class="n">project</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 2:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 3:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 3:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span><span class="w"> </span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">name</span><span class="w"> </span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 4:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 4:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 5:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 5:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 6:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;John%&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 6:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="s1">&#39;Joho&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 7:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">developer_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;completed&#39;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 7:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="o">*</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;completed&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 8:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department_id</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 8:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department_id</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_salary</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department_id</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="k">HAVING</span><span class="w"> </span><span class="n">total_salary</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 9:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span><span class="p">,</span><span class="w"> </span><span class="n">project</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;active&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 9:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span>
+<span class="normal"><a href="#__codelineno-29-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;active&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 10:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 10:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 11:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;JOHN&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 11:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="c1">-- Assuming there is an index on the `name` column.</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 12:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span>
+<span class="normal"><a href="#__codelineno-34-3">3</a></span>
+<span class="normal"><a href="#__codelineno-34-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">name</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 12:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span>
+<span class="normal"><a href="#__codelineno-35-3">3</a></span>
+<span class="normal"><a href="#__codelineno-35-4">4</a></span>
+<span class="normal"><a href="#__codelineno-35-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="c1">-- Use an alias to avoid computing SUM(salary) twice.</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_salary</span><span class="w"> </span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">name</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">total_salary</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 13:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span>
+<span class="normal"><a href="#__codelineno-36-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span><span class="p">,</span><span class="w"> </span><span class="n">skills</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">skills</span><span class="p">.</span><span class="n">developer_id</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">skills</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Python&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 13:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span>
+<span class="normal"><a href="#__codelineno-37-3">3</a></span>
+<span class="normal"><a href="#__codelineno-37-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">skills</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">skills</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">skills</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Python&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 14:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">developer_id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;active&#39;</span><span class="p">));</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 14:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span>
+<span class="normal"><a href="#__codelineno-39-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;completed&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 15:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
+<span class="normal"><a href="#__codelineno-40-2">2</a></span>
+<span class="normal"><a href="#__codelineno-40-3">3</a></span>
+<span class="normal"><a href="#__codelineno-40-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 15:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
+<span class="normal"><a href="#__codelineno-41-2">2</a></span>
+<span class="normal"><a href="#__codelineno-41-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 16:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
+<span class="normal"><a href="#__codelineno-42-2">2</a></span>
+<span class="normal"><a href="#__codelineno-42-3">3</a></span>
+<span class="normal"><a href="#__codelineno-42-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">project</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span><span class="p">,</span><span class="w"> </span><span class="n">project</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-42-4" name="__codelineno-42-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 16:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
+<span class="normal"><a href="#__codelineno-43-2">2</a></span>
+<span class="normal"><a href="#__codelineno-43-3">3</a></span>
+<span class="normal"><a href="#__codelineno-43-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">project</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 17:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span>
+<span class="normal"><a href="#__codelineno-44-2">2</a></span>
+<span class="normal"><a href="#__codelineno-44-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">CHAR_LENGTH</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 17:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
+<span class="normal"><a href="#__codelineno-45-2">2</a></span>
+<span class="normal"><a href="#__codelineno-45-3">3</a></span>
+<span class="normal"><a href="#__codelineno-45-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="c1">-- Assuming there is an index on the `name` column.</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">LENGTH</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 18:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span>
+<span class="normal"><a href="#__codelineno-46-2">2</a></span>
+<span class="normal"><a href="#__codelineno-46-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span><span class="p">,</span><span class="w"> </span><span class="n">project</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;act%&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 18:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
+<span class="normal"><a href="#__codelineno-47-2">2</a></span>
+<span class="normal"><a href="#__codelineno-47-3">3</a></span>
+<span class="normal"><a href="#__codelineno-47-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">project</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">developer_id</span>
+<a id="__codelineno-47-4" name="__codelineno-47-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">project</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;act%&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 19:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
+<span class="normal"><a href="#__codelineno-48-2">2</a></span>
+<span class="normal"><a href="#__codelineno-48-3">3</a></span>
+<span class="normal"><a href="#__codelineno-48-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-48-3" name="__codelineno-48-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span>
+<a id="__codelineno-48-4" name="__codelineno-48-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 19:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
+<span class="normal"><a href="#__codelineno-49-2">2</a></span>
+<span class="normal"><a href="#__codelineno-49-3">3</a></span>
+<span class="normal"><a href="#__codelineno-49-4">4</a></span>
+<span class="normal"><a href="#__codelineno-49-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="c1">-- If there&#39;s an index on age, this will be faster.</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-49-4" name="__codelineno-49-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">20</span>
+<a id="__codelineno-49-5" name="__codelineno-49-5"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Slow Query 20:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
+<span class="normal"><a href="#__codelineno-50-2">2</a></span>
+<span class="normal"><a href="#__codelineno-50-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fast Query 20:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span>
+<span class="normal"><a href="#__codelineno-51-2">2</a></span>
+<span class="normal"><a href="#__codelineno-51-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">developper</span><span class="p">.</span><span class="n">name</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">developper</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></p>
 
 
 
@@ -1960,10 +2301,10 @@ This can lead to better data locality and cache utilization.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
       
     
   </body>
