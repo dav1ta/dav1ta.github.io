@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../decorators/decorators/">
+        <link rel="prev" href="../../async/">
       
       
-        <link rel="next" href="../modules/builtins/">
+        <link rel="next" href="../../talks/talks/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
-        <title>Functions - Elibrary</title>
+        <title>Threading - Elibrary</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#recursion" class="md-skip">
+        <a href="#python-threading-module-synchronization-primitives" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Elibrary" class="md-header__button md-logo" aria-label="Elibrary" data-md-component="logo">
+    <a href="../../.." title="Elibrary" class="md-header__button md-logo" aria-label="Elibrary" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Functions
+              Threading
             
           </span>
         </div>
@@ -181,7 +181,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Elibrary" class="md-nav__button md-logo" aria-label="Elibrary" data-md-component="logo">
+    <a href="../../.." title="Elibrary" class="md-nav__button md-logo" aria-label="Elibrary" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -199,7 +199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classes/classes/" class="md-nav__link">
+      <a href="../../classes/classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classes/data_model/" class="md-nav__link">
+      <a href="../../classes/data_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classes/descriptors/" class="md-nav__link">
+      <a href="../../classes/descriptors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -354,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classes/iterators/" class="md-nav__link">
+      <a href="../../classes/iterators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -383,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../context_managers/context_managers/" class="md-nav__link">
+      <a href="../../context_managers/context_managers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -439,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_types/data_types/" class="md-nav__link">
+      <a href="../../data_types/data_types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_types/dic_set/" class="md-nav__link">
+      <a href="../../data_types/dic_set/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_types/list_tuple/" class="md-nav__link">
+      <a href="../../data_types/list_tuple/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -502,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../data_types/object/" class="md-nav__link">
+      <a href="../../data_types/object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../decorators/decorators/" class="md-nav__link">
+      <a href="../../decorators/decorators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,28 +549,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Functions
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -579,93 +561,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#recursion" class="md-nav__link">
-    <span class="md-ellipsis">
-      RECURSION
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lambda-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      LAMBDA FUNCTIONS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#todo-late-binding" class="md-nav__link">
-    <span class="md-ellipsis">
-      TODO late binding
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="TODO late binding">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inner-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      INNER FUNCTIONS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inspection" class="md-nav__link">
-    <span class="md-ellipsis">
-      INSPECTION
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check-function-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      CHECK FUNCTION PARAMETERS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-current-frame-locals" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET CURRENT FRAME LOCALS
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -713,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modules/builtins/" class="md-nav__link">
+      <a href="../../modules/builtins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modules/io/" class="md-nav__link">
+      <a href="../../modules/io/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../modules/modules/" class="md-nav__link">
+      <a href="../../modules/modules/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -819,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structure/code_design/" class="md-nav__link">
+      <a href="../../structure/code_design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -840,7 +735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structure/dessign_patterns/" class="md-nav__link">
+      <a href="../../structure/dessign_patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -861,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structure/" class="md-nav__link">
+      <a href="../../structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structure/practices/" class="md-nav__link">
+      <a href="../../structure/practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -903,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structure/solid/" class="md-nav__link">
+      <a href="../../structure/solid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -924,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../structure/structure/" class="md-nav__link">
+      <a href="../../structure/structure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../async/" class="md-nav__link">
+      <a href="../../async/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,10 +909,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../threading/threading/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Threading
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1026,6 +941,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Lock
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rlock-reentrant-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. RLock (Reentrant Lock)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-semaphore" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Semaphore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Event
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Condition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-barrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Barrier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Barrier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1038,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../talks/talks/" class="md-nav__link">
+      <a href="../../talks/talks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1059,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../testing/pytest_fixtures.py" class="md-nav__link">
+      <a href="../../testing/pytest_fixtures.py" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1122,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose/" class="md-nav__link">
+      <a href="../../../docker/docker-compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker/" class="md-nav__link">
+      <a href="../../../docker/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1206,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../postgresql/tricks/" class="md-nav__link">
+      <a href="../../../postgresql/tricks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1269,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../git/flows/" class="md-nav__link">
+      <a href="../../../git/flows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1332,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../angular/rxjs/" class="md-nav__link">
+      <a href="../../../angular/rxjs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1353,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../angular/tips/" class="md-nav__link">
+      <a href="../../../angular/tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1416,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../setups/install/" class="md-nav__link">
+      <a href="../../../setups/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1479,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/architecture/" class="md-nav__link">
+      <a href="../../../kubernetes/architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1500,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/backup/" class="md-nav__link">
+      <a href="../../../kubernetes/backup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1521,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/deployments/" class="md-nav__link">
+      <a href="../../../kubernetes/deployments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1542,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/image-security/" class="md-nav__link">
+      <a href="../../../kubernetes/image-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1563,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/lifecycle/" class="md-nav__link">
+      <a href="../../../kubernetes/lifecycle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1584,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/maintanence/" class="md-nav__link">
+      <a href="../../../kubernetes/maintanence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1605,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/monitoring/" class="md-nav__link">
+      <a href="../../../kubernetes/monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1626,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/namespaces/" class="md-nav__link">
+      <a href="../../../kubernetes/namespaces/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1647,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/newtwork/" class="md-nav__link">
+      <a href="../../../kubernetes/newtwork/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1668,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/pods/" class="md-nav__link">
+      <a href="../../../kubernetes/pods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1689,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/replicasets/" class="md-nav__link">
+      <a href="../../../kubernetes/replicasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1710,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/roles/" class="md-nav__link">
+      <a href="../../../kubernetes/roles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1731,7 +1735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/security/" class="md-nav__link">
+      <a href="../../../kubernetes/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1752,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/services/" class="md-nav__link">
+      <a href="../../../kubernetes/services/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1773,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/sheduler/" class="md-nav__link">
+      <a href="../../../kubernetes/sheduler/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1836,7 +1840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/code_review/" class="md-nav__link">
+      <a href="../../../programming/code_review/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1857,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/algorithms/" class="md-nav__link">
+      <a href="../../../programming/algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1878,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/ai/" class="md-nav__link">
+      <a href="../../../programming/ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../programming/orm_sql/" class="md-nav__link">
+      <a href="../../../programming/orm_sql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1927,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/ansible/" class="md-nav__link">
+      <a href="../../../ansible/ansible/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,7 +1986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/tmux/" class="md-nav__link">
+      <a href="../../../tools/tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2003,7 +2007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/nvim/" class="md-nav__link">
+      <a href="../../../tools/nvim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2066,7 +2070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cybersecurity/softwaresecurity/" class="md-nav__link">
+      <a href="../../../cybersecurity/softwaresecurity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2129,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rust/vars/" class="md-nav__link">
+      <a href="../../../rust/vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2150,7 +2154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rust/generators/" class="md-nav__link">
+      <a href="../../../rust/generators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2171,7 +2175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rust/object/" class="md-nav__link">
+      <a href="../../../rust/object/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2192,7 +2196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rust/memory/" class="md-nav__link">
+      <a href="../../../rust/memory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2230,6 +2234,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2238,64 +2244,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#recursion" class="md-nav__link">
+  <a href="#1-lock" class="md-nav__link">
     <span class="md-ellipsis">
-      RECURSION
+      1. Lock
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lambda-functions" class="md-nav__link">
+  <a href="#2-rlock-reentrant-lock" class="md-nav__link">
     <span class="md-ellipsis">
-      LAMBDA FUNCTIONS
+      2. RLock (Reentrant Lock)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#todo-late-binding" class="md-nav__link">
+  <a href="#3-semaphore" class="md-nav__link">
     <span class="md-ellipsis">
-      TODO late binding
+      3. Semaphore
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="TODO late binding">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-event" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Event
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Condition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-barrier" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Barrier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Barrier">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inner-functions" class="md-nav__link">
+  <a href="#summary-of-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      INNER FUNCTIONS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inspection" class="md-nav__link">
-    <span class="md-ellipsis">
-      INSPECTION
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#check-function-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      CHECK FUNCTION PARAMETERS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-current-frame-locals" class="md-nav__link">
-    <span class="md-ellipsis">
-      GET CURRENT FRAME LOCALS
+      Summary of Usage
     </span>
   </a>
   
@@ -2321,81 +2327,104 @@
                   
 
 
-<h2 id="recursion">RECURSION</h2>
-<p>current limit sys.getrecursionlimit() default is 1000
-set limit sys.setrecursionlimit()</p>
-<h2 id="lambda-functions">LAMBDA FUNCTIONS</h2>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<h1 id="python-threading-module-synchronization-primitives">Python <code>threading</code> Module Synchronization Primitives</h1>
+<p>The <code>threading</code> module in Python provides several synchronization primitives that help coordinate and manage access to shared resources among multiple threads. Here’s an overview of the key primitives available.</p>
+<h2 id="1-lock">1. <strong>Lock</strong></h2>
+<p>A <code>Lock</code> is the simplest synchronization primitive. It allows one thread at a time to access a resource, making it a useful tool for protecting shared data.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">threading</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">def</span> <span class="nf">critical_section</span><span class="p">():</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="k">with</span> <span class="n">lock</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="c1"># Only one thread can access this section at a time</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accessing critical section&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-print(f(10))       # --&gt; prints 30
-print(g(10))       # --&gt; prints 30</p>
-<h1 id="todo-late-binding">TODO late binding</h1>
-<h2 id="inner-functions">INNER FUNCTIONS</h2>
-<p>nonlocal cannot be used to refer to a global variable—it must reference a local variable in an outer scope. Thus, if a function is assigning to a global, you should still use the global declaration</p>
-<p>Use of nested functions and nonlocal declarations is not a common programming style. For example, inner functions have no outside visibility, which can complicate testing and debugging. Nevertheless, nested functions are sometimes useful for breaking</p>
-<h2 id="inspection">INSPECTION</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>f.__name__
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Function name
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>f.__qualname__
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>Fully qualified name (if nested)
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>f.__module__
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>Name of module in which defined
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>f.__doc__
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Documentation string
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>f.__annotations__
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>Type hints
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>f.__globals__
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>Dictionary that is the global namespace
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>f.__closure__
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>Closure variables (if any)
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>f.__code__
+<ul>
+<li><strong>Usage</strong>: Ensures that only one thread can access a particular section of code at a time.</li>
+<li><strong>Methods</strong>:</li>
+<li><code>acquire()</code>: Blocks the calling thread until the lock is acquired.</li>
+<li><code>release()</code>: Releases the lock so another thread can acquire it.</li>
+</ul>
+<h2 id="2-rlock-reentrant-lock">2. <strong>RLock (Reentrant Lock)</strong></h2>
+<p>An <code>RLock</code> (reentrant lock) allows a thread that has already acquired the lock to acquire it again without blocking. This is particularly useful in recursive functions or when a function calls other functions that also need the lock.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">rlock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">RLock</span><span class="p">()</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">def</span> <span class="nf">recursive_function</span><span class="p">():</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="k">with</span> <span class="n">rlock</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lock acquired&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="c1"># Recursive call or function that also needs the lock</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="k">if</span> <span class="n">some_condition</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>            <span class="n">recursive_function</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="check-function-parameters">CHECK  FUNCTION PARAMETERS</h2>
+<ul>
+<li><strong>Usage</strong>: Used when a thread needs to acquire the same lock multiple times in a nested or recursive function.</li>
+<li><strong>Methods</strong>: Same as <code>Lock</code> (<code>acquire()</code> and <code>release()</code>), but a thread can re-acquire it without blocking.</li>
+</ul>
+<h2 id="3-semaphore">3. <strong>Semaphore</strong></h2>
+<p>A <code>Semaphore</code> allows a set number of threads to access a resource simultaneously. For example, if you want to limit access to a resource to three threads, you would use a semaphore initialized with a value of <code>3</code>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">inspect</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span><span class="nb">float</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="k">pass</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">sig</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">assert</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="n">func1</span><span class="p">)</span> <span class="o">==</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="n">func2</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">semaphore</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Allows up to 3 threads</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">def</span> <span class="nf">limited_access</span><span class="p">():</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">with</span> <span class="n">semaphore</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accessing limited resource&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="get-current-frame-locals">GET CURRENT FRAME LOCALS</h2>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">spam</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">grok</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">def</span> <span class="nf">grok</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">10</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="c1"># outputs: {&#39;a&#39;:5, &#39;b&#39;:50 }</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">currentframe</span><span class="p">()</span><span class="o">.</span><span class="n">f_locals</span><span class="p">)</span>
+<ul>
+<li><strong>Usage</strong>: To limit the number of threads accessing a resource.</li>
+<li><strong>Methods</strong>:</li>
+<li><code>acquire()</code>: Decreases the semaphore count. If the count is zero, the calling thread blocks.</li>
+<li><code>release()</code>: Increases the semaphore count, allowing another thread to acquire it.</li>
+</ul>
+<h2 id="4-event">4. <strong>Event</strong></h2>
+<p>An <code>Event</code> allows one or more threads to wait until another thread signals an event. It is particularly useful for signaling between threads.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">event</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">def</span> <span class="nf">wait_for_event</span><span class="p">():</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Waiting for event...&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">event</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Event has been set&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="k">def</span> <span class="nf">set_event</span><span class="p">():</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Setting event&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="n">event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Usage</strong>: For signaling between threads. One thread can set the event, and all waiting threads are notified.</li>
+<li><strong>Methods</strong>:</li>
+<li><code>set()</code>: Sets the event, releasing all waiting threads.</li>
+<li><code>clear()</code>: Clears the event.</li>
+<li><code>wait()</code>: Blocks until the event is set.</li>
+<li><code>is_set()</code>: Returns <code>True</code> if the event is set.</li>
+</ul>
+<h2 id="5-condition">5. <strong>Condition</strong></h2>
+<p>A <code>Condition</code> object is a more advanced version of <code>Event</code> that allows multiple threads to wait until notified. It can be combined with a <code>Lock</code> or <code>RLock</code> to create more complex synchronization patterns, such as producer-consumer scenarios.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -2407,27 +2436,65 @@ print(g(10))       # --&gt; prints 30</p>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
 <span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>f.f_back
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Previous stack frame (toward the caller)
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>f.f_code
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Code object being executed
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>f.f_locals
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>Dictionary of local variables (locals())
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>f.f_globals
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>Dictionary used for global variables (globals())
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>f.f_builtins
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>Dictionary used for built-in names
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>f.f_lineno
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>Line number
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>f.f_lasti
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a>Current instruction. This is an index into the bytecode string of f_code.
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a>f.f_trace
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a>Function called at start of each source code line
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">condition</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Condition</span><span class="p">()</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">def</span> <span class="nf">consumer</span><span class="p">():</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="k">with</span> <span class="n">condition</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Consumer waiting&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="n">condition</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>  <span class="c1"># Wait for a signal from producer</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Consumer notified and proceeding&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="k">def</span> <span class="nf">producer</span><span class="p">():</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="k">with</span> <span class="n">condition</span><span class="p">:</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Producer notifying&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>        <span class="n">condition</span><span class="o">.</span><span class="n">notify</span><span class="p">()</span>  <span class="c1"># Notify one waiting thread</span>
 </code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Usage</strong>: Allows threads to wait for some condition and be notified when it changes.</li>
+<li><strong>Methods</strong>:</li>
+<li><code>wait()</code>: Waits until notified.</li>
+<li><code>notify()</code>: Wakes up one waiting thread.</li>
+<li><code>notify_all()</code>: Wakes up all waiting threads.</li>
+</ul>
+<h2 id="6-barrier">6. <strong>Barrier</strong></h2>
+<p>A <code>Barrier</code> is used to synchronize a fixed number of threads at a specific point. When each thread reaches the barrier, they all wait until the specified number of threads have arrived, then they all proceed.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">barrier</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Barrier</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">def</span> <span class="nf">task</span><span class="p">():</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thread waiting at barrier&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="n">barrier</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>  <span class="c1"># Wait until all threads reach this point</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thread proceeding&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="c1"># Create 3 threads for the barrier</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="n">threads</span> <span class="o">=</span> <span class="p">[</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">task</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">:</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>    <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Usage</strong>: For scenarios where a group of threads must synchronize and proceed together.</li>
+<li><strong>Methods</strong>:</li>
+<li><code>wait()</code>: Blocks the thread until the specified number of threads have called it.</li>
+</ul>
+<hr />
+<h3 id="summary-of-usage">Summary of Usage</h3>
+<ul>
+<li><strong><code>Lock</code> and <code>RLock</code></strong>: Used for mutual exclusion to prevent data races.</li>
+<li><strong><code>Semaphore</code></strong>: Controls access to a shared resource for a fixed number of threads.</li>
+<li><strong><code>Event</code></strong>: Signals state changes across threads.</li>
+<li><strong><code>Condition</code></strong>: Allows more complex waiting patterns, used for coordinated waiting and signaling.</li>
+<li><strong><code>Barrier</code></strong>: Ensures that threads reach a certain point before any can proceed.</li>
+</ul>
+<p>These primitives offer various ways to handle synchronization challenges in multi-threaded programs, letting you coordinate and manage shared resources effectively.</p>
 
 
 
@@ -2474,10 +2541,10 @@ print(g(10))       # --&gt; prints 30</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
