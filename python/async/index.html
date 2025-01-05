@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2434,6 +2434,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/graph.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3377,13 +3398,13 @@
 <h4 id="31-async-await">3.1. <code>async</code> &amp; <code>await</code></h4>
 <p>To mark a function as asynchronous, you use the <code>async</code> keyword before <code>def</code>:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">my_async_function</span><span class="p">():</span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">my_async_function</span><span class="p">():</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">pass</span>
 </code></pre></div></td></tr></table></div></p>
 <p>To call asynchronous functions or to execute asynchronous code inside an async function, you use the <code>await</code> keyword:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_data</span><span class="p">():</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">fetch_data</span><span class="p">():</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">get_data_from_source</span><span class="p">()</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="k">return</span> <span class="n">data</span>
 </code></pre></div></td></tr></table></div></p>
@@ -3396,9 +3417,9 @@
 <span class="normal"><a href="#__codelineno-2-5">5</a></span>
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
 <span class="normal"><a href="#__codelineno-2-7">7</a></span>
-<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">)</span>
@@ -3422,16 +3443,16 @@
 <span class="normal"><a href="#__codelineno-3-13">13</a></span>
 <span class="normal"><a href="#__codelineno-3-14">14</a></span>
 <span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">say_hello</span><span class="p">():</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">say_world</span><span class="p">():</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">say_world</span><span class="p">():</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">)</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="n">task1</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">say_hello</span><span class="p">())</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a>    <span class="n">task2</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">say_world</span><span class="p">())</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a>    <span class="k">await</span> <span class="n">task1</span>
@@ -3458,15 +3479,15 @@
 <span class="normal"><a href="#__codelineno-4-13">13</a></span>
 <span class="normal"><a href="#__codelineno-4-14">14</a></span>
 <span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">aiohttp</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">aiohttp</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">fetch_url</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">async</span> <span class="k">with</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="k">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a>            <span class="k">return</span> <span class="k">await</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="n">urls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span> <span class="s2">&quot;http://example.org&quot;</span><span class="p">,</span> <span class="s2">&quot;http://example.net&quot;</span><span class="p">]</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">fetch_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">]</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12"></a>    <span class="n">results</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="n">tasks</span><span class="p">)</span>
@@ -3496,17 +3517,17 @@
 <span class="normal"><a href="#__codelineno-5-15">15</a></span>
 <span class="normal"><a href="#__codelineno-5-16">16</a></span>
 <span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">task_one</span><span class="p">():</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">task_one</span><span class="p">():</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">return</span> <span class="s2">&quot;Task One Completed!&quot;</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">task_two</span><span class="p">():</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">task_two</span><span class="p">():</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a>    <span class="k">return</span> <span class="s2">&quot;Task Two Completed!&quot;</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a>    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">task_one</span><span class="p">(),</span> <span class="n">task_two</span><span class="p">()]</span>
 <a id="__codelineno-5-13" name="__codelineno-5-13"></a>    <span class="n">done</span><span class="p">,</span> <span class="n">pending</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">tasks</span><span class="p">,</span> <span class="n">return_when</span><span class="o">=</span><span class="n">asyncio</span><span class="o">.</span><span class="n">FIRST_COMPLETED</span><span class="p">)</span>
 <a id="__codelineno-5-14" name="__codelineno-5-14"></a>
@@ -3528,12 +3549,12 @@
 <span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-6-10">10</a></span>
 <span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">long_task</span><span class="p">():</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">long_task</span><span class="p">():</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a>    <span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="n">long_task</span><span class="p">(),</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a>    <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">:</span>
@@ -3554,12 +3575,12 @@
 <span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-7-10">10</a></span>
 <span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">risky_task</span><span class="p">():</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">risky_task</span><span class="p">():</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This is an intentional error!&quot;</span><span class="p">)</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-7-7" name="__codelineno-7-7"></a>    <span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>        <span class="k">await</span> <span class="n">risky_task</span><span class="p">()</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
@@ -3580,9 +3601,9 @@
 <span class="normal"><a href="#__codelineno-8-6">6</a></span>
 <span class="normal"><a href="#__codelineno-8-7">7</a></span>
 <span class="normal"><a href="#__codelineno-8-8">8</a></span>
-<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">aiohttp</span> <span class="kn">import</span> <span class="n">web</span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">aiohttp</span><span class="w"> </span><span class="kn">import</span> <span class="n">web</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">handle</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="k">return</span> <span class="n">web</span><span class="o">.</span><span class="n">Response</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5"></a>
 <a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">app</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">()</span>
@@ -3607,10 +3628,10 @@
 <span class="normal"><a href="#__codelineno-9-12">12</a></span>
 <span class="normal"><a href="#__codelineno-9-13">13</a></span>
 <span class="normal"><a href="#__codelineno-9-14">14</a></span>
-<span class="normal"><a href="#__codelineno-9-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">import</span> <span class="nn">aiomysql</span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">aiomysql</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a>    <span class="n">pool</span> <span class="o">=</span> <span class="k">await</span> <span class="n">aiomysql</span><span class="o">.</span><span class="n">create_pool</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">3306</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="s1">&#39;testdb&#39;</span><span class="p">)</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a>
 <a id="__codelineno-9-7" name="__codelineno-9-7"></a>    <span class="k">async</span> <span class="k">with</span> <span class="n">pool</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
@@ -3635,10 +3656,10 @@
 <span class="normal"><a href="#__codelineno-10-5">5</a></span>
 <span class="normal"><a href="#__codelineno-10-6">6</a></span>
 <span class="normal"><a href="#__codelineno-10-7">7</a></span>
-<span class="normal"><a href="#__codelineno-10-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kn">import</span> <span class="nn">time</span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">wrong_usage</span><span class="p">():</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrong_usage</span><span class="p">():</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># This is a blocking call</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This will block the entire event loop&quot;</span><span class="p">)</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7"></a>
@@ -3654,10 +3675,10 @@
 <span class="normal"><a href="#__codelineno-11-5">5</a></span>
 <span class="normal"><a href="#__codelineno-11-6">6</a></span>
 <span class="normal"><a href="#__codelineno-11-7">7</a></span>
-<span class="normal"><a href="#__codelineno-11-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+<span class="normal"><a href="#__codelineno-11-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>    <span class="k">return</span> <span class="s2">&quot;Hello, World!&quot;</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a>    <span class="n">greeting</span> <span class="o">=</span> <span class="n">greet</span><span class="p">()</span>  <span class="c1"># Forgot await</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>  <span class="c1"># This will print a coroutine object, not the greeting.</span>
 <a id="__codelineno-11-7" name="__codelineno-11-7"></a>
@@ -3674,12 +3695,12 @@
 <span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-12-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">raise_error</span><span class="p">():</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">raise_error</span><span class="p">():</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Intentional Error&quot;</span><span class="p">)</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7"></a>    <span class="n">task</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">raise_error</span><span class="p">())</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-12-9" name="__codelineno-12-9"></a>
@@ -3727,15 +3748,15 @@
 <span class="normal"><a href="#__codelineno-14-12">12</a></span>
 <span class="normal"><a href="#__codelineno-14-13">13</a></span>
 <span class="normal"><a href="#__codelineno-14-14">14</a></span>
-<span class="normal"><a href="#__codelineno-14-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2"></a>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">producer</span><span class="p">(</span><span class="n">queue</span><span class="p">):</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">producer</span><span class="p">(</span><span class="n">queue</span><span class="p">):</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
 <a id="__codelineno-14-5" name="__codelineno-14-5"></a>        <span class="k">await</span> <span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <a id="__codelineno-14-6" name="__codelineno-14-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Produced </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-14-7" name="__codelineno-14-7"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-14-8" name="__codelineno-14-8"></a>
-<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">consumer</span><span class="p">(</span><span class="n">queue</span><span class="p">):</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">consumer</span><span class="p">(</span><span class="n">queue</span><span class="p">):</span>
 <a id="__codelineno-14-10" name="__codelineno-14-10"></a>    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
 <a id="__codelineno-14-11" name="__codelineno-14-11"></a>        <span class="n">item</span> <span class="o">=</span> <span class="k">await</span> <span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Consumed </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -3773,17 +3794,17 @@
 <span class="normal"><a href="#__codelineno-15-26">26</a></span>
 <span class="normal"><a href="#__codelineno-15-27">27</a></span>
 <span class="normal"><a href="#__codelineno-15-28">28</a></span>
-<span class="normal"><a href="#__codelineno-15-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="kn">import</span> <span class="nn">random</span>
+<span class="normal"><a href="#__codelineno-15-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">producer</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">producer</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5"></a>    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
 <a id="__codelineno-15-6" name="__codelineno-15-6"></a>        <span class="n">item</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
 <a id="__codelineno-15-8" name="__codelineno-15-8"></a>        <span class="k">await</span> <span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 <a id="__codelineno-15-9" name="__codelineno-15-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Producer </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> produced </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-15-10" name="__codelineno-15-10"></a>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">consumer</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">consumer</span><span class="p">(</span><span class="n">queue</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
 <a id="__codelineno-15-12" name="__codelineno-15-12"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 <a id="__codelineno-15-13" name="__codelineno-15-13"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">())</span>
 <a id="__codelineno-15-14" name="__codelineno-15-14"></a>        <span class="n">item</span> <span class="o">=</span> <span class="k">await</span> <span class="n">queue</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
@@ -3816,7 +3837,7 @@
 <span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-16-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">queue</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Queue</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2"></a>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">bounded_producer</span><span class="p">(</span><span class="n">queue</span><span class="p">):</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">bounded_producer</span><span class="p">(</span><span class="n">queue</span><span class="p">):</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Producing </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-16-6" name="__codelineno-16-6"></a>        <span class="k">await</span> <span class="n">queue</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -3849,21 +3870,21 @@
 <span class="normal"><a href="#__codelineno-17-17">17</a></span>
 <span class="normal"><a href="#__codelineno-17-18">18</a></span>
 <span class="normal"><a href="#__codelineno-17-19">19</a></span>
-<span class="normal"><a href="#__codelineno-17-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="kn">import</span> <span class="nn">heapq</span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">heapq</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3"></a>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="k">class</span> <span class="nc">AsyncPriorityQueue</span><span class="p">:</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">AsyncPriorityQueue</span><span class="p">:</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-17-6" name="__codelineno-17-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span> <span class="o">=</span> <span class="p">[]</span>
 <a id="__codelineno-17-7" name="__codelineno-17-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_count</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-17-8" name="__codelineno-17-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_event</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
 <a id="__codelineno-17-9" name="__codelineno-17-9"></a>
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">priority</span><span class="p">):</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">priority</span><span class="p">):</span>
 <a id="__codelineno-17-11" name="__codelineno-17-11"></a>        <span class="n">heapq</span><span class="o">.</span><span class="n">heappush</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_queue</span><span class="p">,</span> <span class="p">(</span><span class="n">priority</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_count</span><span class="p">,</span> <span class="n">item</span><span class="p">))</span>
 <a id="__codelineno-17-12" name="__codelineno-17-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_count</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-17-13" name="__codelineno-17-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
 <a id="__codelineno-17-14" name="__codelineno-17-14"></a>
-<a id="__codelineno-17-15" name="__codelineno-17-15"></a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-17-16" name="__codelineno-17-16"></a>        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_queue</span><span class="p">:</span>
 <a id="__codelineno-17-17" name="__codelineno-17-17"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_event</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <a id="__codelineno-17-18" name="__codelineno-17-18"></a>            <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">_event</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
@@ -3882,11 +3903,11 @@
 <span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-18-10">10</a></span>
-<span class="normal"><a href="#__codelineno-18-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2"></a>
 <a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">sem</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># Allows 10 tasks to access a resource at a time</span>
 <a id="__codelineno-18-4" name="__codelineno-18-4"></a>
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">worker</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">worker</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
 <a id="__codelineno-18-6" name="__codelineno-18-6"></a>    <span class="k">async</span> <span class="k">with</span> <span class="n">sem</span><span class="p">:</span>
 <a id="__codelineno-18-7" name="__codelineno-18-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Worker </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> has started&quot;</span><span class="p">)</span>
 <a id="__codelineno-18-8" name="__codelineno-18-8"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -3907,14 +3928,14 @@
 <span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-19-10">10</a></span>
 <span class="normal"><a href="#__codelineno-19-11">11</a></span>
-<span class="normal"><a href="#__codelineno-19-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2"></a>
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">ticker</span><span class="p">(</span><span class="n">delay</span><span class="p">,</span> <span class="n">to</span><span class="p">):</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">ticker</span><span class="p">(</span><span class="n">delay</span><span class="p">,</span> <span class="n">to</span><span class="p">):</span>
 <a id="__codelineno-19-4" name="__codelineno-19-4"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">to</span><span class="p">):</span>
 <a id="__codelineno-19-5" name="__codelineno-19-5"></a>        <span class="k">yield</span> <span class="n">i</span>
 <a id="__codelineno-19-6" name="__codelineno-19-6"></a>        <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
 <a id="__codelineno-19-7" name="__codelineno-19-7"></a>
-<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-19-9" name="__codelineno-19-9"></a>    <span class="k">async</span> <span class="k">for</span> <span class="n">tick</span> <span class="ow">in</span> <span class="n">ticker</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
 <a id="__codelineno-19-10" name="__codelineno-19-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tick: </span><span class="si">{</span><span class="n">tick</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-19-11" name="__codelineno-19-11"></a>
@@ -3936,12 +3957,12 @@
 <span class="normal"><a href="#__codelineno-20-12">12</a></span>
 <span class="normal"><a href="#__codelineno-20-13">13</a></span>
 <span class="normal"><a href="#__codelineno-20-14">14</a></span>
-<span class="normal"><a href="#__codelineno-20-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-20-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2"></a>
-<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">raise_exception</span><span class="p">():</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">raise_exception</span><span class="p">():</span>
 <a id="__codelineno-20-4" name="__codelineno-20-4"></a>    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;An error occurred!&quot;</span><span class="p">)</span>
 <a id="__codelineno-20-5" name="__codelineno-20-5"></a>
-<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-20-7" name="__codelineno-20-7"></a>    <span class="n">tasks</span> <span class="o">=</span> <span class="p">[</span><span class="n">raise_exception</span><span class="p">(),</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
 <a id="__codelineno-20-8" name="__codelineno-20-8"></a>    <span class="n">results</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">tasks</span><span class="p">,</span> <span class="n">return_when</span><span class="o">=</span><span class="n">asyncio</span><span class="o">.</span><span class="n">FIRST_EXCEPTION</span><span class="p">)</span>
 <a id="__codelineno-20-9" name="__codelineno-20-9"></a>    <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
@@ -3965,12 +3986,12 @@
 <span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-21-10">10</a></span>
 <span class="normal"><a href="#__codelineno-21-11">11</a></span>
-<span class="normal"><a href="#__codelineno-21-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2"></a>
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">do_work</span><span class="p">():</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">do_work</span><span class="p">():</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-21-5" name="__codelineno-21-5"></a>
-<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-21-7" name="__codelineno-21-7"></a>    <span class="n">task</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">do_work</span><span class="p">())</span>
 <a id="__codelineno-21-8" name="__codelineno-21-8"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-21-9" name="__codelineno-21-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Main work done!&quot;</span><span class="p">)</span>
@@ -3997,14 +4018,14 @@
 <span class="normal"><a href="#__codelineno-22-12">12</a></span>
 <span class="normal"><a href="#__codelineno-22-13">13</a></span>
 <span class="normal"><a href="#__codelineno-22-14">14</a></span>
-<span class="normal"><a href="#__codelineno-22-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="kn">from</span> <span class="nn">concurrent.futures</span> <span class="kn">import</span> <span class="n">ProcessPoolExecutor</span>
+<span class="normal"><a href="#__codelineno-22-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">concurrent.futures</span><span class="w"> </span><span class="kn">import</span> <span class="n">ProcessPoolExecutor</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3"></a>
-<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="k">def</span> <span class="nf">cpu_bound_task</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">cpu_bound_task</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
 <a id="__codelineno-22-5" name="__codelineno-22-5"></a>    <span class="c1"># Simulating a CPU-bound task by calculating sum</span>
 <a id="__codelineno-22-6" name="__codelineno-22-6"></a>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <a id="__codelineno-22-7" name="__codelineno-22-7"></a>
-<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-22-9" name="__codelineno-22-9"></a>    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="mi">1000000</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
 <a id="__codelineno-22-10" name="__codelineno-22-10"></a>    <span class="k">with</span> <span class="n">ProcessPoolExecutor</span><span class="p">()</span> <span class="k">as</span> <span class="n">pool</span><span class="p">:</span>
 <a id="__codelineno-22-11" name="__codelineno-22-11"></a>        <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">loop</span><span class="o">.</span><span class="n">run_in_executor</span><span class="p">(</span><span class="n">pool</span><span class="p">,</span> <span class="n">cpu_bound_task</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">))</span>
@@ -4034,15 +4055,15 @@
 <span class="normal"><a href="#__codelineno-23-17">17</a></span>
 <span class="normal"><a href="#__codelineno-23-18">18</a></span>
 <span class="normal"><a href="#__codelineno-23-19">19</a></span>
-<span class="normal"><a href="#__codelineno-23-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="kn">import</span> <span class="nn">multiprocessing</span>
+<span class="normal"><a href="#__codelineno-23-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">multiprocessing</span>
 <a id="__codelineno-23-3" name="__codelineno-23-3"></a>
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="k">def</span> <span class="nf">worker</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">worker</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
 <a id="__codelineno-23-5" name="__codelineno-23-5"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
 <a id="__codelineno-23-6" name="__codelineno-23-6"></a>        <span class="n">q</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <a id="__codelineno-23-7" name="__codelineno-23-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Produced </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-23-8" name="__codelineno-23-8"></a>
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">async_consumer</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">async_consumer</span><span class="p">(</span><span class="n">q</span><span class="p">):</span>
 <a id="__codelineno-23-10" name="__codelineno-23-10"></a>    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
 <a id="__codelineno-23-11" name="__codelineno-23-11"></a>        <span class="n">item</span> <span class="o">=</span> <span class="k">await</span> <span class="n">loop</span><span class="o">.</span><span class="n">run_in_executor</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">q</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
 <a id="__codelineno-23-12" name="__codelineno-23-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Consumed </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -4087,26 +4108,26 @@
 <span class="normal"><a href="#__codelineno-24-20">20</a></span>
 <span class="normal"><a href="#__codelineno-24-21">21</a></span>
 <span class="normal"><a href="#__codelineno-24-22">22</a></span>
-<span class="normal"><a href="#__codelineno-24-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="k">class</span> <span class="nc">EventBus</span><span class="p">:</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-24-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">EventBus</span><span class="p">:</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_listeners</span> <span class="o">=</span> <span class="p">{}</span>
 <a id="__codelineno-24-4" name="__codelineno-24-4"></a>
-<a id="__codelineno-24-5" name="__codelineno-24-5"></a>    <span class="k">def</span> <span class="nf">add_listener</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">listener</span><span class="p">):</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_listener</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">listener</span><span class="p">):</span>
 <a id="__codelineno-24-6" name="__codelineno-24-6"></a>        <span class="k">if</span> <span class="n">event</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_listeners</span><span class="p">:</span>
 <a id="__codelineno-24-7" name="__codelineno-24-7"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_listeners</span><span class="p">[</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 <a id="__codelineno-24-8" name="__codelineno-24-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_listeners</span><span class="p">[</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">listener</span><span class="p">)</span>
 <a id="__codelineno-24-9" name="__codelineno-24-9"></a>
-<a id="__codelineno-24-10" name="__codelineno-24-10"></a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
 <a id="__codelineno-24-11" name="__codelineno-24-11"></a>        <span class="k">for</span> <span class="n">listener</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_listeners</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="p">[]):</span>
 <a id="__codelineno-24-12" name="__codelineno-24-12"></a>            <span class="k">await</span> <span class="n">listener</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <a id="__codelineno-24-13" name="__codelineno-24-13"></a>
-<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">print_on_event</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">print_on_event</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
 <a id="__codelineno-24-15" name="__codelineno-24-15"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Received event with data: </span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-24-16" name="__codelineno-24-16"></a>
 <a id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="n">bus</span> <span class="o">=</span> <span class="n">EventBus</span><span class="p">()</span>
 <a id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="n">bus</span><span class="o">.</span><span class="n">add_listener</span><span class="p">(</span><span class="s2">&quot;data_event&quot;</span><span class="p">,</span> <span class="n">print_on_event</span><span class="p">)</span>
 <a id="__codelineno-24-19" name="__codelineno-24-19"></a>
-<a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-24-21" name="__codelineno-24-21"></a>    <span class="k">await</span> <span class="n">bus</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">&quot;data_event&quot;</span><span class="p">,</span> <span class="s2">&quot;Some event data&quot;</span><span class="p">)</span>
 <a id="__codelineno-24-22" name="__codelineno-24-22"></a>
 <a id="__codelineno-24-23" name="__codelineno-24-23"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
@@ -4131,21 +4152,21 @@
 <span class="normal"><a href="#__codelineno-25-16">16</a></span>
 <span class="normal"><a href="#__codelineno-25-17">17</a></span>
 <span class="normal"><a href="#__codelineno-25-18">18</a></span>
-<span class="normal"><a href="#__codelineno-25-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">class</span> <span class="nc">ServiceActor</span><span class="p">:</span>
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-25-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">ServiceActor</span><span class="p">:</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-25-3" name="__codelineno-25-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_state</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-25-4" name="__codelineno-25-4"></a>
-<a id="__codelineno-25-5" name="__codelineno-25-5"></a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-25-6" name="__codelineno-25-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_state</span> <span class="o">+=</span> <span class="mi">1</span>
 <a id="__codelineno-25-7" name="__codelineno-25-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State incremented to </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-25-8" name="__codelineno-25-8"></a>
-<a id="__codelineno-25-9" name="__codelineno-25-9"></a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">decrement</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">decrement</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-25-10" name="__codelineno-25-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_state</span> <span class="o">-=</span> <span class="mi">1</span>
 <a id="__codelineno-25-11" name="__codelineno-25-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;State decremented to </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <a id="__codelineno-25-12" name="__codelineno-25-12"></a>
 <a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="n">actor</span> <span class="o">=</span> <span class="n">ServiceActor</span><span class="p">()</span>
 <a id="__codelineno-25-14" name="__codelineno-25-14"></a>
-<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-25-16" name="__codelineno-25-16"></a>    <span class="k">await</span> <span class="n">actor</span><span class="o">.</span><span class="n">increment</span><span class="p">()</span>
 <a id="__codelineno-25-17" name="__codelineno-25-17"></a>    <span class="k">await</span> <span class="n">actor</span><span class="o">.</span><span class="n">decrement</span><span class="p">()</span>
 <a id="__codelineno-25-18" name="__codelineno-25-18"></a>
@@ -4165,11 +4186,11 @@
 <span class="normal"><a href="#__codelineno-26-10">10</a></span>
 <span class="normal"><a href="#__codelineno-26-11">11</a></span>
 <span class="normal"><a href="#__codelineno-26-12">12</a></span>
-<span class="normal"><a href="#__codelineno-26-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kn">import</span> <span class="nn">rx</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="kn">from</span> <span class="nn">rx.scheduler.eventloop</span> <span class="kn">import</span> <span class="n">AsyncIOScheduler</span>
-<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-26-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">rx</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rx.scheduler.eventloop</span><span class="w"> </span><span class="kn">import</span> <span class="n">AsyncIOScheduler</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-26-4" name="__codelineno-26-4"></a>
-<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="n">observer</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">):</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">source</span><span class="p">(</span><span class="n">observer</span><span class="p">,</span> <span class="n">scheduler</span><span class="p">):</span>
 <a id="__codelineno-26-6" name="__codelineno-26-6"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="n">scheduler</span><span class="o">.</span><span class="n">loop</span><span class="p">)</span>
 <a id="__codelineno-26-7" name="__codelineno-26-7"></a>    <span class="n">observer</span><span class="o">.</span><span class="n">on_next</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <a id="__codelineno-26-8" name="__codelineno-26-8"></a>    <span class="n">observer</span><span class="o">.</span><span class="n">on_completed</span><span class="p">()</span>
@@ -4190,9 +4211,9 @@
 <span class="normal"><a href="#__codelineno-27-4">4</a></span>
 <span class="normal"><a href="#__codelineno-27-5">5</a></span>
 <span class="normal"><a href="#__codelineno-27-6">6</a></span>
-<span class="normal"><a href="#__codelineno-27-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-27-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2"></a>
-<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">forgot_await</span><span class="p">():</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">forgot_await</span><span class="p">():</span>
 <a id="__codelineno-27-4" name="__codelineno-27-4"></a>    <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Missing `await`</span>
 <a id="__codelineno-27-5" name="__codelineno-27-5"></a>
 <a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">set_debug</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
@@ -4203,7 +4224,7 @@
 <p>To help debug issues related to unclosed resources like sockets, you can enable logging:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
 <span class="normal"><a href="#__codelineno-28-2">2</a></span>
-<span class="normal"><a href="#__codelineno-28-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="kn">import</span> <span class="nn">logging</span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2"></a>
 <a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -4228,12 +4249,12 @@
 <span class="normal"><a href="#__codelineno-30-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-30-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-30-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-30-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="normal"><a href="#__codelineno-30-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2"></a>
-<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">example_task</span><span class="p">():</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">example_task</span><span class="p">():</span>
 <a id="__codelineno-30-4" name="__codelineno-30-4"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-30-5" name="__codelineno-30-5"></a>
-<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
 <a id="__codelineno-30-7" name="__codelineno-30-7"></a>    <span class="n">task</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">example_task</span><span class="p">())</span>
 <a id="__codelineno-30-8" name="__codelineno-30-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Running tasks:&quot;</span><span class="p">,</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">all_tasks</span><span class="p">())</span>
 <a id="__codelineno-30-9" name="__codelineno-30-9"></a>
@@ -4249,8 +4270,8 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
 <span class="normal"><a href="#__codelineno-32-2">2</a></span>
 <span class="normal"><a href="#__codelineno-32-3">3</a></span>
-<span class="normal"><a href="#__codelineno-32-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="kn">import</span> <span class="nn">uvloop</span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">uvloop</span>
 <a id="__codelineno-32-3" name="__codelineno-32-3"></a>
 <a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop_policy</span><span class="p">(</span><span class="n">uvloop</span><span class="o">.</span><span class="n">EventLoopPolicy</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
@@ -4328,14 +4349,14 @@
 <span class="normal"><a href="#__codelineno-33-55">55</a></span>
 <span class="normal"><a href="#__codelineno-33-56">56</a></span>
 <span class="normal"><a href="#__codelineno-33-57">57</a></span>
-<span class="normal"><a href="#__codelineno-33-58">58</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kn">import</span> <span class="nn">time</span>
+<span class="normal"><a href="#__codelineno-33-58">58</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <a id="__codelineno-33-2" name="__codelineno-33-2"></a>
-<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="k">class</span> <span class="nc">Task</span><span class="p">:</span>
-<a id="__codelineno-33-4" name="__codelineno-33-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen</span><span class="p">):</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Task</span><span class="p">:</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gen</span><span class="p">):</span>
 <a id="__codelineno-33-5" name="__codelineno-33-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_gen</span> <span class="o">=</span> <span class="n">gen</span>
 <a id="__codelineno-33-6" name="__codelineno-33-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_wake_up_time</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-33-7" name="__codelineno-33-7"></a>
-<a id="__codelineno-33-8" name="__codelineno-33-8"></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-33-9" name="__codelineno-33-9"></a>        <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wake_up_time</span><span class="p">:</span>
 <a id="__codelineno-33-10" name="__codelineno-33-10"></a>            <span class="k">return</span> <span class="kc">False</span>
 <a id="__codelineno-33-11" name="__codelineno-33-11"></a>        <span class="k">try</span><span class="p">:</span>
@@ -4344,21 +4365,21 @@
 <a id="__codelineno-33-14" name="__codelineno-33-14"></a>        <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
 <a id="__codelineno-33-15" name="__codelineno-33-15"></a>            <span class="k">return</span> <span class="kc">False</span>
 <a id="__codelineno-33-16" name="__codelineno-33-16"></a>
-<a id="__codelineno-33-17" name="__codelineno-33-17"></a>    <span class="k">def</span> <span class="nf">set_wake_up_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+<a id="__codelineno-33-17" name="__codelineno-33-17"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">set_wake_up_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
 <a id="__codelineno-33-18" name="__codelineno-33-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_wake_up_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="n">delay</span>
 <a id="__codelineno-33-19" name="__codelineno-33-19"></a>
-<a id="__codelineno-33-20" name="__codelineno-33-20"></a><span class="k">class</span> <span class="nc">Scheduler</span><span class="p">:</span>
-<a id="__codelineno-33-21" name="__codelineno-33-21"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-33-20" name="__codelineno-33-20"></a><span class="k">class</span><span class="w"> </span><span class="nc">Scheduler</span><span class="p">:</span>
+<a id="__codelineno-33-21" name="__codelineno-33-21"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-33-22" name="__codelineno-33-22"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_tasks</span> <span class="o">=</span> <span class="p">[]</span>
 <a id="__codelineno-33-23" name="__codelineno-33-23"></a>
-<a id="__codelineno-33-24" name="__codelineno-33-24"></a>    <span class="k">def</span> <span class="nf">add_task</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task_gen</span><span class="p">):</span>
+<a id="__codelineno-33-24" name="__codelineno-33-24"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_task</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task_gen</span><span class="p">):</span>
 <a id="__codelineno-33-25" name="__codelineno-33-25"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Task</span><span class="p">(</span><span class="n">task_gen</span><span class="p">))</span>
 <a id="__codelineno-33-26" name="__codelineno-33-26"></a>
-<a id="__codelineno-33-27" name="__codelineno-33-27"></a>    <span class="k">def</span> <span class="nf">sleep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_task</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
+<a id="__codelineno-33-27" name="__codelineno-33-27"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">sleep</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_task</span><span class="p">,</span> <span class="n">delay</span><span class="p">):</span>
 <a id="__codelineno-33-28" name="__codelineno-33-28"></a>        <span class="n">current_task</span><span class="o">.</span><span class="n">set_wake_up_time</span><span class="p">(</span><span class="n">delay</span><span class="p">)</span>
 <a id="__codelineno-33-29" name="__codelineno-33-29"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_tasks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_task</span><span class="p">)</span>
 <a id="__codelineno-33-30" name="__codelineno-33-30"></a>
-<a id="__codelineno-33-31" name="__codelineno-33-31"></a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-33-31" name="__codelineno-33-31"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-33-32" name="__codelineno-33-32"></a>        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tasks</span><span class="p">:</span>
 <a id="__codelineno-33-33" name="__codelineno-33-33"></a>            <span class="n">current_task</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tasks</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <a id="__codelineno-33-34" name="__codelineno-33-34"></a>            <span class="k">if</span> <span class="ow">not</span> <span class="n">current_task</span><span class="o">.</span><span class="n">run</span><span class="p">():</span>
@@ -4367,17 +4388,17 @@
 <a id="__codelineno-33-37" name="__codelineno-33-37"></a><span class="c1"># Global scheduler instance</span>
 <a id="__codelineno-33-38" name="__codelineno-33-38"></a><span class="n">scheduler</span> <span class="o">=</span> <span class="n">Scheduler</span><span class="p">()</span>
 <a id="__codelineno-33-39" name="__codelineno-33-39"></a>
-<a id="__codelineno-33-40" name="__codelineno-33-40"></a><span class="k">def</span> <span class="nf">async_sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">):</span>
+<a id="__codelineno-33-40" name="__codelineno-33-40"></a><span class="k">def</span><span class="w"> </span><span class="nf">async_sleep</span><span class="p">(</span><span class="n">delay</span><span class="p">):</span>
 <a id="__codelineno-33-41" name="__codelineno-33-41"></a>    <span class="k">yield</span>
 <a id="__codelineno-33-42" name="__codelineno-33-42"></a>    <span class="n">scheduler</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">current_task</span><span class="p">,</span> <span class="n">delay</span><span class="p">)</span>
 <a id="__codelineno-33-43" name="__codelineno-33-43"></a>    <span class="k">yield</span>
 <a id="__codelineno-33-44" name="__codelineno-33-44"></a>
-<a id="__codelineno-33-45" name="__codelineno-33-45"></a><span class="k">def</span> <span class="nf">coro1</span><span class="p">():</span>
+<a id="__codelineno-33-45" name="__codelineno-33-45"></a><span class="k">def</span><span class="w"> </span><span class="nf">coro1</span><span class="p">():</span>
 <a id="__codelineno-33-46" name="__codelineno-33-46"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coroutine 1: Start&quot;</span><span class="p">)</span>
 <a id="__codelineno-33-47" name="__codelineno-33-47"></a>    <span class="k">yield from</span> <span class="n">async_sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-33-48" name="__codelineno-33-48"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coroutine 1: After 2 seconds&quot;</span><span class="p">)</span>
 <a id="__codelineno-33-49" name="__codelineno-33-49"></a>
-<a id="__codelineno-33-50" name="__codelineno-33-50"></a><span class="k">def</span> <span class="nf">coro2</span><span class="p">():</span>
+<a id="__codelineno-33-50" name="__codelineno-33-50"></a><span class="k">def</span><span class="w"> </span><span class="nf">coro2</span><span class="p">():</span>
 <a id="__codelineno-33-51" name="__codelineno-33-51"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coroutine 2: Start&quot;</span><span class="p">)</span>
 <a id="__codelineno-33-52" name="__codelineno-33-52"></a>    <span class="k">yield from</span> <span class="n">async_sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a id="__codelineno-33-53" name="__codelineno-33-53"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coroutine 2: After 1 second&quot;</span><span class="p">)</span>
@@ -4436,7 +4457,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -2018,6 +2018,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../graph/graph.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2536,7 +2557,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">for</span> <span class="n">purchase</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">purchases</span><span class="p">:</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="k">if</span> <span class="n">purchase</span> <span class="o">&gt;</span> <span class="mf">1000.0</span><span class="p">:</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>            <span class="o">...</span>
@@ -2545,7 +2566,7 @@
 <h3 id="itertoolsislice-takes-first-ten"><code>itertools.islice</code> - Takes First Ten</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">islice</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">islice</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">purchases</span> <span class="o">=</span> <span class="n">islice</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="mf">1000.0</span><span class="p">,</span> <span class="n">purchases</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -2553,7 +2574,7 @@
 <h2 id="repeated-iterations-with-itertoolstee">Repeated Iterations with <code>itertools.tee</code></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">process_purchases</span><span class="p">(</span><span class="n">purchases</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">process_purchases</span><span class="p">(</span><span class="n">purchases</span><span class="p">):</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">min_</span><span class="p">,</span> <span class="n">max_</span><span class="p">,</span> <span class="n">avg</span> <span class="o">=</span> <span class="n">itertools</span><span class="o">.</span><span class="n">tee</span><span class="p">(</span><span class="n">purchases</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">min_</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_</span><span class="p">),</span> <span class="n">median</span><span class="p">(</span><span class="n">avg</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -2562,7 +2583,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">_iterate_array2d</span><span class="p">(</span><span class="n">array2d</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">_iterate_array2d</span><span class="p">(</span><span class="n">array2d</span><span class="p">):</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">array2d</span><span class="p">):</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>            <span class="k">yield</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">),</span> <span class="n">cell</span>
@@ -2577,7 +2598,7 @@
 <span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">search_nested</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">desired_value</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">search_nested</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">desired_value</span><span class="p">):</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="n">coord</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>            <span class="n">coord</span>
@@ -2585,7 +2606,7 @@
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a>            <span class="k">if</span> <span class="n">cell</span> <span class="o">==</span> <span class="n">desired_value</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a>        <span class="p">)</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">desired_value</span><span class="si">}</span><span class="s2"> not found&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">desired_value</span><span class="si">}</span><span class="s2"> not found&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;value </span><span class="si">%r</span><span class="s2"> found at [</span><span class="si">%i</span><span class="s2">, </span><span class="si">%i</span><span class="s2">]&quot;</span><span class="p">,</span> <span class="n">desired_value</span><span class="p">,</span> <span class="o">*</span><span class="n">coord</span><span class="p">)</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="k">return</span> <span class="n">coord</span>
 </code></pre></div></td></tr></table></div>
@@ -2597,11 +2618,11 @@
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
 <span class="normal"><a href="#__codelineno-5-7">7</a></span>
-<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span> <span class="nc">SequenceIterator</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">SequenceIterator</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="n">start</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">step</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a>        <span class="k">return</span> <span class="n">value</span>
@@ -2618,17 +2639,17 @@
 <span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-6-10">10</a></span>
 <span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span> <span class="nc">MappedRange</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MappedRange</span><span class="p">:</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Apply a transformation to a range of numbers.&quot;&quot;&quot;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transformation</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transformation</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_transformation</span> <span class="o">=</span> <span class="n">transformation</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_wrapped</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a>        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wrapped</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a>        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_transformation</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Index </span><span class="si">%d</span><span class="s2">: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10"></a>        <span class="k">return</span> <span class="n">result</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12"></a>        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_wrapped</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="coroutines">Coroutines</h2>
@@ -2651,7 +2672,7 @@
 <span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span> <span class="nf">stream_data</span><span class="p">(</span><span class="n">db_handler</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">stream_data</span><span class="p">(</span><span class="n">db_handler</span><span class="p">):</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a>        <span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a>            <span class="k">yield</span> <span class="n">db_handler</span><span class="o">.</span><span class="n">read_n_records</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -2674,7 +2695,7 @@
 <span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-8-10">10</a></span>
 <span class="normal"><a href="#__codelineno-8-11">11</a></span>
-<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">stream_db_records</span><span class="p">(</span><span class="n">db_handler</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">stream_db_records</span><span class="p">(</span><span class="n">db_handler</span><span class="p">):</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="n">retrieved_data</span> <span class="o">=</span> <span class="kc">None</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="n">previous_page_size</span> <span class="o">=</span> <span class="mi">10</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="k">try</span><span class="p">:</span>
@@ -2699,7 +2720,7 @@
 <span class="normal"><a href="#__codelineno-9-5">5</a></span>
 <span class="normal"><a href="#__codelineno-9-6">6</a></span>
 <span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nd">@contextlib</span><span class="o">.</span><span class="n">asynccontextmanager</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">db_management</span><span class="p">():</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">db_management</span><span class="p">():</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="k">try</span><span class="p">:</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a>        <span class="k">await</span> <span class="n">stop_database</span><span class="p">()</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a>        <span class="k">yield</span>
@@ -2724,20 +2745,20 @@
 <span class="normal"><a href="#__codelineno-10-16">16</a></span>
 <span class="normal"><a href="#__codelineno-10-17">17</a></span>
 <span class="normal"><a href="#__codelineno-10-18">18</a></span>
-<span class="normal"><a href="#__codelineno-10-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">asyncio</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kn">import</span> <span class="nn">random</span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">coroutine</span><span class="p">():</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">coroutine</span><span class="p">():</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="k">class</span> <span class="nc">RecordStreamer</span><span class="p">:</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_rows</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">RecordStreamer</span><span class="p">:</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_rows</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
 <a id="__codelineno-10-10" name="__codelineno-10-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_current_row</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-10-11" name="__codelineno-10-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_max_rows</span> <span class="o">=</span> <span class="n">max_rows</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12"></a>    <span class="k">def</span> <span class="fm">__aiter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__aiter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-10-13" name="__codelineno-10-13"></a>        <span class="k">return</span> <span class="bp">self</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14"></a>    <span class="k">async</span> <span class="k">def</span> <span class="fm">__anext__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a>    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="fm">__anext__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <a id="__codelineno-10-15" name="__codelineno-10-15"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_current_row</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_max_rows</span><span class="p">:</span>
 <a id="__codelineno-10-16" name="__codelineno-10-16"></a>            <span class="n">row</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_current_row</span><span class="p">,</span> <span class="k">await</span> <span class="n">coroutine</span><span class="p">())</span>
 <a id="__codelineno-10-17" name="__codelineno-10-17"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_current_row</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -2751,7 +2772,7 @@
 <span class="normal"><a href="#__codelineno-11-3">3</a></span>
 <span class="normal"><a href="#__codelineno-11-4">4</a></span>
 <span class="normal"><a href="#__codelineno-11-5">5</a></span>
-<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">record_streamer</span><span class="p">(</span><span class="n">max_rows</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">record_streamer</span><span class="p">(</span><span class="n">max_rows</span><span class="p">):</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>    <span class="n">current_row</span> <span class="o">=</span> <span class="mi">0</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a>    <span class="k">while</span> <span class="n">current_row</span> <span class="o">&lt;</span> <span class="n">max_rows</span><span class="p">:</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a>        <span class="n">row</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_row</span><span class="p">,</span> <span class="k">await</span> <span class="n">coroutine</span><span class="p">())</span>
@@ -2807,7 +2828,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1503,6 +1503,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#26-fromevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. fromEvent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. interval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-startwith" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. startWith
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-take" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. take
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2171,6 +2207,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../graph/graph.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2725,6 +2782,42 @@
   <a href="#25-throttletime" class="md-nav__link">
     <span class="md-ellipsis">
       25. throttleTime
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-fromevent" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. fromEvent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      27. interval
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-startwith" class="md-nav__link">
+    <span class="md-ellipsis">
+      28. startWith
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29-take" class="md-nav__link">
+    <span class="md-ellipsis">
+      29. take
     </span>
   </a>
   
@@ -3840,14 +3933,11 @@
 <a id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="w">  </span><span class="p">});</span>
 </code></pre></div></td></tr></table></div>
 <hr />
-<h2 id="additional-angular-features-beyond-rxjs-operators">Additional Angular Features Beyond RxJS Operators</h2>
-<p>Angular has introduced several innovative features recently to improve reactivity, component lifecycle management, and lazy loading. Here’s a closer look at more of these features:</p>
-<h3 id="1-signals-angular-16">1. <strong>Signals</strong> (Angular 16+)</h3>
+<h3 id="26-fromevent">26. fromEvent</h3>
 <ul>
-<li><strong>What it is</strong>: Signals are a reactivity model for managing component state, inspired by reactive programming concepts.</li>
-<li><strong>Use case</strong>: Provides a simpler way to manage local state in components, ideal for controlling reactivity without manual change detection.</li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<li><strong>Usage</strong>: Creates an Observable that emits events of a specific type from an Angular component template element.</li>
+<li><strong>Example</strong>:
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
@@ -3861,83 +3951,79 @@
 <span class="normal"><a href="#__codelineno-25-12">12</a></span>
 <span class="normal"><a href="#__codelineno-25-13">13</a></span>
 <span class="normal"><a href="#__codelineno-25-14">14</a></span>
-<span class="normal"><a href="#__codelineno-25-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">signal</span><span class="p">,</span><span class="w"> </span><span class="nx">computed</span><span class="p">,</span><span class="w"> </span><span class="nx">effect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a>
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="c1">// Define a signal</span>
-<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">signal</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-25-5" name="__codelineno-25-5"></a>
-<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="c1">// Computed signal</span>
-<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">doubleCounter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">computed</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">counter</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
-<a id="__codelineno-25-8" name="__codelineno-25-8"></a>
-<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="c1">// Effect on signal</span>
-<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="nx">effect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Counter value: </span><span class="si">${</span><span class="nx">counter</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="p">});</span>
-<a id="__codelineno-25-13" name="__codelineno-25-13"></a>
-<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="c1">// Update the signal</span>
-<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="nx">counter</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">counter</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// increments counter by 1</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="2-tosignal">2. <strong>toSignal</strong></h3>
-<ul>
-<li><strong>What it is</strong>: Converts an observable to a signal for seamless integration with Angular’s signal-based reactivity model.</li>
-<li><strong>Use case</strong>: Ideal for integrating RxJS streams or service observables with components using signals.</li>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span>
+<span class="normal"><a href="#__codelineno-25-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w"> </span><span class="nx">ElementRef</span><span class="p">,</span><span class="w"> </span><span class="nx">ViewChild</span><span class="p">,</span><span class="w"> </span><span class="nx">AfterViewInit</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fromEvent</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="kd">@Component</span><span class="p">({</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-example&#39;</span><span class="p">,</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">  </span><span class="nx">template</span><span class="o">:</span><span class="w"> </span><span class="sb">`&lt;button #myButton&gt;Click Me&lt;/button&gt;`</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="p">})</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">ExampleComponent</span><span class="w"> </span><span class="k">implements</span><span class="w"> </span><span class="nx">AfterViewInit</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">  </span><span class="kd">@ViewChild</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">static</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="nx">button</span><span class="o">!:</span><span class="w"> </span><span class="nx">ElementRef</span><span class="p">;</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">  </span><span class="nx">ngAfterViewInit</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">    </span><span class="nx">fromEvent</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;click&#39;</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Button clicked!&#39;</span><span class="p">);</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<hr />
+<h3 id="27-interval">27. interval</h3>
+<ul>
+<li><strong>Usage</strong>: Creates an Observable that emits sequential numbers every specified interval of time.</li>
+<li><strong>Example</strong>:
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
 <span class="normal"><a href="#__codelineno-26-2">2</a></span>
-<span class="normal"><a href="#__codelineno-26-3">3</a></span>
-<span class="normal"><a href="#__codelineno-26-4">4</a></span>
-<span class="normal"><a href="#__codelineno-26-5">5</a></span>
-<span class="normal"><a href="#__codelineno-26-6">6</a></span>
-<span class="normal"><a href="#__codelineno-26-7">7</a></span>
-<span class="normal"><a href="#__codelineno-26-8">8</a></span>
-<span class="normal"><a href="#__codelineno-26-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">interval</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">toSignal</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core/rxjs-interop&#39;</span><span class="p">;</span>
-<a id="__codelineno-26-3" name="__codelineno-26-3"></a>
-<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">interval$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">interval</span><span class="p">(</span><span class="mf">1000</span><span class="p">);</span><span class="w"> </span><span class="c1">// emits every second</span>
-<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">intervalSignal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">toSignal</span><span class="p">(</span><span class="nx">interval$</span><span class="p">);</span>
-<a id="__codelineno-26-6" name="__codelineno-26-6"></a>
-<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="nx">effect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Interval signal value: </span><span class="si">${</span><span class="nx">intervalSignal</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="p">});</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="3-defer-directive">3. <strong>defer Directive</strong></h3>
-<ul>
-<li><strong>What it is</strong>: A structural directive that defers rendering of components until specific conditions are met, like visibility or data readiness.</li>
-<li><strong>Use case</strong>: Ideal for improving performance by lazy-loading content.</li>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">interval</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="nx">interval</span><span class="p">(</span><span class="mf">1000</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">));</span><span class="w"> </span><span class="c1">// Emits a number every second</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<hr />
+<h3 id="28-startwith">28. startWith</h3>
+<ul>
+<li><strong>Usage</strong>: Emits the specified initial values before any values emitted by the source Observable.</li>
+<li><strong>Example</strong>:
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
 <span class="normal"><a href="#__codelineno-27-2">2</a></span>
-<span class="normal"><a href="#__codelineno-27-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="p">&lt;</span><span class="nt">ng-container</span> <span class="err">*</span><span class="na">defer</span><span class="o">=</span><span class="s">&quot;isVisible&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2"></a>  <span class="p">&lt;</span><span class="nt">app-heavy-component</span><span class="p">&gt;&lt;/</span><span class="nt">app-heavy-component</span><span class="p">&gt;</span>
-<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="p">&lt;/</span><span class="nt">ng-container</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="4-destroyref-componentdirective-destruction-event">4. <strong>destroyRef</strong> (Component/Directive Destruction Event)</h3>
-<ul>
-<li><strong>What it is</strong>: <code>DestroyRef</code> is a new injectable that allows for executing cleanup code when a component or directive is destroyed.</li>
-<li><strong>Use case</strong>: Useful for managing resources like WebSockets, non-Angular observables, or event listeners.</li>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span>
+<span class="normal"><a href="#__codelineno-27-5">5</a></span>
+<span class="normal"><a href="#__codelineno-27-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">startWith</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="k">of</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">  </span><span class="nx">startWith</span><span class="p">(</span><span class="mf">1</span><span class="p">)</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 1, 2, 3</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<hr />
+<h3 id="29-take">29. take</h3>
+<ul>
+<li><strong>Usage</strong>: Takes only the first N values from an Observable and then completes.</li>
+<li><strong>Example</strong>:
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
 <span class="normal"><a href="#__codelineno-28-2">2</a></span>
 <span class="normal"><a href="#__codelineno-28-3">3</a></span>
 <span class="normal"><a href="#__codelineno-28-4">4</a></span>
 <span class="normal"><a href="#__codelineno-28-5">5</a></span>
-<span class="normal"><a href="#__codelineno-28-6">6</a></span>
-<span class="normal"><a href="#__codelineno-28-7">7</a></span>
-<span class="normal"><a href="#__codelineno-28-8">8</a></span>
-<span class="normal"><a href="#__codelineno-28-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DestroyRef</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2"></a>
-<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">destroyRef</span><span class="o">:</span><span class="w"> </span><span class="kt">DestroyRef</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">myResource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">openResource</span><span class="p">();</span>
-<a id="__codelineno-28-5" name="__codelineno-28-5"></a>
-<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">destroyRef</span><span class="p">.</span><span class="nx">onDestroy</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">    </span><span class="nx">myResource</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// Clean up when destroyed</span>
-<a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="w">  </span><span class="p">});</span>
-<a id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="5-signal-store-experimental">5. <strong>Signal Store (Experimental)</strong></h3>
+<span class="normal"><a href="#__codelineno-28-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">take</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs/operators&#39;</span><span class="p">;</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="k">of</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">  </span><span class="nx">take</span><span class="p">(</span><span class="mf">3</span><span class="p">)</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">value</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 1, 2, 3</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<h2 id="additional-angular-features-beyond-rxjs-operators">Additional Angular Features Beyond RxJS Operators</h2>
+<p>Angular has introduced several innovative features recently to improve reactivity, component lifecycle management, and lazy loading. Here’s a closer look at more of these features:</p>
+<h3 id="1-signals-angular-16">1. <strong>Signals</strong> (Angular 16+)</h3>
 <ul>
-<li><strong>What it is</strong>: Angular’s experimental state management solution with signals.</li>
-<li><strong>Use case</strong>: Provides a simple API for state management without needing traditional stores or observables.</li>
+<li><strong>What it is</strong>: Signals are a reactivity model for managing component state, inspired by reactive programming concepts.</li>
+<li><strong>Use case</strong>: Provides a simpler way to manage local state in components, ideal for controlling reactivity without manual change detection.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
@@ -3953,102 +4039,194 @@
 <span class="normal"><a href="#__codelineno-29-12">12</a></span>
 <span class="normal"><a href="#__codelineno-29-13">13</a></span>
 <span class="normal"><a href="#__codelineno-29-14">14</a></span>
-<span class="normal"><a href="#__codelineno-29-15">15</a></span>
-<span class="normal"><a href="#__codelineno-29-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">signal</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-29-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">signal</span><span class="p">,</span><span class="w"> </span><span class="nx">computed</span><span class="p">,</span><span class="w"> </span><span class="nx">effect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2"></a>
-<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="kd">class</span><span class="w"> </span><span class="nx">CounterStore</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="w">  </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">signal</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="c1">// Define a signal</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">signal</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 <a id="__codelineno-29-5" name="__codelineno-29-5"></a>
-<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="w">  </span><span class="nx">increment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="p">}</span>
-<a id="__codelineno-29-10" name="__codelineno-29-10"></a>
-<a id="__codelineno-29-11" name="__codelineno-29-11"></a><span class="kd">const</span><span class="w"> </span><span class="nx">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CounterStore</span><span class="p">();</span>
-<a id="__codelineno-29-12" name="__codelineno-29-12"></a><span class="nx">effect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-29-13" name="__codelineno-29-13"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Count: </span><span class="si">${</span><span class="nx">store</span><span class="p">.</span><span class="nx">count</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<a id="__codelineno-29-14" name="__codelineno-29-14"></a><span class="p">});</span>
-<a id="__codelineno-29-15" name="__codelineno-29-15"></a>
-<a id="__codelineno-29-16" name="__codelineno-29-16"></a><span class="nx">store</span><span class="p">.</span><span class="nx">increment</span><span class="p">();</span><span class="w"> </span><span class="c1">// Count updates to 1</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="c1">// Computed signal</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">doubleCounter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">computed</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">counter</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a>
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="c1">// Effect on signal</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="nx">effect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Counter value: </span><span class="si">${</span><span class="nx">counter</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12"></a><span class="p">});</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13"></a>
+<a id="__codelineno-29-14" name="__codelineno-29-14"></a><span class="c1">// Update the signal</span>
+<a id="__codelineno-29-15" name="__codelineno-29-15"></a><span class="nx">counter</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">counter</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// increments counter by 1</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="2-tosignal">2. <strong>toSignal</strong></h3>
+<ul>
+<li><strong>What it is</strong>: Converts an observable to a signal for seamless integration with Angular’s signal-based reactivity model.</li>
+<li><strong>Use case</strong>: Ideal for integrating RxJS streams or service observables with components using signals.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span>
+<span class="normal"><a href="#__codelineno-30-5">5</a></span>
+<span class="normal"><a href="#__codelineno-30-6">6</a></span>
+<span class="normal"><a href="#__codelineno-30-7">7</a></span>
+<span class="normal"><a href="#__codelineno-30-8">8</a></span>
+<span class="normal"><a href="#__codelineno-30-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">interval</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">toSignal</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core/rxjs-interop&#39;</span><span class="p">;</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">interval$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">interval</span><span class="p">(</span><span class="mf">1000</span><span class="p">);</span><span class="w"> </span><span class="c1">// emits every second</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">intervalSignal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">toSignal</span><span class="p">(</span><span class="nx">interval$</span><span class="p">);</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a>
+<a id="__codelineno-30-7" name="__codelineno-30-7"></a><span class="nx">effect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Interval signal value: </span><span class="si">${</span><span class="nx">intervalSignal</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<a id="__codelineno-30-9" name="__codelineno-30-9"></a><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="3-defer-directive">3. <strong>defer Directive</strong></h3>
+<ul>
+<li><strong>What it is</strong>: A structural directive that defers rendering of components until specific conditions are met, like visibility or data readiness.</li>
+<li><strong>Use case</strong>: Ideal for improving performance by lazy-loading content.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="p">&lt;</span><span class="nt">ng-container</span> <span class="err">*</span><span class="na">defer</span><span class="o">=</span><span class="s">&quot;isVisible&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>  <span class="p">&lt;</span><span class="nt">app-heavy-component</span><span class="p">&gt;&lt;/</span><span class="nt">app-heavy-component</span><span class="p">&gt;</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="p">&lt;/</span><span class="nt">ng-container</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="4-destroyref-componentdirective-destruction-event">4. <strong>destroyRef</strong> (Component/Directive Destruction Event)</h3>
+<ul>
+<li><strong>What it is</strong>: <code>DestroyRef</code> is a new injectable that allows for executing cleanup code when a component or directive is destroyed.</li>
+<li><strong>Use case</strong>: Useful for managing resources like WebSockets, non-Angular observables, or event listeners.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span>
+<span class="normal"><a href="#__codelineno-32-6">6</a></span>
+<span class="normal"><a href="#__codelineno-32-7">7</a></span>
+<span class="normal"><a href="#__codelineno-32-8">8</a></span>
+<span class="normal"><a href="#__codelineno-32-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DestroyRef</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">destroyRef</span><span class="o">:</span><span class="w"> </span><span class="kt">DestroyRef</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">myResource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">openResource</span><span class="p">();</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">destroyRef</span><span class="p">.</span><span class="nx">onDestroy</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">    </span><span class="nx">myResource</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// Clean up when destroyed</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="5-signal-store-experimental">5. <strong>Signal Store (Experimental)</strong></h3>
+<ul>
+<li><strong>What it is</strong>: Angular’s experimental state management solution with signals.</li>
+<li><strong>Use case</strong>: Provides a simple API for state management without needing traditional stores or observables.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-33-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-33-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-33-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-33-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-33-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-33-10">10</a></span>
+<span class="normal"><a href="#__codelineno-33-11">11</a></span>
+<span class="normal"><a href="#__codelineno-33-12">12</a></span>
+<span class="normal"><a href="#__codelineno-33-13">13</a></span>
+<span class="normal"><a href="#__codelineno-33-14">14</a></span>
+<span class="normal"><a href="#__codelineno-33-15">15</a></span>
+<span class="normal"><a href="#__codelineno-33-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">signal</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="kd">class</span><span class="w"> </span><span class="nx">CounterStore</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="w">  </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">signal</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="w">  </span><span class="nx">increment</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a><span class="p">}</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="kd">const</span><span class="w"> </span><span class="nx">store</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CounterStore</span><span class="p">();</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="nx">effect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-13" name="__codelineno-33-13"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Count: </span><span class="si">${</span><span class="nx">store</span><span class="p">.</span><span class="nx">count</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<a id="__codelineno-33-14" name="__codelineno-33-14"></a><span class="p">});</span>
+<a id="__codelineno-33-15" name="__codelineno-33-15"></a>
+<a id="__codelineno-33-16" name="__codelineno-33-16"></a><span class="nx">store</span><span class="p">.</span><span class="nx">increment</span><span class="p">();</span><span class="w"> </span><span class="c1">// Count updates to 1</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="6-inject-function">6. <strong>inject Function</strong></h3>
 <ul>
 <li><strong>What it is</strong>: A utility function for injecting dependencies outside of Angular components.</li>
 <li><strong>Use case</strong>: Ideal for dependency injection in utility functions or standalone components.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
-<span class="normal"><a href="#__codelineno-30-2">2</a></span>
-<span class="normal"><a href="#__codelineno-30-3">3</a></span>
-<span class="normal"><a href="#__codelineno-30-4">4</a></span>
-<span class="normal"><a href="#__codelineno-30-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">inject</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">MyService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./my-service&#39;</span><span class="p">;</span>
-<a id="__codelineno-30-3" name="__codelineno-30-3"></a>
-<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">myService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">inject</span><span class="p">(</span><span class="nx">MyService</span><span class="p">);</span>
-<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="nx">myService</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span>
+<span class="normal"><a href="#__codelineno-34-3">3</a></span>
+<span class="normal"><a href="#__codelineno-34-4">4</a></span>
+<span class="normal"><a href="#__codelineno-34-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">inject</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">MyService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./my-service&#39;</span><span class="p">;</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">myService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">inject</span><span class="p">(</span><span class="nx">MyService</span><span class="p">);</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="nx">myService</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="7-host-directives">7. <strong>Host Directives</strong></h3>
 <ul>
 <li><strong>What it is</strong>: Host Directives allow you to add multiple directive functionalities directly to a component.</li>
 <li><strong>Use case</strong>: Useful for applying shared behaviors or styling directly to components without cluttering templates.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-31-10">10</a></span>
-<span class="normal"><a href="#__codelineno-31-11">11</a></span>
-<span class="normal"><a href="#__codelineno-31-12">12</a></span>
-<span class="normal"><a href="#__codelineno-31-13">13</a></span>
-<span class="normal"><a href="#__codelineno-31-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Directive</span><span class="p">,</span><span class="w"> </span><span class="nx">HostBinding</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2"></a>
-<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="kd">@Directive</span><span class="p">({</span>
-<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;[highlight]&#39;</span>
-<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="p">})</span>
-<a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">HighlightDirective</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="w">  </span><span class="kd">@HostBinding</span><span class="p">(</span><span class="s1">&#39;style.backgroundColor&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">bgColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;yellow&#39;</span><span class="p">;</span>
-<a id="__codelineno-31-8" name="__codelineno-31-8"></a><span class="p">}</span>
-<a id="__codelineno-31-9" name="__codelineno-31-9"></a>
-<a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="kd">@Component</span><span class="p">({</span>
-<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-example&#39;</span><span class="p">,</span>
-<a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">  </span><span class="nx">hostDirectives</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">HighlightDirective</span><span class="p">]</span>
-<a id="__codelineno-31-13" name="__codelineno-31-13"></a><span class="p">})</span>
-<a id="__codelineno-31-14" name="__codelineno-31-14"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">ExampleComponent</span><span class="w"> </span><span class="p">{}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span>
+<span class="normal"><a href="#__codelineno-35-12">12</a></span>
+<span class="normal"><a href="#__codelineno-35-13">13</a></span>
+<span class="normal"><a href="#__codelineno-35-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Directive</span><span class="p">,</span><span class="w"> </span><span class="nx">HostBinding</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="kd">@Directive</span><span class="p">({</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;[highlight]&#39;</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="p">})</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">HighlightDirective</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="w">  </span><span class="kd">@HostBinding</span><span class="p">(</span><span class="s1">&#39;style.backgroundColor&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">bgColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;yellow&#39;</span><span class="p">;</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="p">}</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a>
+<a id="__codelineno-35-10" name="__codelineno-35-10"></a><span class="kd">@Component</span><span class="p">({</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-example&#39;</span><span class="p">,</span>
+<a id="__codelineno-35-12" name="__codelineno-35-12"></a><span class="w">  </span><span class="nx">hostDirectives</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">HighlightDirective</span><span class="p">]</span>
+<a id="__codelineno-35-13" name="__codelineno-35-13"></a><span class="p">})</span>
+<a id="__codelineno-35-14" name="__codelineno-35-14"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">ExampleComponent</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="8-standalone-components-with-providers">8. <strong>Standalone Components with Providers</strong></h3>
 <ul>
 <li><strong>What it is</strong>: Allows defining providers directly within standalone components.</li>
 <li><strong>Use case</strong>: Simplifies dependency injection for components without NgModules.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-32-10">10</a></span>
-<span class="normal"><a href="#__codelineno-32-11">11</a></span>
-<span class="normal"><a href="#__codelineno-32-12">12</a></span>
-<span class="normal"><a href="#__codelineno-32-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Component</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">MyService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./my-service&#39;</span><span class="p">;</span>
-<a id="__codelineno-32-3" name="__codelineno-32-3"></a>
-<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="kd">@Component</span><span class="p">({</span>
-<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-standalone&#39;</span><span class="p">,</span>
-<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="w">  </span><span class="nx">standalone</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
-<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">  </span><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">MyService</span><span class="p">]</span>
-<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="p">})</span>
-<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">StandaloneComponent</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-10" name="__codelineno-32-10"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">myService</span><span class="o">:</span><span class="w"> </span><span class="kt">MyService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-11" name="__codelineno-32-11"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">myService</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
-<a id="__codelineno-32-12" name="__codelineno-32-12"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-32-13" name="__codelineno-32-13"></a><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-36-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-36-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-36-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-36-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-36-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-36-10">10</a></span>
+<span class="normal"><a href="#__codelineno-36-11">11</a></span>
+<span class="normal"><a href="#__codelineno-36-12">12</a></span>
+<span class="normal"><a href="#__codelineno-36-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Component</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">MyService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./my-service&#39;</span><span class="p">;</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="kd">@Component</span><span class="p">({</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-standalone&#39;</span><span class="p">,</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="w">  </span><span class="nx">standalone</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="w">  </span><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">MyService</span><span class="p">]</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="p">})</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">StandaloneComponent</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">myService</span><span class="o">:</span><span class="w"> </span><span class="kt">MyService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">myService</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-36-13" name="__codelineno-36-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr />
 <p>Each of these operators and Angular features gives you powerful tools for managing state, reactivity, and performance. Replace any <code>...</code> with additional details as needed.</p>
@@ -4101,7 +4279,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
