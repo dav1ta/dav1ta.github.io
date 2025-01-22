@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="../../talks/talks/">
+      
+      
+        <link rel="next" href="../../../docker/docker-compose/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
-        <title>Notes on Testing Hard-to-Test Aspects in Python Applications - Elibrary</title>
+        <title>Testing - Elibrary</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -102,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notes on Testing Hard-to-Test Aspects in Python Applications
+              Testing
             
           </span>
         </div>
@@ -212,17 +216,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -236,7 +242,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Python
@@ -945,14 +951,465 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../pytest_fixtures.py" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
     Testing
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-concurrency-and-parallelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Concurrency and Parallelism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Concurrency and Parallelism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-thread-safety-with-fixtures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Thread Safety with Fixtures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-time-dependent-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Time-Dependent Behavior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Time-Dependent Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-using-freezegun-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Using freezegun Library
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-randomness" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Randomness
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Randomness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-mocking-randomness" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Mocking Randomness
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-error-handling-and-edge-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Error Handling and Edge Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Error Handling and Edge Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-testing-exceptions-with-pytestraises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Testing Exceptions with pytest.raises
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-third-party-libraries-and-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Third-Party Libraries and APIs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Third-Party Libraries and APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-mocking-api-responses-with-requests-mock" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Mocking API Responses with requests-mock
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-file-system-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. File System Interactions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. File System Interactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-temporary-files-with-tmp_path-fixture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Temporary Files with tmp_path Fixture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-network-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Network Conditions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Network Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-testing-retries-with-mocking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Testing Retries with Mocking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-configuration-variations" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Configuration Variations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Configuration Variations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-parameterized-testing-with-pytestmarkparametrize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Parameterized Testing with pytest.mark.parametrize
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-data-consistency-in-distributed-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Data Consistency in Distributed Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Data Consistency in Distributed Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-simulating-network-partitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Simulating Network Partitions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-legacy-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Legacy Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Legacy Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenges_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-refactoring-for-dependency-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Refactoring for Dependency Injection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-testing-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Testing Techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Testing Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixtures-for-setupteardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixtures for Setup/Teardown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Coverage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterized-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterized Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fault Injection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mocking-with-context-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mocking with Context Managers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../type_annotations/type.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Typing
   </span>
   
 
@@ -1865,6 +2322,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programming/questions.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1893,7 +2371,7 @@
             
   
   <span class="md-ellipsis">
-    Django
+    System Design
   </span>
   
 
@@ -1902,6 +2380,90 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            System Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../system_design/design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../system_design/prob/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Django
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Django
           </label>
@@ -1949,10 +2511,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1963,8 +2525,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Odoo
           </label>
@@ -2032,10 +2594,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2046,8 +2608,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             Other
           </label>
@@ -2116,10 +2678,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
         
           
-          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2130,8 +2692,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_14">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
             <span class="md-nav__icon md-icon"></span>
             Cybersec
           </label>
@@ -2179,10 +2741,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
         
           
-          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2193,8 +2755,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_15">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
             <span class="md-nav__icon md-icon"></span>
             Rust
           </label>
@@ -2275,6 +2837,69 @@
   
   <span class="md-ellipsis">
     Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Daily life
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Daily life
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/nutr.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nutrition
   </span>
   
 
@@ -2648,11 +3273,62 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#additional-tips" class="md-nav__link">
+  <a href="#additional-testing-techniques" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Tips
+      Additional Testing Techniques
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Additional Testing Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixtures-for-setupteardown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixtures for Setup/Teardown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Coverage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterized-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameterized Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fault Injection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mocking-with-context-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mocking with Context Managers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2672,16 +3348,16 @@
 
 
 <h1 id="notes-on-testing-hard-to-test-aspects-in-python-applications">Notes on Testing Hard-to-Test Aspects in Python Applications</h1>
-<p>Testing Python applications requires thoughtful strategies, especially for hard-to-test scenarios. Here are challenges, examples, and additional testing techniques like fixtures and exception handling.</p>
+<p>Testing Python applications requires thoughtful strategies, especially for hard-to-test scenarios. Below are challenges, examples, and testing techniques like fixtures and exception handling, organized by common problem areas.</p>
 <hr />
 <h2 id="1-concurrency-and-parallelism">1. Concurrency and Parallelism</h2>
 <h3 id="challenges">Challenges:</h3>
 <ul>
-<li><strong>Thread safety</strong> (e.g., race conditions, deadlocks).</li>
+<li>Thread safety (e.g., race conditions, deadlocks).</li>
 <li>Correctness in multiprocessing and async behavior.</li>
 </ul>
 <h3 id="example-thread-safety-with-fixtures">Example: Thread Safety with Fixtures</h3>
-<p>Using <strong>pytest fixtures</strong> to initialize shared resources for threading tests:
+<p>Using <strong>pytest fixtures</strong> to initialize shared resources for threading tests:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -2727,15 +3403,16 @@
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a>        <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a>
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="k">assert</span> <span class="n">shared_counter</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">5</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="2-time-dependent-behavior">2. Time-Dependent Behavior</h2>
 <h3 id="challenges_1">Challenges:</h3>
 <ul>
-<li><code>datetime.now()</code> dependencies.</li>
+<li>Dependencies on <code>datetime.now()</code>.</li>
 <li>Handling scheduled tasks.</li>
 </ul>
 <h3 id="example-using-freezegun-library">Example: Using <code>freezegun</code> Library</h3>
+<p>Freeze time to test time-dependent code deterministically:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -2759,6 +3436,7 @@
 <li>Functions using randomization or stochastic behavior.</li>
 </ul>
 <h3 id="example-mocking-randomness">Example: Mocking Randomness</h3>
+<p>Patch random functions to produce predictable outputs:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -2781,10 +3459,11 @@
 <h2 id="4-error-handling-and-edge-cases">4. Error Handling and Edge Cases</h2>
 <h3 id="challenges_3">Challenges:</h3>
 <ul>
-<li>Testing edge cases and rare conditions.</li>
+<li>Testing rare conditions.</li>
 <li>Ensuring proper exception handling.</li>
 </ul>
 <h3 id="example-testing-exceptions-with-pytestraises">Example: Testing Exceptions with <code>pytest.raises</code></h3>
+<p>Assert that a function raises the expected exception:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -2809,10 +3488,10 @@
 <h2 id="5-third-party-libraries-and-apis">5. Third-Party Libraries and APIs</h2>
 <h3 id="challenges_4">Challenges:</h3>
 <ul>
-<li>Rate limits and downtime.</li>
-<li>Library upgrades introducing breaking changes.</li>
+<li>Handling rate limits, downtime, or library changes.</li>
 </ul>
 <h3 id="example-mocking-api-responses-with-requests-mock">Example: Mocking API Responses with <code>requests-mock</code></h3>
+<p>Simulate API responses without actual network calls:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -2841,9 +3520,10 @@
 <h2 id="6-file-system-interactions">6. File System Interactions</h2>
 <h3 id="challenges_5">Challenges:</h3>
 <ul>
-<li>Handling file locks, missing files, and permissions.</li>
+<li>File locks, missing files, permissions.</li>
 </ul>
 <h3 id="example-temporary-files-with-tmp_path-fixture">Example: Temporary Files with <code>tmp_path</code> Fixture</h3>
+<p>Use temporary paths to test file I/O safely:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
@@ -2864,9 +3544,10 @@
 <h2 id="7-network-conditions">7. Network Conditions</h2>
 <h3 id="challenges_6">Challenges:</h3>
 <ul>
-<li>Latency, dropped packets, or unreliable networks.</li>
+<li>Simulating latency, dropped packets, unreliable networks.</li>
 </ul>
 <h3 id="example-testing-retries-with-mocking">Example: Testing Retries with Mocking</h3>
+<p>Test retry logic by simulating intermittent failures:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -2897,9 +3578,10 @@
 <h2 id="8-configuration-variations">8. Configuration Variations</h2>
 <h3 id="challenges_7">Challenges:</h3>
 <ul>
-<li>Testing across environments and OS setups.</li>
+<li>Testing across different environments and OS setups.</li>
 </ul>
 <h3 id="example-parameterized-testing-with-pytestmarkparametrize">Example: Parameterized Testing with <code>pytest.mark.parametrize</code></h3>
+<p>Simulate different OS behaviors:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
@@ -2909,7 +3591,11 @@
 <span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">platform</span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">platform</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;os_name&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Linux&quot;</span><span class="p">,</span> <span class="s2">&quot;Windows&quot;</span><span class="p">,</span> <span class="s2">&quot;Darwin&quot;</span><span class="p">])</span>
@@ -2917,8 +3603,12 @@
 <a id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">mock_system</span><span class="p">():</span>
 <a id="__codelineno-7-7" name="__codelineno-7-7"></a>        <span class="k">return</span> <span class="n">os_name</span>
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="n">platform</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">mock_system</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>    <span class="k">assert</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="n">os_name</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="n">original_system</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>    <span class="n">platform</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">mock_system</span>  <span class="c1"># Temporarily override</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>        <span class="k">assert</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span> <span class="o">==</span> <span class="n">os_name</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>    <span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>        <span class="n">platform</span><span class="o">.</span><span class="n">system</span> <span class="o">=</span> <span class="n">original_system</span>  <span class="c1"># Restore original</span>
 </code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="9-data-consistency-in-distributed-systems">9. Data Consistency in Distributed Systems</h2>
@@ -2928,6 +3618,7 @@
 <li>Ensuring eventual consistency.</li>
 </ul>
 <h3 id="example-simulating-network-partitions">Example: Simulating Network Partitions</h3>
+<p>Use mock databases to simulate consistency checks:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
@@ -2970,9 +3661,10 @@
 <h2 id="10-legacy-code">10. Legacy Code</h2>
 <h3 id="challenges_9">Challenges:</h3>
 <ul>
-<li>Poorly documented and tightly coupled dependencies.</li>
+<li>Poor documentation, tightly coupled dependencies.</li>
 </ul>
 <h3 id="example-refactoring-for-dependency-injection">Example: Refactoring for Dependency Injection</h3>
+<p>Inject dependencies to improve testability:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -2994,49 +3686,33 @@
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a>    <span class="k">assert</span> <span class="n">legacy_function</span><span class="p">(</span><span class="n">mock_source</span><span class="p">)</span> <span class="o">==</span> <span class="mi">16</span>
 </code></pre></div></td></tr></table></div>
 <hr />
-<h2 id="additional-tips">Additional Tips</h2>
-<ol>
-<li><strong>Fixtures for Setup/Teardown</strong>:</li>
-<li>Use <code>pytest</code> fixtures for reusable test setup.</li>
-<li>
-<p>Example:
-     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<h2 id="additional-testing-techniques">Additional Testing Techniques</h2>
+<h3 id="fixtures-for-setupteardown">Fixtures for Setup/Teardown</h3>
+<p>Reuse setup code with pytest fixtures:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span>
 <span class="normal"><a href="#__codelineno-10-4">4</a></span>
 <span class="normal"><a href="#__codelineno-10-5">5</a></span>
-<span class="normal"><a href="#__codelineno-10-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">sample_data</span><span class="p">():</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_sum</span><span class="p">(</span><span class="n">sample_data</span><span class="p">):</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a>    <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p><strong>Test Coverage</strong>:</p>
-</li>
-<li>
-<p>Use tools like <code>coverage.py</code> to identify untested parts of your codebase.</p>
-</li>
-<li>
-<p><strong>Parameterized Tests</strong>:</p>
-</li>
-<li>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">sample_data</span><span class="p">():</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>    <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_sum</span><span class="p">(</span><span class="n">sample_data</span><span class="p">):</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>    <span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="test-coverage">Test Coverage</h3>
+<p>Use <code>coverage.py</code> to measure and improve test coverage.</p>
+<h3 id="parameterized-tests">Parameterized Tests</h3>
 <p>Cover multiple scenarios with <code>pytest.mark.parametrize</code>.</p>
-</li>
-<li>
-<p><strong>Fault Injection</strong>:</p>
-</li>
-<li>
-<p>Simulate failure scenarios (e.g., database errors, network latency).</p>
-</li>
-<li>
-<p><strong>Mocking with Context Managers</strong>:</p>
-</li>
-<li>Simplify mocking external dependencies.</li>
-</ol>
-<p>By addressing these areas with targeted testing strategies, you can improve your application's robustness and reliability.</p>
+<h3 id="fault-injection">Fault Injection</h3>
+<p>Simulate failures (e.g., database errors, network latency) to test resilience.</p>
+<h3 id="mocking-with-context-managers">Mocking with Context Managers</h3>
+<p>Simplify external dependency mocking using context managers.</p>
 
 
 
@@ -3083,10 +3759,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
       
     
   </body>
