@@ -1,0 +1,57 @@
+[api]
+enabled = true
+address = "0.0.0.0:8686"
+
+# Source 1: NATS JetStream (Durable Stream)
+[sources.in_nats]
+type = "nats"
+url = "nats://nats:4222"
+connection_name = "vector"
+queue = "vector-consumers" # Load balance between Vector instances
+subject = "logs.>"
+decoding.codec = "json"
+
+
+
+# Source 2: Internal Metrics (for Prometheus)
+[sources.internal_metrics]
+type = "internal_metrics"
+
+# Transform: Add metadata & Scrub PII
+[transforms.process_logs]
+type = "remap"
+inputs = ["in_nats"]
+source = '''
+  # Parse JSON is automatic with decoding.codec="json"
+  
+  # Parse timestamp from ISO format to Unix timestamp
+  .timestamp = parse_timestamp!(.timestamp, format: "%+")
+  
+  # Add ingestion timestamp
+  .ingested_at = now()
+  
+  # Ensure fields exist for ClickHouse
+  .service_id = .service_id || "unknown"
+  .level = .level || "INFO"
+  .message = .message || ""
+  .trace_id = .trace_id || ""
+  .user_id = .user_id || ""
+'''
+
+# Sink 1: ClickHouse (Storage)
+[sinks.out_clickhouse]
+type = "clickhouse"
+inputs = ["process_logs"]
+endpoint = "http://clickhouse:8123"
+database = "default"
+table = "app_logs"
+compression = "gzip"
+encoding.timestamp_format = "unix"
+batch.max_events = 100
+batch.timeout_secs = 1
+
+# Sink 2: Prometheus (Observability)
+[sinks.out_prometheus]
+type = "prometheus_exporter"
+inputs = ["internal_metrics"]
+address = "0.0.0.0:9598"

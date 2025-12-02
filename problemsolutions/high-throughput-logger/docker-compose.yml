@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  # 1. Message Broker (Async Buffer)
+  nats:
+    image: nats:2.9-alpine
+    container_name: nats
+    command: "-js -m 8222" # Enable JetStream, Monitor port
+    ports:
+      - "4222:4222" # Client
+      - "8222:8222" # Dashboard
+    volumes:
+      - nats_data:/data
+
+  # 1b. NATS Exporter (Metrics)
+  nats-exporter:
+    image: natsio/prometheus-nats-exporter:0.11.0
+    container_name: nats-exporter
+    command: -varz -connz -routez -subz -gatewayz -jsz=all http://nats:8222
+    ports:
+      - "7777:7777"
+    depends_on:
+      - nats
+
+  # 2. Log Collector & Processor
+  vector:
+    image: timberio/vector:0.34.0-alpine
+    container_name: vector
+    depends_on:
+      - nats
+      - clickhouse
+    volumes:
+      - ./vector.toml:/etc/vector/vector.toml:ro
+    ports:
+      - "8686:8686" # API / GraphQL
+      - "9598:9598" # Prometheus Exporter
+    environment:
+      - VECTOR_CONFIG=/etc/vector/vector.toml
+
+  # 3. OLAP Database (Storage)
+  clickhouse:
+    image: clickhouse/clickhouse-server:23.8-alpine
+    container_name: clickhouse
+    ports:
+      - "8123:8123" # HTTP
+      - "9010:9000" # Native
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+  # 4. Metrics (Observability)
+  prometheus:
+    image: prom/prometheus:v2.45.0
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  # 5. Visualization (Observability)
+  grafana:
+    image: grafana/grafana:10.0.0
+    container_name: mgrafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - prometheus
+
+  # 6. ClickHouse UI (Tabix)
+  tabix:
+    image: spoonest/clickhouse-tabix-web-client
+    container_name: tabix
+    ports:
+      - "8090:80"
+    depends_on:
+      - clickhouse
+
+volumes:
+  nats_data:
+  clickhouse_data:
