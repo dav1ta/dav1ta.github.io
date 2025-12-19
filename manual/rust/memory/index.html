@@ -12,22 +12,22 @@
         <link rel="prev" href="../object/">
       
       
-        <link rel="next" href="../../other/nutr/">
+        <link rel="next" href="../stdlib_recipes/">
       
       
         
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Memory - Elibrary</title>
+        <title>Memory & Tooling - Elibrary</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#memory-management" class="md-skip">
+        <a href="#memory-unsafe-macros-and-tooling" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Memory
+              Memory & Tooling
             
           </span>
         </div>
@@ -6303,6 +6303,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../vars/" class="md-nav__link">
         
   
@@ -6310,7 +6338,7 @@
   <span class="md-ellipsis">
     
   
-    Types
+    Fundamentals
   
 
     
@@ -6338,7 +6366,7 @@
   <span class="md-ellipsis">
     
   
-    Generators
+    Data & Generics
   
 
     
@@ -6366,7 +6394,7 @@
   <span class="md-ellipsis">
     
   
-    Objects
+    Async & Concurrency
   
 
     
@@ -6393,6 +6421,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -6401,7 +6431,7 @@
   <span class="md-ellipsis">
     
   
-    Memory
+    Memory & Tooling
   
 
     
@@ -6419,7 +6449,7 @@
   <span class="md-ellipsis">
     
   
-    Memory
+    Memory & Tooling
   
 
     
@@ -6435,6 +6465,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6443,166 +6475,109 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#memory-management" class="md-nav__link">
+  <a href="#table-of-contents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Memory Management
+        Table of Contents
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Memory Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#type-system-and-generics" class="md-nav__link">
+  <a href="#memory-model-and-smart-pointers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Type System and Generics
+        Memory Model and Smart Pointers
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Type System and Generics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pattern-matching" class="md-nav__link">
+  <a href="#interior-mutability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pattern Matching
+        Interior Mutability
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Pattern Matching">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#macros" class="md-nav__link">
+  <a href="#pinning-and-self-referential-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Macros
+        Pinning and Self-Referential Types
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Macros">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#unsafe-code-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conclusion
+        Unsafe Code Guidelines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foreign-function-interface-ffi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foreign Function Interface (FFI)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros-declarative-and-procedural" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros: Declarative and Procedural
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-fmt-clippy-tests-benches-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling: fmt, clippy, tests, benches, docs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiling-logging-and-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling, Logging, and Observability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaging-features-and-workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packaging, Features, and Workspaces
       
     </span>
   </a>
@@ -6613,6 +6588,146 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib_recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stdlib Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tooling_cargo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargo & Tooling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_web_db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI / Web / DB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../async_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Async Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -7504,6 +7619,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7512,166 +7629,109 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#memory-management" class="md-nav__link">
+  <a href="#table-of-contents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Memory Management
+        Table of Contents
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Memory Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#type-system-and-generics" class="md-nav__link">
+  <a href="#memory-model-and-smart-pointers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Type System and Generics
+        Memory Model and Smart Pointers
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Type System and Generics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pattern-matching" class="md-nav__link">
+  <a href="#interior-mutability" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pattern Matching
+        Interior Mutability
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Pattern Matching">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#macros" class="md-nav__link">
+  <a href="#pinning-and-self-referential-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Macros
+        Pinning and Self-Referential Types
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Macros">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#unsafe-code-guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conclusion
+        Unsafe Code Guidelines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#foreign-function-interface-ffi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foreign Function Interface (FFI)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macros-declarative-and-procedural" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macros: Declarative and Procedural
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-fmt-clippy-tests-benches-docs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling: fmt, clippy, tests, benches, docs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiling-logging-and-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling, Logging, and Observability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaging-features-and-workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packaging, Features, and Workspaces
       
     </span>
   </a>
@@ -7695,158 +7755,112 @@
 
 
 
-  <h1>Memory</h1>
-
-<h2 id="memory-management">Memory Management</h2>
-<h3 id="python">Python</h3>
+<h1 id="memory-unsafe-macros-and-tooling">Memory, Unsafe, Macros, and Tooling</h1>
+<p><strong>Overview:</strong> See the consolidated navigation in <a href="../">Rust Docs Overview</a>.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
 <ul>
-<li><strong>Garbage Collection</strong>: Python uses reference counting and a garbage collector to manage memory automatically. Developers have limited control over this process.</li>
+<li>Memory Model and Smart Pointers</li>
+<li>Interior Mutability</li>
+<li>Pinning and Self-Referential Types</li>
+<li>Unsafe Code Guidelines</li>
+<li>Foreign Function Interface (FFI)</li>
+<li>Macros: Declarative and Procedural</li>
+<li>Tooling: fmt, clippy, tests, benches, docs</li>
+<li>Profiling, Logging, and Observability</li>
+<li>Packaging, Features, and Workspaces</li>
 </ul>
+<h2 id="memory-model-and-smart-pointers">Memory Model and Smart Pointers</h2>
+<ul>
+<li>Stack vs heap is explicit through ownership. Dropping a value runs its <code>Drop</code> implementation deterministically.</li>
+<li>Use <code>Box&lt;T&gt;</code> to allocate on the heap and give a stable address; great for large enums or trait objects.</li>
+<li>Reference counting:</li>
+<li><code>Rc&lt;T&gt;</code> for shared ownership in single-threaded scenarios.</li>
+<li><code>Arc&lt;T&gt;</code> for thread-safe shared ownership; combine with <code>Mutex&lt;T&gt;</code>/<code>RwLock&lt;T&gt;</code> when mutation is needed.</li>
+<li>Borrowed smart pointers:</li>
+<li><code>Cow&lt;'a, T&gt;</code> to defer allocation until mutation is required.</li>
+<li><code>Weak&lt;T&gt;</code> to break reference cycles when using <code>Rc</code>/<code>Arc</code>.</li>
+</ul>
+<h2 id="interior-mutability">Interior Mutability</h2>
+<ul>
+<li><code>Cell&lt;T&gt;</code> enables copy-in/copy-out mutation for <code>Copy</code> types.</li>
+<li><code>RefCell&lt;T&gt;</code> enforces borrowing rules at runtime; panics on violation. Keep scopes narrow to avoid surprises.</li>
+<li><code>OnceCell</code>/<code>Lazy</code> provide single-assignment patterns; prefer them over <code>static mut</code>.</li>
+</ul>
+<h2 id="pinning-and-self-referential-types">Pinning and Self-Referential Types</h2>
+<ul>
+<li><code>Pin&lt;&amp;mut T&gt;</code> promises the value will not move in memory; needed for some async primitives and self-referential structs.</li>
+<li>Convert with <code>Box::pin</code> or <code>pin_utils::pin_mut!</code>. Avoid self-referential types when possible; refactor to store indices or handles instead of references.</li>
+</ul>
+<h2 id="unsafe-code-guidelines">Unsafe Code Guidelines</h2>
+<ul>
+<li>Unsafe unlocks five powers: dereferencing raw pointers, calling <code>unsafe fn</code>, implementing <code>unsafe trait</code>, accessing/modifying mutable statics, and inline assembly.</li>
+<li>Keep <code>unsafe</code> blocks small and documented with invariants you rely on.</li>
+<li>Prefer safe abstractions: look for crates that already encapsulate the unsafe (e.g., <code>bytemuck</code>, <code>bytes</code>, <code>parking_lot</code>).</li>
+</ul>
+<h2 id="foreign-function-interface-ffi">Foreign Function Interface (FFI)</h2>
+<ul>
+<li>Match C layout with <code>#[repr(C)]</code> and plain field types:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span>
-<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">gc</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># Create objects and circular references</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Circular</span><span class="p">:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">loop</span> <span class="o">=</span> <span class="bp">self</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1"># Force a garbage collection</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="rust">Rust</h3>
-<ul>
-<li><strong>Ownership System</strong>: Rust uses a compile-time ownership system with rules that the compiler checks to manage memory safely and efficiently, eliminating the need for a garbage collector.</li>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#[repr(C)]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">pub</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Point</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">pub</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="p">,</span><span class="w"> </span><span class="k">pub</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="kt">f64</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Declare externs: <code>extern "C" { fn c_func(arg: *const c_char) -&gt; c_int; }</code>.</li>
+<li>Export Rust to C consumers with <code>#[no_mangle] pub extern "C" fn</code> and stable signatures.</li>
+<li>Use <code>cbindgen</code> to generate C headers and <code>bindgen</code> to generate Rust bindings to C libraries. Ensure safety boundaries are enforced in wrapper functions.</li>
 </ul>
+<h2 id="macros-declarative-and-procedural">Macros: Declarative and Procedural</h2>
+<ul>
+<li>Declarative (<code>macro_rules!</code>) for pattern-based expansion:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">take_ownership</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span><span class="w"> </span><span class="c1">// `s` is dropped here</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kd">let</span><span class="w"> </span><span class="n">my_string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">from</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">);</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">take_ownership</span><span class="p">(</span><span class="n">my_string</span><span class="p">);</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1">// `my_string` can no longer be used here as ownership was moved to the function</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="type-system-and-generics">Type System and Generics</h2>
-<h3 id="python_1">Python</h3>
-<ul>
-<li><strong>Dynamic Typing</strong>: Python's type system is dynamic; type errors are only caught at runtime. Python 3.5+ introduced type hints for static analysis tools.</li>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="fm">macro_rules!</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="p">(</span><span class="cp">$($k</span><span class="p">:</span><span class="nc">expr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="cp">$v</span><span class="p">:</span><span class="nc">expr</span><span class="p">),</span><span class="o">*</span><span class="w"> </span><span class="cp">$(,</span><span class="p">)</span><span class="o">?</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">collections</span><span class="p">::</span><span class="n">HashMap</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">        </span><span class="cp">$(</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="cp">$k</span><span class="p">,</span><span class="w"> </span><span class="cp">$v</span><span class="p">);</span><span class="w"> </span><span class="p">)</span><span class="o">*</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="n">m</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="p">}};</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Procedural macros run at compile time and operate on token streams:</li>
+<li>Derive macros (<code>#[derive(Serialize, Deserialize)]</code>)</li>
+<li>Attribute macros (<code>#[tokio::main]</code>)</li>
+<li>Function-like macros (<code>foo!(...)</code>)</li>
+<li>Keep proc-macro crates minimal and fast; test with <code>cargo expand</code> to view expansions.</li>
 </ul>
+<h2 id="tooling-fmt-clippy-tests-benches-docs">Tooling: fmt, clippy, tests, benches, docs</h2>
+<ul>
+<li>Format: <code>cargo fmt</code> (enforce in CI).</li>
+<li>Lint: <code>cargo clippy -- -D warnings</code> for stricter hygiene.</li>
+<li>Unit tests live alongside code with <code>#[cfg(test)] mod tests { ... }</code>; integration tests go in <code>tests/</code>.</li>
+<li>Doc tests ensure examples stay correct. Use <code>///</code> comments and run <code>cargo test</code>.</li>
+<li>Benchmarks: use <code>criterion</code> for stable Rust (since <code>cargo bench</code> is nightly-only by default).</li>
+<li>Docs: <code>cargo doc --open</code> builds API docs; add module-level docs with <code>//!</code> at the top of a file.</li>
+</ul>
+<h2 id="profiling-logging-and-observability">Profiling, Logging, and Observability</h2>
+<ul>
+<li>Logging: pair <code>log</code> with <code>env_logger</code> for minimal setup, or adopt <code>tracing</code> for structured, async-aware spans.</li>
+<li>Profiling: <code>cargo flamegraph</code> (with <code>perf</code>), <code>dhat-rs</code>/<code>heaptrack</code> for allocations, <code>tokio-console</code> for runtime insight into async tasks.</li>
+<li>Metrics: <code>metrics</code> + <code>prometheus</code> exporter or <code>opentelemetry</code> for distributed traces.</li>
+</ul>
+<h2 id="packaging-features-and-workspaces">Packaging, Features, and Workspaces</h2>
+<ul>
+<li>Use Cargo features to toggle optional dependencies or functionality:<br />
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1"># Type hints are not enforced at runtime</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">)</span>  <span class="c1"># This is a runtime error, not caught by Python itself.</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="rust_1">Rust</h3>
-<ul>
-<li><strong>Static Typing with Generics</strong>: Rust's type system is static, enforcing types at compile time. Generics allow for type-safe code without sacrificing performance.</li>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">[features]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;cli&quot;</span><span class="p">]</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;clap&quot;</span><span class="p">]</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">serde</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;serde/derive&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Prefer additive, non-breaking features; avoid mutually exclusive flags unless documented.</li>
+<li>Workspaces reduce duplication of dependencies and share lockfiles; centralize common tooling (lint, fmt) at the root.</li>
+<li>Versioning: follow semver; keep <code>authors</code>/<code>repository</code> metadata; publish with <code>cargo publish --dry-run</code> before releasing.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">fn</span><span class="w"> </span><span class="nf">add_numbers</span><span class="o">&lt;</span><span class="n">T</span><span class="p">:</span><span class="w"> </span><span class="nc">std</span><span class="p">::</span><span class="n">ops</span><span class="p">::</span><span class="n">Add</span><span class="o">&lt;</span><span class="n">Output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">}</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kd">let</span><span class="w"> </span><span class="n">int_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// Works</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kd">let</span><span class="w"> </span><span class="n">float_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add_numbers</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Works</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1">// Rust compiler enforces type safety, errors are caught at compile time.</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="pattern-matching">Pattern Matching</h2>
-<h3 id="python_2">Python</h3>
-<ul>
-<li>Limited to simple matching cases using if-elif-else structures. Python 3.10 introduced match-case, similar to Rust's match, but it's less integrated into the language's core features.</li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1"># Using Python 3.10+ match-case</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">match</span> <span class="n">x</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Zero&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;One&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="k">case</span><span class="w"> </span><span class="k">_</span><span class="p">:</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something else&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="rust_2">Rust</h3>
-<ul>
-<li><strong>First-Class Feature</strong>: Pattern matching in Rust is powerful and deeply integrated, allowing matching against values, structs, enums, and more.</li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">Message</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">Quit</span><span class="p">,</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">Move</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">Write</span><span class="p">(</span><span class="nb">String</span><span class="p">),</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">fn</span><span class="w"> </span><span class="nf">process_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span><span class="w"> </span><span class="nc">Message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">        </span><span class="n">Message</span><span class="p">::</span><span class="n">Quit</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">),</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="n">Message</span><span class="p">::</span><span class="n">Move</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Move to x: {}, y: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">),</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">        </span><span class="n">Message</span><span class="p">::</span><span class="n">Write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Text message: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">text</span><span class="p">),</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="macros">Macros</h2>
-<h3 id="python_3">Python</h3>
-<ul>
-<li><strong>Macros are not natively supported</strong>: Python does not have a macro system. Metaprogramming in Python is typically done using decorators or other runtime features.</li>
-</ul>
-<h3 id="rust_3">Rust</h3>
-<ul>
-<li><strong>Powerful Macro System</strong>: Rust macros allow for writing code that writes other code, which is especially useful for reducing boilerplate and ensuring compile-time code generation.</li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span>
-<span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span>
-<span class="normal"><a href="#__codelineno-6-6">6</a></span>
-<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="fm">macro_rules!</span><span class="w"> </span><span class="n">say_hello</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">        </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello, Rust!&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="p">};</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">}</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="n">say_hello</span><span class="o">!</span><span class="p">();</span><span class="w"> </span><span class="c1">// This will print &quot;Hello, Rust!&quot; at runtime.</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="conclusion">Conclusion</h2>
-<p>This detailed comparison underscores the distinctive approaches of Python and Rust in handling advanced programming concepts. While Python offers simplicity and dynamic features conducive to rapid development, Rust provides a robust system for safe and efficient coding, leveraging its ownership model, type system, and concurrency features. Understanding these differences and their implications can significantly enhance a developer's ability to utilize the strengths of each language effectively.</p>
 
 
 
@@ -7896,10 +7910,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -19,15 +19,15 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Objects - Elibrary</title>
+        <title>Async & Concurrency - Elibrary</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#generators-and-iterators" class="md-skip">
+        <a href="#async-concurrency-and-parallelism" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Objects
+              Async & Concurrency
             
           </span>
         </div>
@@ -6303,6 +6303,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../vars/" class="md-nav__link">
         
   
@@ -6310,7 +6338,7 @@
   <span class="md-ellipsis">
     
   
-    Types
+    Fundamentals
   
 
     
@@ -6338,7 +6366,7 @@
   <span class="md-ellipsis">
     
   
-    Generators
+    Data & Generics
   
 
     
@@ -6365,6 +6393,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -6373,7 +6403,7 @@
   <span class="md-ellipsis">
     
   
-    Objects
+    Async & Concurrency
   
 
     
@@ -6391,7 +6421,7 @@
   <span class="md-ellipsis">
     
   
-    Objects
+    Async & Concurrency
   
 
     
@@ -6407,6 +6437,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6415,158 +6447,101 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#generators-and-iterators" class="md-nav__link">
+  <a href="#table-of-contents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Generators and Iterators
+        Table of Contents
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Generators and Iterators">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#context-managers" class="md-nav__link">
+  <a href="#concurrency-model-and-sendsync" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Context Managers
+        Concurrency Model and Send/Sync
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Context Managers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#asynchronous-programming" class="md-nav__link">
+  <a href="#threads-and-message-passing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Asynchronous Programming
+        Threads and Message Passing
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Asynchronous Programming">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concurrency" class="md-nav__link">
+  <a href="#shared-state-arc-mutex-rwlock" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Concurrency
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Concurrency">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
+        Shared State: Arc, Mutex, RwLock
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_3" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#async-foundations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rust
+        Async Foundations
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#tokio-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokio Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancellation-timeouts-and-backpressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cancellation, Timeouts, and Backpressure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocking-and-async-interop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocking and Async Interop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-concurrent-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing Concurrent Code
+      
+    </span>
+  </a>
   
 </li>
       
@@ -6593,7 +6568,147 @@
   <span class="md-ellipsis">
     
   
-    Memory
+    Memory & Tooling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stdlib_recipes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stdlib Recipes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tooling_cargo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cargo & Tooling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli_web_db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI / Web / DB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../async_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Async Patterns
   
 
     
@@ -7493,6 +7608,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7501,158 +7618,101 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#generators-and-iterators" class="md-nav__link">
+  <a href="#table-of-contents" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Generators and Iterators
+        Table of Contents
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Generators and Iterators">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#context-managers" class="md-nav__link">
+  <a href="#concurrency-model-and-sendsync" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Context Managers
+        Concurrency Model and Send/Sync
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Context Managers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#asynchronous-programming" class="md-nav__link">
+  <a href="#threads-and-message-passing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Asynchronous Programming
+        Threads and Message Passing
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Asynchronous Programming">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rust
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concurrency" class="md-nav__link">
+  <a href="#shared-state-arc-mutex-rwlock" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Concurrency
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Concurrency">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#python_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
+        Shared State: Arc, Mutex, RwLock
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#rust_3" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#async-foundations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rust
+        Async Foundations
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#tokio-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokio Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cancellation-timeouts-and-backpressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cancellation, Timeouts, and Backpressure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocking-and-async-interop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocking and Async Interop
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-concurrent-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing Concurrent Code
+      
+    </span>
+  </a>
   
 </li>
       
@@ -7673,219 +7733,129 @@
 
 
 
-  <h1>Objects</h1>
-
-<h2 id="generators-and-iterators">Generators and Iterators</h2>
-<h3 id="python">Python</h3>
+<h1 id="async-concurrency-and-parallelism">Async, Concurrency, and Parallelism</h1>
+<p><strong>Overview:</strong> See the consolidated navigation in <a href="../">Rust Docs Overview</a>.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
 <ul>
-<li><strong>Generators</strong>: Use <code>yield</code> for lazy evaluation.</li>
-<li><strong>Iterators</strong>: Objects that implement <code>__iter__</code> and <code>__next__</code>.</li>
+<li>Concurrency Model and Send/Sync</li>
+<li>Threads and Message Passing</li>
+<li>Shared State: Arc, Mutex, RwLock</li>
+<li>Async Foundations</li>
+<li>Tokio Patterns (applies to async-std with minor changes)</li>
+<li>Cancellation, Timeouts, and Backpressure</li>
+<li>Blocking and Async Interop</li>
+<li>Testing Concurrent Code</li>
 </ul>
+<h2 id="concurrency-model-and-sendsync">Concurrency Model and Send/Sync</h2>
+<ul>
+<li>Rust prevents data races at compile time. A type is</li>
+<li><code>Send</code> if it is safe to move to another thread,</li>
+<li><code>Sync</code> if <code>&amp;T</code> is safe to share between threads.</li>
+<li><code>Send + 'static</code> often bounds spawned tasks to avoid borrowed data escaping its scope.</li>
+<li><code>Send</code>/<code>Sync</code> are auto traits; custom unsafe impls are rare and should be justified.</li>
+</ul>
+<h2 id="threads-and-message-passing">Threads and Message Passing</h2>
+<ul>
+<li>Spawn threads with <code>std::thread::spawn</code> and join via <code>JoinHandle::join</code>.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span>
-<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">count_up_to</span><span class="p">(</span><span class="nb">max</span><span class="p">):</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="nb">max</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="k">yield</span> <span class="n">count</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">gen</span> <span class="o">=</span> <span class="n">count_up_to</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="rust">Rust</h3>
-<ul>
-<li><strong>Iterators</strong>: Core part of Rust, implemented via the <code>Iterator</code> trait.</li>
-<li><strong>No direct equivalent to <code>yield</code></strong>: But can achieve similar functionality with iterator adaptors or by implementing <code>Iterator</code> trait.</li>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">thread</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">let</span><span class="w"> </span><span class="n">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thread</span><span class="p">::</span><span class="n">spawn</span><span class="p">(</span><span class="o">||</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">let</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">handle</span><span class="p">.</span><span class="n">join</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Prefer message passing (<code>std::sync::mpsc</code> or <code>crossbeam::channel</code>) to reduce shared mutable state:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="n">tx</span><span class="p">,</span><span class="w"> </span><span class="n">rx</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">sync</span><span class="p">::</span><span class="n">mpsc</span><span class="p">::</span><span class="n">channel</span><span class="p">();</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="o">..</span><span class="mi">4</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tx</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="n">std</span><span class="p">::</span><span class="n">thread</span><span class="p">::</span><span class="n">spawn</span><span class="p">(</span><span class="k">move</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">tx</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">).</span><span class="n">unwrap</span><span class="p">());</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">for</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">rx</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">take</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{val}&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">CountUpTo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">count</span><span class="p">:</span><span class="w"> </span><span class="kt">u32</span><span class="p">,</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">max</span><span class="p">:</span><span class="w"> </span><span class="kt">u32</span><span class="p">,</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">}</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">impl</span><span class="w"> </span><span class="nb">Iterator</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">CountUpTo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="k">type</span><span class="w"> </span><span class="nc">Item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">u32</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="k">fn</span><span class="w"> </span><span class="nf">next</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Option</span><span class="o">&lt;</span><span class="bp">Self</span><span class="p">::</span><span class="n">Item</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">count</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">max</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">count</span><span class="p">;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">            </span><span class="bp">self</span><span class="p">.</span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">            </span><span class="nb">Some</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">            </span><span class="nb">None</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="p">}</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="kd">let</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CountUpTo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">count</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">max</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">};</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="context-managers">Context Managers</h2>
-<h3 id="python_1">Python</h3>
+<h2 id="shared-state-arc-mutex-rwlock">Shared State: Arc, Mutex, RwLock</h2>
 <ul>
-<li><strong>Context Managers</strong>: Use <code>with</code> statement to automatically manage resources.</li>
+<li>Use <code>Arc&lt;T&gt;</code> for shared ownership across threads; combine with <code>Mutex&lt;T&gt;</code> for mutable access:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::{</span><span class="n">sync</span><span class="p">::{</span><span class="n">Arc</span><span class="p">,</span><span class="w"> </span><span class="n">Mutex</span><span class="p">},</span><span class="w"> </span><span class="n">thread</span><span class="p">};</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">let</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arc</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">Mutex</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">handles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[];</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">for</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="o">..</span><span class="mi">8</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arc</span><span class="p">::</span><span class="n">clone</span><span class="p">(</span><span class="o">&amp;</span><span class="n">counter</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">handles</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">thread</span><span class="p">::</span><span class="n">spawn</span><span class="p">(</span><span class="k">move</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">lock</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="o">*</span><span class="n">n</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="p">}));</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="k">for</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">handles</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">h</span><span class="p">.</span><span class="n">join</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;count = {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">counter</span><span class="p">.</span><span class="n">lock</span><span class="p">().</span><span class="n">unwrap</span><span class="p">());</span>
+</code></pre></div></td></tr></table></div></li>
+<li><code>RwLock</code> allows many readers or one writer; avoid if write-heavy.</li>
+<li>Avoid deadlocks by minimizing lock scope and keeping lock acquisition order consistent.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">file_contents</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="rust_1">Rust</h3>
+<h2 id="async-foundations">Async Foundations</h2>
 <ul>
-<li><strong>RAII (Resource Acquisition Is Initialization)</strong>: Resources are released when the variable goes out of scope, similar to context managers. Uses the <code>Drop</code> trait.</li>
+<li><code>async fn</code> returns <code>impl Future</code>; execution requires a runtime.</li>
+<li>Polling is cooperative; await points yield control.</li>
+<li>Use <code>FutureExt::map</code>/<code>then</code> (from <code>futures</code>) for combinators, or structured concurrency with <code>tokio::try_join!</code>.</li>
 </ul>
+<h2 id="tokio-patterns">Tokio Patterns</h2>
+<ul>
+<li>Entry point: <code>#[tokio::main] async fn main() -&gt; anyhow::Result&lt;()&gt; { ... }</code></li>
+<li>Spawning: <code>tokio::spawn(async move { /* ... */ })</code> (tasks must be <code>Send + 'static</code>).</li>
+<li>Async I/O: <code>TcpStream</code>, <code>UdpSocket</code>, <code>File</code>, <code>AsyncRead/AsyncWrite</code> via <code>tokio::io</code>.</li>
+<li>Concurrency control:</li>
+<li><code>tokio::sync::mpsc</code> for channels.</li>
+<li><code>Semaphore</code> to cap concurrency.</li>
+<li><code>Mutex</code>/<code>RwLock</code> in <code>tokio::sync</code> are async-aware.</li>
+<li>Timers and cancellation:
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">::</span><span class="n">open</span><span class="p">(</span><span class="s">&quot;file.txt&quot;</span><span class="p">).</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Unable to open file&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="c1">// Use file</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span><span class="w"> </span><span class="c1">// `f` goes out of scope and is automatically closed here</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="asynchronous-programming">Asynchronous Programming</h2>
-<h3 id="python_2">Python</h3>
-<ul>
-<li><strong>Async/Await</strong>: Python 3.5+ supports <code>async</code> and <code>await</code> for asynchronous programming.</li>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">use</span><span class="w"> </span><span class="n">tokio</span><span class="p">::{</span><span class="n">time</span><span class="p">,</span><span class="w"> </span><span class="n">select</span><span class="p">};</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">select</span><span class="o">!</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">::</span><span class="n">sleep</span><span class="p">(</span><span class="n">Duration</span><span class="p">::</span><span class="n">from_secs</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;timeout&quot;</span><span class="p">),</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">do_work</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;done: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">res</span><span class="p">),</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">fetch_data</span><span class="p">():</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fetch_data</span><span class="p">()</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="rust_2">Rust</h3>
+<h2 id="cancellation-timeouts-and-backpressure">Cancellation, Timeouts, and Backpressure</h2>
 <ul>
-<li><strong>Async/Await</strong>: Rust also supports <code>async</code> and <code>await</code>, often used with <code>tokio</code> or <code>async-std</code>.</li>
+<li>Cancellation is cooperative; dropping a <code>JoinHandle</code> cancels the task. Ensure tasks check for shutdown signals (channels, <code>watch</code>, <code>Notify</code>).</li>
+<li>Apply timeouts with <code>tokio::time::timeout(duration, fut)</code>; handle <code>Elapsed</code>.</li>
+<li>For streams, apply backpressure with bounded channels or <code>buffer_unordered</code>/<code>buffered</code> to cap in-flight tasks.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">use</span><span class="w"> </span><span class="n">tokio</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="cp">#[tokio::main]</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">async</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fetch_data</span><span class="p">().</span><span class="k">await</span><span class="p">;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">}</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="k">async</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">fetch_data</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Result</span><span class="o">&lt;</span><span class="kt">u32</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;&#39;</span><span class="nb">static</span><span class="w"> </span><span class="kt">str</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="c1">// Simulate an async operation</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="n">tokio</span><span class="p">::</span><span class="n">time</span><span class="p">::</span><span class="n">sleep</span><span class="p">(</span><span class="n">tokio</span><span class="p">::</span><span class="n">time</span><span class="p">::</span><span class="n">Duration</span><span class="p">::</span><span class="n">from_secs</span><span class="p">(</span><span class="mi">2</span><span class="p">)).</span><span class="k">await</span><span class="p">;</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="nb">Ok</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h2 id="concurrency">Concurrency</h2>
-<h3 id="python_3">Python</h3>
+<h2 id="blocking-and-async-interop">Blocking and Async Interop</h2>
 <ul>
-<li><strong>Threading and Multiprocessing</strong>: Due to GIL, multiprocessing is often used for CPU-bound tasks.</li>
+<li>Do not perform blocking I/O or CPU-heavy work on the async runtime threads; offload with <code>tokio::task::spawn_blocking</code> or a dedicated thread pool.</li>
+<li>Bridging sync APIs: wrap in <code>spawn_blocking</code> or expose a sync facade for callers not on a runtime.</li>
+<li>Mixing runtimes is rarely necessary; prefer one runtime per process. For synchronous binaries, use <code>tokio::runtime::Runtime</code> when embedding.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">multiprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Process</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    <span class="c1"># Process data</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>    <span class="k">pass</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">Process</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">process_data</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">data</span><span class="p">,))</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>    <span class="n">p</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>    <span class="n">p</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="rust_3">Rust</h3>
+<h2 id="testing-concurrent-code">Testing Concurrent Code</h2>
 <ul>
-<li><strong>Concurrency</strong>: Rust's ownership and type system allow for safe concurrency without a GIL. Uses <code>std::thread</code>, <code>tokio</code> for async operations.</li>
+<li>Use <code>#[tokio::test]</code> or <code>#[actix_rt::test]</code> for async tests.</li>
+<li>In threaded tests, coordinate with channels instead of sleeps; if timing matters, prefer <code>loom</code> for deterministic concurrency testing.</li>
+<li>Validate absence of deadlocks by keeping tests short-lived and enabling <code>RUST_BACKTRACE=1</code> for panics. Use <code>cargo test -- --nocapture</code> to see log output.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span><span class="p">::</span><span class="n">thread</span><span class="p">;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">fn</span><span class="w"> </span><span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="c1">// Process data</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">}</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;data&quot;</span><span class="p">;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thread</span><span class="p">::</span><span class="n">spawn</span><span class="p">(</span><span class="k">move</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">        </span><span class="n">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="p">});</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="n">handle</span><span class="p">.</span><span class="n">join</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>Continuing with advanced examples, each section showcases the unique aspects and best practices of Python and Rust in handling complex programming scenarios.</p>
 
 
 
@@ -7935,10 +7905,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
