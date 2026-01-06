@@ -9445,6 +9445,7 @@
 <h1 id="embedding-and-composition">Embedding and Composition</h1>
 <p>Go favors composition over inheritance. Embedding promotes fields and methods.</p>
 <h2 id="struct-embedding">Struct Embedding</h2>
+<p>Compose structs by embedding fields.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -9463,6 +9464,7 @@
 </code></pre></div></td></tr></table></div>
 <p><code>Server</code> now has access to <code>Logger</code> methods directly.</p>
 <h2 id="interface-embedding">Interface Embedding</h2>
+<p>Compose interfaces by embedding smaller ones.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -9474,10 +9476,12 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="guidelines">Guidelines</h2>
+<p>Practical do and do not guidance for structure.</p>
 <ul>
 <li>Embed for reuse, not for deep type hierarchies.</li>
 <li>Prefer explicit fields when it improves clarity.</li>
 </ul>
+<p>Next: <a href="../../concurrency/overview/">Overview</a></p>
 
 
 

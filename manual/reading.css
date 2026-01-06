@@ -81,17 +81,46 @@
 /* Mobile tweaks */
 @media (max-width: 700px) {
   :root {
-    --reading-font-size: 1.06rem;
+    --reading-font-size: 0.88rem;
     --reading-side-pad: 0.9rem;
   }
+  .md-typeset h1 {
+    font-size: 1.45rem;
+  }
+  .md-typeset h2 {
+    font-size: 1.25rem;
+  }
+  .md-typeset h3 {
+    font-size: 1.12rem;
+  }
+  .md-typeset code,
+  .md-typeset pre {
+    font-size: 0.86em;
+  }
   .md-typeset pre > code {
-    font-size: 0.88em;
+    font-size: 0.84em;
   }
 }
 
 @media (max-width: 420px) {
   :root {
-    --reading-font-size: 1.02rem;
+    --reading-font-size: 0.84rem;
     --reading-side-pad: 0.75rem;
+  }
+  .md-typeset h1 {
+    font-size: 1.35rem;
+  }
+  .md-typeset h2 {
+    font-size: 1.18rem;
+  }
+  .md-typeset h3 {
+    font-size: 1.05rem;
+  }
+  .md-typeset code,
+  .md-typeset pre {
+    font-size: 0.83em;
+  }
+  .md-typeset pre > code {
+    font-size: 0.8em;
   }
 }

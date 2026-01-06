@@ -9469,15 +9469,18 @@
 <h1 id="performance-basics">Performance Basics</h1>
 <p>Measure first. Optimize after you have a clear bottleneck.</p>
 <h2 id="reduce-allocations">Reduce Allocations</h2>
+<p>Techniques to lower heap allocations.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">buf</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nx">buf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">buf</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="o">...</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Use <code>strings.Builder</code> or <code>bytes.Buffer</code> for concatenation.</p>
 <h2 id="avoid-unnecessary-conversions">Avoid Unnecessary Conversions</h2>
+<p>Minimize type conversions to keep code clear and reduce overhead.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// avoid []byte -&gt; string -&gt; []byte roundtrips in hot paths</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="reuse-objects">Reuse Objects</h2>
+<p>Reuse buffers and objects to reduce GC pressure.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">pool</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">sync</span><span class="p">.</span><span class="nx">Pool</span><span class="p">{</span>
@@ -9485,9 +9488,11 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="profile-with-benchmarks">Profile with Benchmarks</h2>
+<p>Use benchmarks to measure changes over time.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>go<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-bench<span class="w"> </span>.<span class="w"> </span>-benchmem
 </code></pre></div></td></tr></table></div>
 <p>If code is latency-sensitive, add pprof and measure.</p>
+<p>Next: <a href="../env_modules/">Environment &amp; Modules</a></p>
 
 
 

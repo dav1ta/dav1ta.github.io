@@ -9447,6 +9447,7 @@
 <h1 id="maps-and-sets">Maps and Sets</h1>
 <p>Maps are hash tables. Sets are usually implemented as <code>map[T]struct{}</code>.</p>
 <h2 id="maps">Maps</h2>
+<p>Key/value associative type and common operations.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -9473,6 +9474,7 @@
 - Iteration order is not guaranteed.
 - A nil map can be read from but not assigned to.</p>
 <h2 id="sets">Sets</h2>
+<p>Model sets using maps for membership checks.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -9485,6 +9487,7 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="concurrency">Concurrency</h2>
 <p>Maps are not safe for concurrent writes. Guard with a mutex or use <code>sync.Map</code>.</p>
+<p>Next: <a href="../structs/">Structs</a></p>
 
 
 

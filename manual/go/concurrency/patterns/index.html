@@ -9466,6 +9466,7 @@
 
 <h1 id="concurrency-patterns">Concurrency Patterns</h1>
 <h2 id="worker-pool">Worker Pool</h2>
+<p>Bounded concurrency with a pool of workers.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -9487,6 +9488,7 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="fan-out-fan-in">Fan-out / Fan-in</h2>
+<p>Spread work across goroutines and merge results.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -9508,11 +9510,13 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="pipeline">Pipeline</h2>
+<p>Connect stages with channels for streaming work.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">stage1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">in</span><span class="w"> </span><span class="o">&lt;-</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">stage2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">in</span><span class="w"> </span><span class="o">&lt;-</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="rate-limiting">Rate Limiting</h2>
+<p>Limit request or job throughput to protect services.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -9527,6 +9531,7 @@
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nx">handle</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>Next: <a href="../../patterns/web/">Web Services</a></p>
 
 
 

@@ -9467,6 +9467,7 @@
 <h1 id="structs-and-methods">Structs and Methods</h1>
 <p>Methods attach behavior to types.</p>
 <h2 id="defining-methods">Defining Methods</h2>
+<p>Attach methods to types to add behavior.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -9476,11 +9477,13 @@
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="nx">Counter</span><span class="p">)</span><span class="w"> </span><span class="nx">Value</span><span class="p">()</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">n</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="pointer-vs-value-receivers">Pointer vs Value Receivers</h2>
+<p>Choose receivers based on mutability and size.</p>
 <ul>
 <li>Use pointer receivers to mutate or avoid copying large structs.</li>
 <li>Value receivers work for small, immutable types.</li>
 </ul>
 <h2 id="method-sets">Method Sets</h2>
+<p>Which methods are available on a type or pointer.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -9502,12 +9505,14 @@
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1">// r = File{} // not ok, method set missing pointer receiver</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="constructor-pattern">Constructor Pattern</h2>
+<p>Create constructors to enforce invariants and defaults.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">NewCounter</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="nx">Counter</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">Counter</span><span class="p">{}</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>Next: <a href="../interfaces/">Interfaces</a></p>
 
 
 

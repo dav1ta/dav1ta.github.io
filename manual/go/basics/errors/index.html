@@ -9497,11 +9497,13 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="creating-errors">Creating Errors</h2>
+<p>Create errors with context and useful messages.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;bad input&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;bad input: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">msg</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="wrapping-and-unwrapping">Wrapping and Unwrapping</h2>
+<p>Add context to errors and unwrap causes.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -9517,6 +9519,7 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">if</span><span class="w"> </span><span class="nx">errors</span><span class="p">.</span><span class="nx">As</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="sentinel-errors">Sentinel Errors</h2>
+<p>Use shared error values for comparisons.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -9534,6 +9537,7 @@
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="custom-error-types">Custom Error Types</h2>
+<p>Define error types to carry structured details.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -9552,6 +9556,7 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="panic-and-recover">Panic and Recover</h2>
 <p>Use panic for programmer errors or impossible states, not expected failures.</p>
+<p>Next: <a href="../builtins/">Builtins</a></p>
 
 
 

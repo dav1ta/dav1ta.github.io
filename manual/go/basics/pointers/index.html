@@ -9469,6 +9469,7 @@
 <h1 id="pointers">Pointers</h1>
 <p>Pointers let you share and mutate values.</p>
 <h2 id="basics">Basics</h2>
+<p>Core language fundamentals and first steps.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">x</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">10</span>
@@ -9486,11 +9487,13 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="nx">Counter</span><span class="p">)</span><span class="w"> </span><span class="nx">Value</span><span class="p">()</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">n</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="new-vs">new vs &amp;</h2>
+<p>Use new to allocate and &amp; to take addresses.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">p1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">new</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="c1">// zeroed int</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">p2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">User</span><span class="p">{}</span><span class="w">  </span><span class="c1">// literal</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="common-pitfall-loop-variable-address">Common Pitfall: Loop Variable Address</h2>
+<p>Why taking the address of a loop variable can be surprising.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -9503,6 +9506,7 @@
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="nx">ptrs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">ptrs</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">v</span><span class="p">)</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<p>Next: <a href="../time/">Time</a></p>
 
 
 

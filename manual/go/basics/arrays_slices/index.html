@@ -9469,6 +9469,7 @@
 <h1 id="arrays-and-slices">Arrays and Slices</h1>
 <p>Arrays are fixed-size value types. Slices are dynamic views over arrays.</p>
 <h2 id="arrays">Arrays</h2>
+<p>Fixed-length sequences; use when size is known at compile time.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -9483,6 +9484,7 @@
 </code></pre></div></td></tr></table></div>
 <p>Passing an array copies it. Use a pointer or slice when you want sharing.</p>
 <h2 id="slices">Slices</h2>
+<p>Dynamic views over arrays with length and capacity.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -9501,6 +9503,7 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">e</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{}</span><span class="w">  </span><span class="c1">// empty but non-nil</span>
 </code></pre></div></td></tr></table></div></p>
 <h2 id="slicing-and-capacity">Slicing and Capacity</h2>
+<p>How slicing affects length and capacity.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -9510,6 +9513,7 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nx">t</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="w">    </span><span class="c1">// full slice expression, cap limited to 3</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="pitfalls">Pitfalls</h2>
+<p>Common mistakes and how to avoid them.</p>
 <ul>
 <li>Appending may reallocate; do not keep pointers to elements across append.</li>
 <li>Slicing a huge backing array keeps it alive. Copy into a new slice if needed.</li>
@@ -9518,6 +9522,7 @@
 <span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nx">big</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&lt;&lt;</span><span class="mi">20</span><span class="p">)</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nx">small</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">append</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="kc">nil</span><span class="p">),</span><span class="w"> </span><span class="nx">big</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="o">...</span><span class="p">)</span><span class="w"> </span><span class="c1">// copy to release big</span>
 </code></pre></div></td></tr></table></div>
+<p>Next: <a href="../maps_sets/">Maps &amp; Sets</a></p>
 
 
 

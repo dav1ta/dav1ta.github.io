@@ -9491,6 +9491,7 @@
 <h1 id="packages-and-modules">Packages and Modules</h1>
 <p>A package is a directory of Go files with the same <code>package</code> name. A module is a versioned collection of packages defined by <code>go.mod</code>.</p>
 <h2 id="imports">Imports</h2>
+<p>Import packages and use aliases or dot imports.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -9510,6 +9511,7 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kd">func</span><span class="w"> </span><span class="nx">NewClient</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="nx">Client</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">Client</span><span class="p">{}</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="init">init</h2>
+<p>Package init functions run before main.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -9517,12 +9519,14 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="module-basics">Module Basics</h2>
+<p>Module paths, versions, and go.mod basics.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>go<span class="w"> </span>mod<span class="w"> </span>init<span class="w"> </span>example.com/app
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>go<span class="w"> </span>mod<span class="w"> </span>tidy
 </code></pre></div></td></tr></table></div>
 <h2 id="internal-packages">internal Packages</h2>
 <p>Code under <code>internal/</code> is importable only from within the module.</p>
+<p>Next: <a href="../errors/">Errors</a></p>
 
 
 

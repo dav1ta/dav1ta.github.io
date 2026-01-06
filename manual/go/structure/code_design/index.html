@@ -9468,11 +9468,13 @@
 <h2 id="keep-apis-small">Keep APIs Small</h2>
 <p>Expose only what you need. A small surface area is easier to maintain.</p>
 <h2 id="accept-interfaces-return-concrete-types">Accept Interfaces, Return Concrete Types</h2>
+<p>Design APIs to accept interfaces for flexibility while returning concrete types for clarity.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">func</span><span class="w"> </span><span class="nx">NewStore</span><span class="p">(</span><span class="nx">db</span><span class="w"> </span><span class="o">*</span><span class="nx">sql</span><span class="p">.</span><span class="nx">DB</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="nx">Store</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="w"> </span><span class="o">*</span><span class="nx">Store</span><span class="p">)</span><span class="w"> </span><span class="nx">List</span><span class="p">(</span><span class="nx">ctx</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">([]</span><span class="nx">Item</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">...</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="functional-options">Functional Options</h2>
+<p>Option functions for flexible configuration APIs.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -9509,6 +9511,7 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="error-boundaries">Error Boundaries</h2>
 <p>Handle errors at boundaries. Keep inner layers pure and simple.</p>
+<p>Next: <a href="../practices/">Practices</a></p>
 
 
 

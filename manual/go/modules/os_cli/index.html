@@ -9444,20 +9444,24 @@
 
 <h1 id="os-and-cli">OS and CLI</h1>
 <h2 id="log">log</h2>
+<p>Basic logging utilities in the standard library.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">log</span><span class="p">.</span><span class="nx">SetFlags</span><span class="p">(</span><span class="nx">log</span><span class="p">.</span><span class="nx">LstdFlags</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">log</span><span class="p">.</span><span class="nx">Lshortfile</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;started&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="flag">flag</h2>
+<p>Command-line flag parsing with the standard library.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">port</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;port&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">8080</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;listen port&quot;</span><span class="p">)</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nx">flag</span><span class="p">.</span><span class="nx">Parse</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="osexec">os/exec</h2>
+<p>Run external commands and manage processes.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">cmd</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">exec</span><span class="p">.</span><span class="nx">Command</span><span class="p">(</span><span class="s">&quot;git&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;status&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">out</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">cmd</span><span class="p">.</span><span class="nx">CombinedOutput</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
+<p>Next: <a href="../net_data/">Networking &amp; Data</a></p>
 
 
 

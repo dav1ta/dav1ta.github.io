@@ -9444,6 +9444,7 @@
 
 <h1 id="io-and-files">I/O and Files</h1>
 <h2 id="io-and-bufio">io and bufio</h2>
+<p>I/O primitives and buffered I/O helpers.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -9463,11 +9464,13 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nx">line</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">ReadString</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="os-filepath-iofs">os, filepath, io/fs</h2>
+<p>Filesystem and path utilities in the standard library.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">files</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">ReadDir</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">path</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">filepath</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;file.txt&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="encodingjson">encoding/json</h2>
+<p>JSON encoding and decoding in the standard library.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -9484,6 +9487,7 @@
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kd">var</span><span class="w"> </span><span class="nx">u</span><span class="w"> </span><span class="nx">User</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nx">_</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">u</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p>Next: <a href="../os_cli/">OS &amp; CLI</a></p>
 
 
 

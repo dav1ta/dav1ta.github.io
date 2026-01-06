@@ -9467,6 +9467,7 @@
 <h1 id="config-and-secrets-5-layers">Config and Secrets (5 Layers)</h1>
 <p>Use a clear precedence order so config is predictable.</p>
 <h2 id="the-5-layers-low-high-priority">The 5 Layers (low -&gt; high priority)</h2>
+<p>Config precedence from low to high priority sources.</p>
 <ol>
 <li>Defaults in code</li>
 <li>Config file (optional)</li>
@@ -9476,6 +9477,7 @@
 </ol>
 <p>Keep it boring: deterministic, validated, and easy to debug.</p>
 <h2 id="minimal-standard-lib-loader">Minimal Standard-Lib Loader</h2>
+<p>Small config loader using only the standard library.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -9545,6 +9547,7 @@
 <a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="secrets">Secrets</h2>
+<p>Handle secrets securely and avoid leaking them.</p>
 <ul>
 <li>Never commit secrets to git.</li>
 <li>Prefer environment variables or mounted files (Kubernetes secrets).</li>
@@ -9564,6 +9567,7 @@
 <h2 id="when-you-need-a-library">When You Need a Library</h2>
 <p>If the config surface grows (multiple files, env + flags + overrides), use a config helper.
 See <a href="../libraries/">Common Libraries</a> for options.</p>
+<p>Next: <a href="../background_jobs/">Background Jobs</a></p>
 
 
 

@@ -9491,6 +9491,7 @@
 <h1 id="structs">Structs</h1>
 <p>Structs group related fields into a named type.</p>
 <h2 id="definition-and-literals">Definition and Literals</h2>
+<p>Define structs and create values with composite literals.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -9506,6 +9507,7 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">User</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Linus&quot;</span><span class="p">}</span><span class="w"> </span><span class="c1">// positional</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="zero-values">Zero Values</h2>
+<p>Default values for types when not initialized.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">u</span><span class="w"> </span><span class="nx">User</span>
@@ -9513,11 +9515,13 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">u</span><span class="p">.</span><span class="nx">Name</span><span class="p">)</span><span class="w"> </span><span class="c1">// &quot;&quot;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="pointers-to-structs">Pointers to Structs</h2>
+<p>Use struct pointers for mutation and efficiency.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">u</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">User</span><span class="p">{</span><span class="nx">ID</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">u</span><span class="p">.</span><span class="nx">Name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Ada&quot;</span><span class="w"> </span><span class="c1">// automatic dereference</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="struct-tags">Struct Tags</h2>
+<p>Annotate struct fields for encoding and validation.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -9533,6 +9537,7 @@
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">Point</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">Point</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">})</span><span class="w"> </span><span class="c1">// true</span>
 </code></pre></div></td></tr></table></div>
 <p>For non-comparable fields (slices, maps), use a custom equality function.</p>
+<p>Next: <a href="../functions/">Functions</a></p>
 
 
 

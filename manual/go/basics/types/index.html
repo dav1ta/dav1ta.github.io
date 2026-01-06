@@ -9535,6 +9535,7 @@
 <h1 id="go-types-and-literals">Go Types and Literals</h1>
 <p>Practical overview of Go's basic and composite types.</p>
 <h2 id="basic-types">Basic Types</h2>
+<p>Built-in numeric, boolean, and string types in Go.</p>
 <ul>
 <li>bool</li>
 <li>int, int8, int16, int32, int64</li>
@@ -9561,6 +9562,7 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kd">var</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="kt">rune</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="zero-values">Zero Values</h2>
+<p>Default values for types when not initialized.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -9572,6 +9574,7 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kd">var</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="w"> </span><span class="c1">// nil</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="composite-types">Composite Types</h2>
+<p>Arrays, slices, maps, and structs and how they compose.</p>
 <ul>
 <li>array: fixed length</li>
 <li>slice: dynamic view over an array</li>
@@ -9599,6 +9602,7 @@
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kd">var</span><span class="w"> </span><span class="nx">u</span><span class="w"> </span><span class="nx">User</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="literals-and-inference">Literals and Inference</h2>
+<p>Use literals and type inference to keep code concise.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -9610,6 +9614,7 @@
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nx">m</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="s">&quot;a&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="conversions-explicit-only">Conversions (Explicit Only)</h2>
+<p>Go requires explicit conversions between different types.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span>
@@ -9617,6 +9622,7 @@
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">float64</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="defined-types-vs-aliases">Defined Types vs Aliases</h2>
+<p>How defined types differ from aliases and why it matters.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">type</span><span class="w"> </span><span class="nx">UserID</span><span class="w"> </span><span class="kt">int</span><span class="w">      </span><span class="c1">// new defined type</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kd">type</span><span class="w"> </span><span class="nx">Bytes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="w">  </span><span class="c1">// alias</span>
@@ -9630,6 +9636,7 @@
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">f64</span><span class="w"> </span><span class="kt">float64</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">Pi</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">f32</span><span class="w"> </span><span class="kt">float32</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">Pi</span>
 </code></pre></div></td></tr></table></div>
+<p>Next: <a href="../arrays_slices/">Arrays &amp; Slices</a></p>
 
 
 

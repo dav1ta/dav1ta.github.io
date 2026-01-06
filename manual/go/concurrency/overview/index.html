@@ -9445,6 +9445,7 @@
 <h1 id="concurrency-overview">Concurrency Overview</h1>
 <p>Goroutines are lightweight threads managed by the Go runtime.</p>
 <h2 id="start-a-goroutine">Start a Goroutine</h2>
+<p>Launch concurrent work with the go keyword.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -9452,6 +9453,7 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}()</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="wait-for-work">Wait for Work</h2>
+<p>Coordinate goroutines to wait for completion.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -9467,10 +9469,12 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nx">wg</span><span class="p">.</span><span class="nx">Wait</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="key-ideas">Key Ideas</h2>
+<p>The core mental models to keep in mind.</p>
 <ul>
 <li>Concurrency is about structure, not parallelism.</li>
 <li>Always have a shutdown path to avoid goroutine leaks.</li>
 </ul>
+<p>Next: <a href="../channels_select/">Channels &amp; Select</a></p>
 
 
 

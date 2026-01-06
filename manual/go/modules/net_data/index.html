@@ -9466,6 +9466,7 @@
 
 <h1 id="networking-and-data">Networking and Data</h1>
 <h2 id="nethttp-client">net/http Client</h2>
+<p>HTTP client configuration and request patterns.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -9479,6 +9480,7 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">defer</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="nethttp-server">net/http Server</h2>
+<p>HTTP server setup and handler patterns.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -9490,6 +9492,7 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nx">_</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8080&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="net-and-crypto">net and crypto</h2>
+<p>Networking and cryptography packages overview.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -9501,6 +9504,7 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">rand</span><span class="p">.</span><span class="nx">Read</span><span class="p">(</span><span class="nx">buf</span><span class="p">)</span><span class="w"> </span><span class="c1">// crypto/rand</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="databasesql">database/sql</h2>
+<p>Core SQL database API and usage patterns.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -9515,6 +9519,7 @@
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nx">row</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">db</span><span class="p">.</span><span class="nx">QueryRow</span><span class="p">(</span><span class="s">&quot;select id, name from users where id=$1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">id</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
+<p>Next: <a href="../../structure/">Overview</a></p>
 
 
 
