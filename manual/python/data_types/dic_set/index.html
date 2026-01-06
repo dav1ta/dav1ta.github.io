@@ -9366,6 +9366,7 @@ hasing in python</p>
 <p>When adding 'Wed' to the set, Python computes the hash -5145319347887138165 and index 3. Python probes bucket 3 and sees that it is already taken. But the hash code stored there, 4199492796428269555 is different. As discussed in “Hashes and equality”, if two objects have different hashes, then their value is also different. This is an index collision. Python then probes the next bucket and finds it empty. So 'Wed' ends up at index 4, as shown in Figure 3-7.</p>
 <p>Adding the next element, 'Thu', is boring: there’s no collision, and it lands in its natural bucket, at index 7. Placing 'Fri' is more interesting. Its hash, 7021641685991143771 implies index 3, which is taken by 'Mon'. Probing the next bucket—4— Python finds the hash for 'Wed' stored there. The hash codes don’t match, so this is another index collision. Python probes the next bucket. It’s empty, so 'Fri' ends up at index 5. The end state of the hash table is shown in Figure 3-8.</p>
 <p>ahsh table for the set {'Mon', 'Tue', 'Wed', 'Thu', 'Fri'}. It is now 62.5% full—close to the ⅔ threshold.</p>
+<p>Next: <a href="../list_tuple/">List &amp; Tuple</a></p>
 
 
 

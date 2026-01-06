@@ -9350,6 +9350,7 @@ A <code>Transaction</code> service fails a transfer. A standard gRPC <code>INTER
 Rich Error Model (<code>google.rpc.Status</code>)</p>
 <p><strong>Solution Logic:</strong> 
 We will avoid mapping everything to simple HTTP-like status codes. Instead, we will use the <code>google.rpc.Status</code> model to attach strongly-typed error details (like a <code>QuotaFailure</code> or custom <code>TransactionError</code> message) to the gRPC error response, allowing the client to programmatically handle specific failure scenarios.</p>
+<p>Next: <a href="../../high-throughput-logger/problems/">High Throughput Logger</a></p>
 
 
 

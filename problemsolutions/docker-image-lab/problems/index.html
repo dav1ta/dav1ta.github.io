@@ -9345,6 +9345,7 @@
 <p><strong>Real-World Scenario:</strong> Adding or modifying unrelated files (docs, local scripts) forces Docker to re-upload large build contexts and invalidate layers, slowing every build.</p>
 <p><strong>System Design Pattern:</strong> Minimal Build Context &amp; Context Isolation</p>
 <p><strong>Solution Logic:</strong> Restructure the project so that the Docker build context includes only what is required to build and run the app, excluding logs, docs, and local tooling via directory layout and <code>.dockerignore</code>. This reduces context size, speeds up context transfer to the daemon/remote builder, and avoids spurious cache invalidations caused by files that should not affect the image. Architecturally, you treat the build context as an API boundary: small, explicit, and stable.</p>
+<p>Next: <a href="../../eda-vs-durable-execution/problems/">EDA vs Durable Execution</a></p>
 
 
 

@@ -9344,6 +9344,7 @@ An event occurs in your system (e.g., "UserRegistered"). You need to perform mul
 3.  <strong>Decoupling</strong>: The Main App (Producer) pushes data to an <code>asyncio.Queue</code>. It doesn't know about the publishers.
 4.  <strong>Worker</strong>: A background consumer reads from the Queue and calls the <code>FanOutPublisher</code>.
 5.  <strong>Error Isolation</strong>: If one publisher fails (e.g., Email is down), it shouldn't crash the others (DB/Search).</p>
+<p>Next: <a href="../../streaming-server-practice/problems/">Streaming Server Practice</a></p>
 
 
 
