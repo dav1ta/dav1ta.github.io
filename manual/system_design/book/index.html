@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -6965,6 +6965,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-design-often-missed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Design (Often Missed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Reliability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#scalability" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8791,6 +8813,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-design-often-missed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Design (Often Missed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Reliability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#scalability" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -8871,6 +8915,24 @@
 <li>Databases (SQL vs NoSQL, indexing)</li>
 <li>Consistency models and transactions</li>
 </ul>
+<h2 id="data-design-often-missed">Data Design (Often Missed)</h2>
+<ul>
+<li>Access patterns first (query shapes, latency targets, read/write ratio)</li>
+<li>Data model boundaries (entities, ownership, lifecycle)</li>
+<li>Partition keys and hot-key mitigation strategy</li>
+<li>Secondary indexes and their write amplification cost</li>
+<li>Retention, TTL, archival, and legal/compliance constraints</li>
+<li>Schema evolution plan (backward compatibility, rollouts, backfills)</li>
+<li>Data migration and dual-write/verification strategy</li>
+</ul>
+<h2 id="data-reliability">Data Reliability</h2>
+<ul>
+<li>Durability guarantees (WAL, replication factor, quorum rules)</li>
+<li>RPO/RTO targets mapped to backup + restore tests</li>
+<li>Idempotency and deduplication for at-least-once delivery</li>
+<li>Exactly-once semantics boundaries (where they are real vs simulated)</li>
+<li>Clock/time concerns (ordering, monotonic IDs, timezone handling)</li>
+</ul>
 <h2 id="scalability">Scalability</h2>
 <ul>
 <li>Horizontal scaling + stateless services</li>
@@ -8894,14 +8956,17 @@
 <ul>
 <li>Metrics, logs, traces</li>
 <li>SLOs/SLAs</li>
+<li>Data quality monitors (freshness, completeness, drift)</li>
+<li>Capacity signals (p95/p99 latency, queue lag, disk growth, cardinality)</li>
 </ul>
 <h2 id="design-interview-flow-short">Design Interview Flow (Short)</h2>
 <ol>
 <li>Requirements and constraints.</li>
 <li>High-level architecture.</li>
-<li>Data model and scaling plan.</li>
-<li>Bottlenecks and failure modes.</li>
-<li>Trade-offs and next steps.</li>
+<li>Data model, consistency, and durability choices.</li>
+<li>Scaling and partition strategy.</li>
+<li>Bottlenecks, failure modes, and operational runbooks.</li>
+<li>Trade-offs, costs, and next steps.</li>
 </ol>
 <p>Next: <a href="../../django/django/">Tips</a></p>
 
