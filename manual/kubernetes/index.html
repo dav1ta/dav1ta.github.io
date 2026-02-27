@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -6095,6 +6095,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -6111,6 +6129,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This Section
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -6848,62 +6896,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../system_design/design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Design Patterns
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../system_design/prob/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Problems
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../system_design/book/" class="md-nav__link">
         
   
@@ -6912,34 +6904,6 @@
     
   
     Book
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../system_design/event_driven/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Event-Driven Patterns
   
 
     
@@ -8670,6 +8634,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This Section
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -8687,8 +8670,16 @@
 
 <h1 id="kubernetes-docs-overview">Kubernetes Docs Overview</h1>
 <p>Concise notes on core concepts and operations.</p>
+<h2 id="how-to-use-this-section">How to Use This Section</h2>
 <ul>
-<li><a href="architecture/">Architecture</a></li>
+<li>Learning path: Architecture -&gt; Pods -&gt; ReplicaSets/Deployments -&gt; Services -&gt; Namespaces/Network -&gt; RBAC/Security -&gt; Scheduler/Lifecycle -&gt; Monitoring/Backup/Maintenance.</li>
+<li>Review loop: revisit Architecture, Services, Network, Security, and Monitoring before touching advanced operational changes.</li>
+<li>
+<p>Problem-solving mode: start from the failed layer (scheduling, networking, security, lifecycle, backup) and then return to the overview.</p>
+</li>
+<li>
+<p><a href="architecture/">Architecture</a></p>
+</li>
 <li><a href="pods/">Pods</a></li>
 <li><a href="replicasets/">ReplicaSets</a></li>
 <li><a href="deployments/">Deployments</a></li>

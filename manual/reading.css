@@ -3,6 +3,39 @@
   --reading-font-size: 0.9rem;
   --reading-line-height: 1.6;
   --reading-side-pad: 1.1rem;
+  /* Light mode (One Light-ish) */
+  --code-bg: #fafbfc;
+  --code-fg: #24292f;
+  --code-muted: #6a737d;
+  --code-keyword: #d73a49;
+  --code-string: #032f62;
+  --code-number: #005cc5;
+  --code-function: #6f42c1;
+  --code-operator: #d73a49;
+  --code-border: #e1e4e8;
+  --md-code-bg-color: var(--code-bg);
+  --md-code-fg-color: var(--code-fg);
+  --md-code-hl-comment-color: var(--code-muted);
+  --md-code-hl-keyword-color: var(--code-keyword);
+  --md-code-hl-string-color: var(--code-string);
+  --md-code-hl-number-color: var(--code-number);
+  --md-code-hl-function-color: var(--code-function);
+  --md-code-hl-name-color: var(--code-fg);
+  --md-code-hl-operator-color: var(--code-operator);
+  --md-code-hl-punctuation-color: var(--code-fg);
+}
+
+[data-md-color-scheme="slate"] {
+  /* Dark mode (Dracula) */
+  --code-bg: #282a36;
+  --code-fg: #f8f8f2;
+  --code-muted: #6272a4;
+  --code-keyword: #ff79c6;
+  --code-string: #f1fa8c;
+  --code-number: #bd93f9;
+  --code-function: #50fa7b;
+  --code-operator: #ff79c6;
+  --code-border: #44475a;
 }
 
 /* Core reading ergonomics */
@@ -71,11 +104,94 @@
   border-radius: 10px;
 }
 
+/* Theme-aware code snippets */
+.md-typeset .highlight,
+.md-typeset .highlighttable {
+  background-color: var(--code-bg) !important;
+  color: var(--code-fg);
+}
+
+.md-typeset .highlight pre,
+.md-typeset .highlighttable pre {
+  background-color: var(--code-bg) !important;
+  color: inherit;
+}
+
+.md-typeset .highlighttable td.linenos,
+.md-typeset .highlight .linenos,
+.md-typeset .highlight .linenodiv,
+.md-typeset .highlight .linenodiv pre {
+  background-color: var(--code-bg) !important;
+  color: var(--code-muted) !important;
+}
+
+.md-typeset .highlighttable td.linenos pre,
+.md-typeset .highlighttable .linenos pre,
+.md-typeset .highlight .linenos .normal,
+.md-typeset .highlighttable .linenos .normal,
+.md-typeset .highlight span.linenos,
+.md-typeset .highlighttable span.linenos {
+  background-color: transparent !important;
+  color: var(--code-muted) !important;
+}
+
+.md-typeset .highlighttable td.linenos {
+  border-right: 1px solid var(--code-border);
+}
+
+.md-typeset .highlight .c,
+.md-typeset .highlight .c1,
+.md-typeset .highlight .cm {
+  color: var(--code-muted);
+}
+
+.md-typeset .highlight .k,
+.md-typeset .highlight .kd,
+.md-typeset .highlight .kn {
+  color: var(--code-keyword);
+}
+
+.md-typeset .highlight .s,
+.md-typeset .highlight .sa,
+.md-typeset .highlight .sb,
+.md-typeset .highlight .s1,
+.md-typeset .highlight .s2 {
+  color: var(--code-string);
+}
+
+.md-typeset .highlight .m,
+.md-typeset .highlight .mi,
+.md-typeset .highlight .mf {
+  color: var(--code-number);
+}
+
+.md-typeset .highlight .nf,
+.md-typeset .highlight .fm {
+  color: var(--code-function);
+}
+
 /* Tables */
 .md-typeset table {
   display: block;
   overflow-x: auto;
   border-radius: 8px;
+}
+
+/* Galaxy Fold (open / inner display) */
+@media (min-width: 760px) and (max-width: 980px) and (min-height: 700px) {
+  :root {
+    --reading-max-width: 70ch;
+    --reading-font-size: 0.96rem;
+    --reading-side-pad: 1.35rem;
+  }
+
+  .md-typeset pre {
+    border-radius: 12px;
+  }
+
+  .md-typeset pre > code {
+    font-size: 0.9em;
+  }
 }
 
 /* Mobile tweaks */

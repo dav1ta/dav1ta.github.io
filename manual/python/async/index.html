@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -7692,62 +7692,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../system_design/design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Design Patterns
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../system_design/prob/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Problems
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../system_design/book/" class="md-nav__link">
         
   
@@ -7756,34 +7700,6 @@
     
   
     Book
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../system_design/event_driven/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Event-Driven Patterns
   
 
     
@@ -10351,14 +10267,14 @@
 </blockquote>
 <h3 id="1-introduction-to-asynchronous-programming">1. Introduction to Asynchronous Programming</h3>
 <p>Asynchronous programming is a method that allows for the execution of certain tasks concurrently without blocking the main thread. Instead of waiting for one task to complete before moving on to the next, asynchronous programming allows multiple tasks to run in "parallel", making better use of system resources and often speeding up overall execution.</p>
-<p><strong>Next topic:</strong> Traditional Multi-threading vs Asynchronous Programming.</p>
+<p><strong>Next topic:</strong> <a href="#2-traditional-multi-threading-vs-asynchronous-programming">Traditional Multi-threading vs Asynchronous Programming.</a></p>
 <h3 id="2-traditional-multi-threading-vs-asynchronous-programming">2. Traditional Multi-threading vs Asynchronous Programming</h3>
 <p>In traditional multi-threading, multiple threads run in parallel. Each thread might be executing a different task or function. While this allows for concurrent execution, it also introduces complexity with thread management, synchronization, and potential deadlocks.</p>
 <p>In contrast, asynchronous programming, especially in Python's context, utilizes a single-threaded event loop. Tasks are executed in this loop but can yield control back to the loop when waiting for some I/O operations, allowing other tasks to run.</p>
 <p><strong>Advantages of Asynchronous Programming:</strong>
 - <strong>Scalability:</strong> Asynchronous programs can handle many tasks with a single thread.
 - <strong>Simplicity:</strong> Avoids complexities of thread synchronization and deadlocks.</p>
-<p><strong>Next topic:</strong> Python's <code>asyncio</code> Basics.</p>
+<p><strong>Next topic:</strong> <a href="#3-pythons-asyncio-basics">Python's <code>asyncio</code> Basics.</a></p>
 <h3 id="3-pythons-asyncio-basics">3. Python's <code>asyncio</code> Basics</h3>
 <h4 id="31-async-await">3.1. <code>async</code> &amp; <code>await</code></h4>
 <p>To mark a function as asynchronous, you use the <code>async</code> keyword before <code>def</code>:
@@ -10425,7 +10341,7 @@
 <a id="__codelineno-3-15" name="__codelineno-3-15"></a>
 <a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Next topic:</strong> Asynchronous I/O with Python.</p>
+<p><strong>Next topic:</strong> <a href="#4-asynchronous-io-with-python">Asynchronous I/O with Python.</a></p>
 <h3 id="4-asynchronous-io-with-python">4. Asynchronous I/O with Python</h3>
 <p>One of the primary uses for asynchronous programming is handling Input/Output (I/O) operations without blocking. I/O-bound tasks, such as network requests or reading and writing to databases, often involve waiting. Asynchronous I/O lets us perform these tasks more efficiently.</p>
 <p>For instance, when fetching data from multiple URLs, instead of waiting for each request to complete one after another, you can fetch from multiple URLs "at the same time".</p>
@@ -10461,7 +10377,7 @@
 <a id="__codelineno-4-15" name="__codelineno-4-15"></a>
 <a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Next topic:</strong> Advanced Techniques in Asynchronous Programming.</p>
+<p><strong>Next topic:</strong> <a href="#5-advanced-techniques-in-asynchronous-programming">Advanced Techniques in Asynchronous Programming.</a></p>
 <h3 id="5-advanced-techniques-in-asynchronous-programming">5. Advanced Techniques in Asynchronous Programming</h3>
 <h4 id="51-managing-multiple-tasks-with-gather-wait">5.1. Managing Multiple Tasks with <code>gather</code> &amp; <code>wait</code></h4>
 <p>We've already seen <code>gather</code> in action, which waits for all tasks to complete and returns their results. However, sometimes you might want to proceed as soon as one of the tasks completes, and for that, you can use <code>asyncio.wait</code> with the <code>FIRST_COMPLETED</code> option.</p>
@@ -10553,7 +10469,7 @@
 <a id="__codelineno-7-11" name="__codelineno-7-11"></a>
 <a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Next topic:</strong> Integration with Other Libraries.</p>
+<p><strong>Next topic:</strong> <a href="#6-integration-with-other-libraries">Integration with Other Libraries.</a></p>
 <h3 id="6-integration-with-other-libraries">6. Integration with Other Libraries</h3>
 <h4 id="61-aiohttp-for-asynchronous-http-requests">6.1. <code>aiohttp</code> for Asynchronous HTTP Requests</h4>
 <p>We briefly touched on <code>aiohttp</code> earlier. It's a powerful library that provides asynchronous HTTP client and server functionality. The client lets you make non-blocking requests, while the server allows you to handle incoming requests asynchronously.</p>
@@ -10609,7 +10525,7 @@
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a>
 <a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Next topic:</strong> Potential Pitfalls and Common Mistakes.</p>
+<p><strong>Next topic:</strong> <a href="#7-potential-pitfalls-and-common-mistakes">Potential Pitfalls and Common Mistakes.</a></p>
 <h3 id="7-potential-pitfalls-and-common-mistakes">7. Potential Pitfalls and Common Mistakes</h3>
 <p>Understanding the potential pitfalls in asynchronous programming can save developers a lot of time and prevent unexpected behaviors.</p>
 <h4 id="71-mixing-sync-and-async-code">7.1. Mixing Sync and Async Code</h4>
@@ -10672,7 +10588,7 @@
 <a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
 <p>Always ensure you handle exceptions in your tasks, either within the task or when gathering/waiting for them.</p>
-<p><strong>Next topic:</strong> Best Practices &amp; Recommendations.</p>
+<p><strong>Next topic:</strong> <a href="#8-best-practices-recommendations">Best Practices &amp; Recommendations.</a></p>
 <h3 id="8-best-practices-recommendations">8. Best Practices &amp; Recommendations</h3>
 <p>When writing asynchronous code, following best practices can help maintainability, performance, and overall code quality.</p>
 <h4 id="81-use-async-and-await-consistently">8.1. Use <code>async</code> and <code>await</code> Consistently</h4>
@@ -10689,7 +10605,7 @@
 <p>This ensures that the session is properly closed after usage.</p>
 <h4 id="84-be-wary-of-thread-safety">8.4. Be Wary of Thread-Safety</h4>
 <p>Even though asynchronous code in Python usually runs in a single thread, if you integrate with other systems or use thread pools, be aware of thread-safety. Ensure shared resources are accessed in a thread-safe manner.</p>
-<p><strong>Next topic:</strong> Conclusion and Future of Python Async.</p>
+<p><strong>Next topic:</strong> <a href="#9-conclusion-and-future-of-python-async">Conclusion and Future of Python Async.</a></p>
 <h3 id="9-conclusion-and-future-of-python-async">9. Conclusion and Future of Python Async</h3>
 <p>Asynchronous programming in Python has come a long way, especially with the introduction and continuous development of <code>asyncio</code>. It provides a powerful toolset for writing efficient I/O-bound programs.</p>
 <p>However, like all tools, it's essential to understand its strengths and limitations, and when to use it. Not all problems are best solved with asynchronicity, and sometimes, traditional multi-threading or even multi-processing can be more appropriate.</p>
@@ -10830,7 +10746,7 @@
 <a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">bounded_producer</span><span class="p">(</span><span class="n">queue</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
 <p>When the queue reaches its maximum size, <code>queue.put</code> will block until there's room to add another item.</p>
-<p><strong>Next topic:</strong> More Advanced Techniques in Asynchronous Programming.</p>
+<p><strong>Next topic:</strong> <a href="#11-more-advanced-techniques-in-asynchronous-programming">More Advanced Techniques in Asynchronous Programming.</a></p>
 <h3 id="11-more-advanced-techniques-in-asynchronous-programming">11. More Advanced Techniques in Asynchronous Programming</h3>
 <h4 id="111-priority-queues">11.1. Priority Queues</h4>
 <p>You can use priority queues to ensure that some tasks get priority over others:</p>
@@ -10982,7 +10898,7 @@
 <a id="__codelineno-21-11" name="__codelineno-21-11"></a>
 <a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Next topic:</strong> Combining Async IO with Multiprocessing.</p>
+<p><strong>Next topic:</strong> <a href="#12-combining-async-io-with-multiprocessing">Combining Async IO with Multiprocessing.</a></p>
 <h3 id="12-combining-async-io-with-multiprocessing">12. Combining Async IO with Multiprocessing</h3>
 <p>While <code>asyncio</code> excels at I/O-bound tasks, it runs in a single thread and doesn't utilize multiple cores for CPU-bound tasks. For these tasks, you can combine <code>asyncio</code> with multiprocessing to achieve parallelism across cores.</p>
 <h4 id="121-basic-async-with-multiprocessing">12.1. Basic Async with Multiprocessing</h4>
@@ -11065,7 +10981,7 @@
 <li><strong>Data Serialization:</strong> Remember that data sent between processes needs to be serialized and deserialized, which can introduce overhead.</li>
 <li><strong>Resource Management:</strong> Ensure all processes are cleaned up to avoid resource leaks or zombie processes.</li>
 </ul>
-<p><strong>Next topic:</strong> Advanced Patterns and Designs in Async Applications.</p>
+<p><strong>Next topic:</strong> <a href="#13-advanced-patterns-and-designs-in-async-applications">Advanced Patterns and Designs in Async Applications.</a></p>
 <h3 id="13-advanced-patterns-and-designs-in-async-applications">13. Advanced Patterns and Designs in Async Applications</h3>
 <h4 id="131-event-driven-architecture">13.1. Event-driven Architecture</h4>
 <p>Using <code>asyncio</code>, you can build an event-driven system where components react to events rather than follow a strict sequential order:</p>
@@ -11183,7 +11099,7 @@
 <a id="__codelineno-26-12" name="__codelineno-26-12"></a>
 <a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">run_forever</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Next topic:</strong> Debugging and Profiling Asynchronous Python Applications.</p>
+<p><strong>Next topic:</strong> <a href="#14-debugging-and-profiling-asynchronous-python-applications">Debugging and Profiling Asynchronous Python Applications.</a></p>
 <h3 id="14-debugging-and-profiling-asynchronous-python-applications">14. Debugging and Profiling Asynchronous Python Applications</h3>
 <p>Debugging and profiling asynchronous applications can be different than traditional synchronous applications. Let's look into techniques and tools available for <code>asyncio</code>:</p>
 <h4 id="141-debug-mode-in-asyncio">14.1. Debug Mode in <code>asyncio</code></h4>
@@ -11243,7 +11159,7 @@
 <a id="__codelineno-30-9" name="__codelineno-30-9"></a>
 <a id="__codelineno-30-10" name="__codelineno-30-10"></a><span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Next topic:</strong> Scaling and Deploying Asynchronous Applications.</p>
+<p><strong>Next topic:</strong> <a href="#15-scaling-and-deploying-asynchronous-applications">Scaling and Deploying Asynchronous Applications.</a></p>
 <h3 id="15-scaling-and-deploying-asynchronous-applications">15. Scaling and Deploying Asynchronous Applications</h3>
 <p>Once your asynchronous application is developed and tested, the next step is to deploy and scale it. Here are some strategies and considerations:</p>
 <h4 id="151-event-loop-implementations">15.1. Event Loop Implementations</h4>
@@ -11268,7 +11184,7 @@
 <p>Asynchronous applications, especially long-running ones, should be monitored for memory and resource leaks. Tools like <code>objgraph</code> or built-in Python profilers can help identify and fix such leaks.</p>
 <h4 id="156-error-monitoring-and-alerting">15.6. Error Monitoring and Alerting</h4>
 <p>Implement monitoring and alerting to keep an eye on exceptions and errors in production. Tools like Sentry can be integrated to capture and notify about runtime errors.</p>
-<p><strong>Next topic:</strong> Conclusion and Continuous Learning in Asynchronous Programming.</p>
+<p><strong>Next topic:</strong> <a href="#16-conclusion-and-continuous-learning-in-asynchronous-programming">Conclusion and Continuous Learning in Asynchronous Programming.</a></p>
 <h3 id="16-conclusion-and-continuous-learning-in-asynchronous-programming">16. Conclusion and Continuous Learning in Asynchronous Programming</h3>
 <p>The landscape of asynchronous programming in Python is vast and continuously evolving. With tools like <code>asyncio</code> and the expanding ecosystem around it, developers have powerful mechanisms to write efficient, scalable, and maintainable applications.</p>
 <p>However, the journey doesn't end with mastering <code>asyncio</code> or any specific library. The Python community is vibrant and always innovating. It's essential to stay updated, participate in discussions, and continuously experiment with new techniques, tools, and best practices.</p>

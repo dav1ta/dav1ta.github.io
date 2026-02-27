@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../prob/">
+        <link rel="prev" href="../../programming/interview/">
       
       
-        <link rel="next" href="../event_driven/">
+        <link rel="next" href="../../django/django/">
       
       
         
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#system-design-notes-outline" class="md-skip">
+        <a href="#chapter-1-system-design-patterns" class="md-skip">
           Skip to content
         </a>
       
@@ -6835,62 +6835,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Design Patterns
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../prob/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Problems
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -6899,8 +6843,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -6944,8 +6886,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -6954,10 +6894,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fundamentals" class="md-nav__link">
+  <a href="#chapter-1-system-design-patterns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fundamentals
+        Chapter 1: System Design Patterns
       
     </span>
   </a>
@@ -6965,10 +6905,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-design-often-missed" class="md-nav__link">
+  <a href="#back-of-envelope-math-fast" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Design (Often Missed)
+        Back-of-Envelope Math (Fast)
       
     </span>
   </a>
@@ -6976,10 +6916,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-reliability" class="md-nav__link">
+  <a href="#1-clarify-requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Reliability
+        1) Clarify Requirements
       
     </span>
   </a>
@@ -6987,10 +6927,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalability" class="md-nav__link">
+  <a href="#2-shape-the-data-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scalability
+        2) Shape the Data Flow
       
     </span>
   </a>
@@ -6998,10 +6938,390 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reliability" class="md-nav__link">
+  <a href="#3-core-building-blocks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reliability
+        3) Core Building Blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-scaling-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Scaling Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-consistency-and-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) Consistency and Transactions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Reliability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) Observability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-deployment-ops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Deployment / Ops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-feed-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Example (Feed v1)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-defaults-and-traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fast Defaults and Traps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-event-driven-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 2: Event-Driven Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-event-driven-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) Event-Driven Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-saga-pattern-choreography-vs-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) Saga Pattern (Choreography vs Orchestration)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-event-sourcing-and-when-not-to-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Event Sourcing (and when not to use it)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cqrs-command-query-responsibility-segregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) CQRS (Command Query Responsibility Segregation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-circuit-breaker-with-retries-and-timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) Circuit Breaker (with Retries and Timeouts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bulkhead-isolation-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Bulkhead (Isolation Boundaries)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-outbox-cdc-reliable-event-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) Outbox + CDC (Reliable Event Publish)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-idempotency-exactly-once-illusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Idempotency (Exactly-Once Illusion)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-rate-limiting-protect-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Rate Limiting (Protect Dependencies)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-api-gateway-edge-auth-routing-throttling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10) API Gateway (Edge Auth, Routing, Throttling)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-system-design-good-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 3: System Design Good Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retry-safety-unbounded-retries-anti-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retry Safety: Unbounded Retries (Anti-Pattern)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retry Safety: Unbounded Retries (Anti-Pattern)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When not to use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failure modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics-to-watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrics to watch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common mistakes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#small-real-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Small real example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-good-practices-retryresilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Good Practices (Retry/Resilience)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-common-system-design-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 4: Common System Design Problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-and-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability and Reliability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data and Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consistency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time
       
     </span>
   </a>
@@ -7020,10 +7340,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#observability" class="md-nav__link">
+  <a href="#operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Observability
+        Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Choices
       
     </span>
   </a>
@@ -7041,38 +7372,109 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#chapter-5-distributed-systems-data-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 5: Distributed Systems &amp; Data Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replication-and-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replication and Consistency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-internals-and-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Internals and Recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partitioning-sharding-and-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partitioning, Sharding, and Placement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling-and-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling and Reliability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-modeling-and-query-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Modeling and Query Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency-control-and-anomalies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concurrency Control and Anomalies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-platforms-and-schema-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Platforms and Schema Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../event_driven/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Event-Driven Patterns
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -8792,8 +9194,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8802,10 +9202,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fundamentals" class="md-nav__link">
+  <a href="#chapter-1-system-design-patterns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Fundamentals
+        Chapter 1: System Design Patterns
       
     </span>
   </a>
@@ -8813,10 +9213,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-design-often-missed" class="md-nav__link">
+  <a href="#back-of-envelope-math-fast" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Design (Often Missed)
+        Back-of-Envelope Math (Fast)
       
     </span>
   </a>
@@ -8824,10 +9224,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-reliability" class="md-nav__link">
+  <a href="#1-clarify-requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data Reliability
+        1) Clarify Requirements
       
     </span>
   </a>
@@ -8835,10 +9235,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalability" class="md-nav__link">
+  <a href="#2-shape-the-data-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Scalability
+        2) Shape the Data Flow
       
     </span>
   </a>
@@ -8846,10 +9246,390 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#reliability" class="md-nav__link">
+  <a href="#3-core-building-blocks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reliability
+        3) Core Building Blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-scaling-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) Scaling Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-consistency-and-transactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) Consistency and Transactions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Reliability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-observability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) Observability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-deployment-ops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Deployment / Ops
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-feed-v1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Example (Feed v1)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-defaults-and-traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fast Defaults and Traps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-2-event-driven-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 2: Event-Driven Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-event-driven-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) Event-Driven Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-saga-pattern-choreography-vs-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) Saga Pattern (Choreography vs Orchestration)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-event-sourcing-and-when-not-to-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) Event Sourcing (and when not to use it)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-cqrs-command-query-responsibility-segregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4) CQRS (Command Query Responsibility Segregation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-circuit-breaker-with-retries-and-timeouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5) Circuit Breaker (with Retries and Timeouts)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bulkhead-isolation-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6) Bulkhead (Isolation Boundaries)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-outbox-cdc-reliable-event-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7) Outbox + CDC (Reliable Event Publish)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-idempotency-exactly-once-illusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8) Idempotency (Exactly-Once Illusion)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-rate-limiting-protect-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9) Rate Limiting (Protect Dependencies)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-api-gateway-edge-auth-routing-throttling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10) API Gateway (Edge Auth, Routing, Throttling)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-3-system-design-good-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 3: System Design Good Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retry-safety-unbounded-retries-anti-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retry Safety: Unbounded Retries (Anti-Pattern)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retry Safety: Unbounded Retries (Anti-Pattern)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When not to use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failure modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics-to-watch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrics to watch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common mistakes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#small-real-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Small real example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-good-practices-retryresilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Good Practices (Retry/Resilience)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-4-common-system-design-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 4: Common System Design Problems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-and-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Availability and Reliability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data and Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consistency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time
       
     </span>
   </a>
@@ -8868,10 +9648,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#observability" class="md-nav__link">
+  <a href="#operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Observability
+        Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Choices
       
     </span>
   </a>
@@ -8883,6 +9674,105 @@
     <span class="md-ellipsis">
       
         Design Interview Flow (Short)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-5-distributed-systems-data-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chapter 5: Distributed Systems &amp; Data Glossary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replication-and-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replication and Consistency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-internals-and-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Internals and Recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partitioning-sharding-and-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partitioning, Sharding, and Placement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling-and-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling and Reliability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-modeling-and-query-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Modeling and Query Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency-control-and-anomalies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concurrency Control and Anomalies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-platforms-and-schema-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Platforms and Schema Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
       
     </span>
   </a>
@@ -8906,59 +9796,525 @@
 
 
 
-<h1 id="system-design-notes-outline">System Design Notes (Outline)</h1>
-<p>A short outline of key topics to study or reference.</p>
-<h2 id="fundamentals">Fundamentals</h2>
+  <h1>Book</h1>
+
+<h2 id="chapter-1-system-design-patterns">Chapter 1: System Design Patterns</h2>
+<h2 id="back-of-envelope-math-fast">Back-of-Envelope Math (Fast)</h2>
 <ul>
-<li>Networking basics (HTTP/TCP/UDP, DNS, load balancing)</li>
-<li>Caching strategies and eviction</li>
-<li>Databases (SQL vs NoSQL, indexing)</li>
-<li>Consistency models and transactions</li>
+<li>Round-number estimates.</li>
+<li><code>Peak QPS = avg QPS x burst factor</code>.</li>
+<li><code>Concurrency ~= QPS x latency_seconds</code>.</li>
+<li><code>Daily storage ~= events/day x avg bytes x replicas</code>.</li>
+<li><code>Queue drain time ~= backlog / drain_rate</code>.</li>
+<li><code>Cache memory ~= hot_keys x object_size x overhead</code>.</li>
+<li>Example: <code>20k</code> QPS at <code>80ms</code> -&gt; <code>~1600</code> in flight.</li>
+<li>Example: <code>3M</code> backlog at <code>30k/min</code> -&gt; <code>~100 min</code> drain.</li>
 </ul>
-<h2 id="data-design-often-missed">Data Design (Often Missed)</h2>
+<h2 id="1-clarify-requirements">1) Clarify Requirements</h2>
 <ul>
-<li>Access patterns first (query shapes, latency targets, read/write ratio)</li>
-<li>Data model boundaries (entities, ownership, lifecycle)</li>
-<li>Partition keys and hot-key mitigation strategy</li>
-<li>Secondary indexes and their write amplification cost</li>
-<li>Retention, TTL, archival, and legal/compliance constraints</li>
-<li>Schema evolution plan (backward compatibility, rollouts, backfills)</li>
-<li>Data migration and dual-write/verification strategy</li>
+<li>Users?</li>
+<li>Peak QPS?</li>
+<li>Latency target?</li>
+<li>Data size and growth?</li>
+<li>Read-heavy or write-heavy?</li>
+<li>Strong or eventual consistency?</li>
+<li>Uptime/SLO target?</li>
+<li>Example: feed read <code>&lt;200ms</code>; uploads can be slower.</li>
 </ul>
-<h2 id="data-reliability">Data Reliability</h2>
+<h2 id="2-shape-the-data-flow">2) Shape the Data Flow</h2>
 <ul>
-<li>Durability guarantees (WAL, replication factor, quorum rules)</li>
-<li>RPO/RTO targets mapped to backup + restore tests</li>
-<li>Idempotency and deduplication for at-least-once delivery</li>
-<li>Exactly-once semantics boundaries (where they are real vs simulated)</li>
-<li>Clock/time concerns (ordering, monotonic IDs, timezone handling)</li>
+<li>Request path.</li>
+<li>Split read/write paths.</li>
+<li>Mark hot paths first.</li>
+<li>Mark async/background work.</li>
+<li>Example: read <code>client -&gt; CDN -&gt; API -&gt; cache -&gt; DB</code>; write <code>client -&gt; API -&gt; DB -&gt; queue -&gt; worker</code>.</li>
 </ul>
-<h2 id="scalability">Scalability</h2>
+<h2 id="3-core-building-blocks">3) Core Building Blocks</h2>
 <ul>
-<li>Horizontal scaling + stateless services</li>
-<li>Sharding and partitioning</li>
-<li>Read replicas and CQRS</li>
-<li>Queues and background workers</li>
+<li>LB for traffic spread.</li>
+<li>Autoscale stateless services.</li>
+<li>Cache to cut DB reads.</li>
+<li>Queues for async jobs.</li>
+<li>Choose DB by access pattern.</li>
+<li>Example: thumbnails -&gt; worker queue; profile reads -&gt; Redis cache.</li>
 </ul>
-<h2 id="reliability">Reliability</h2>
+<h2 id="4-scaling-patterns">4) Scaling Patterns</h2>
 <ul>
-<li>Timeouts, retries, circuit breakers</li>
-<li>Failover and multi-region</li>
-<li>Backups and disaster recovery</li>
+<li>Scale stateless APIs horizontally first.</li>
+<li>Partition when one DB gets hot.</li>
+<li>Read replicas for read-heavy traffic.</li>
+<li>Keep the write path simple early.</li>
+<li>Example: feed reads -&gt; replicas; writes -&gt; primary.</li>
 </ul>
+<h2 id="5-consistency-and-transactions">5) Consistency and Transactions</h2>
+<ul>
+<li>Strong consistency for money/identity; eventual for derived views (feeds/counters).</li>
+<li>Idempotency keys for retryable writes.</li>
+<li>Version APIs/events/schemas.</li>
+<li>Schema changes: expand/contract; keep dual-read during rollout.</li>
+<li>Keep transactions small.</li>
+</ul>
+<h2 id="6-reliability">6) Reliability</h2>
+<ul>
+<li>Timeouts on every network hop.</li>
+<li>Retry only idempotent ops; cap retries and add jitter.</li>
+<li>Circuit breakers stop retry storms.</li>
+<li>Bulkheads isolate failures.</li>
+<li>Graceful degradation path (e.g., recent posts if recommendations fail).</li>
+</ul>
+<h2 id="7-observability">7) Observability</h2>
+<ul>
+<li>Logs + metrics + traces; add request/correlation IDs.</li>
+<li>Track latency, errors, throughput, saturation.</li>
+<li>By layer: API <code>p95/p99</code>, DB slow queries/replica lag, cache hit rate, queue depth/lag.</li>
+<li>Alert on user impact + likely cause pairs (<code>/feed p95</code> + cache hit drop; queue lag + worker errors).</li>
+</ul>
+<h2 id="8-security">8) Security</h2>
+<ul>
+<li>Separate AuthN (who) and AuthZ (what).</li>
+<li>Least privilege for services.</li>
+<li>Rate limits + abuse controls.</li>
+<li>Store/rotate secrets safely.</li>
+<li>Example: upload API = token + per-user rate limit.</li>
+</ul>
+<h2 id="9-deployment-ops">9) Deployment / Ops</h2>
+<ul>
+<li>Canary or blue/green deploys; feature flags for risky changes.</li>
+<li>Keep schema rollouts backward compatible (expand/contract).</li>
+<li>Predefine rollback steps.</li>
+<li>Back up data and test restores.</li>
+<li>Keep a short incident runbook.</li>
+<li>Example: 5% canary -&gt; watch errors/latency -&gt; expand.</li>
+<li>Example: add column -&gt; deploy readers -&gt; backfill -&gt; switch writers -&gt; clean old path later.</li>
+</ul>
+<h2 id="worked-example-feed-v1">Worked Example (Feed v1)</h2>
+<ul>
+<li>Goal: photo feed v1, read-heavy, <code>/feed p95 &lt;200ms</code>.</li>
+<li>Consistency split: profile edits strong; counters eventual (<code>2-3s</code> lag okay).</li>
+<li>Read path: client -&gt; <code>CDN</code> -&gt; API -&gt; cache -&gt; replica.</li>
+<li>Write path: client -&gt; API -&gt; primary DB -&gt; queue -&gt; worker (<code>S3</code> for media).</li>
+<li>Core blocks: <code>AWS ALB</code>, stateless API, <code>Redis</code>, <code>PostgreSQL</code>, queue, worker, <code>S3</code>.</li>
+<li>Scale first: add API nodes; shard cache by user hash if hot.</li>
+<li>Safety defaults: idempotent uploads/jobs; timeouts + capped retries/jitter; degrade recommendations.</li>
+<li>Observe + ops: <code>/feed p95/p99</code>, cache hit rate, queue lag, worker errors; canary <code>5%</code>; rollback on error + latency + saturation.</li>
+<li>Failure: new post not visible due to replica lag (read-after-write miss).</li>
+<li>Fix: sticky reads to primary for a short post-write window.</li>
+<li>Rollout: add nullable column -&gt; dual-read -&gt; backfill -&gt; switch writes.</li>
+</ul>
+<h2 id="fast-defaults-and-traps">Fast Defaults and Traps</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Fast default</th>
+<th>Trap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hot read-heavy endpoint</td>
+<td><code>CDN</code> + <code>Redis</code> (+ replica if needed)</td>
+<td>Stampede/invalidation; replica lag breaks read-after-write</td>
+</tr>
+<tr>
+<td>Simple async jobs</td>
+<td><code>SQS</code>/<code>RabbitMQ</code> + worker + DLQ</td>
+<td>Uncapped retries; queue growth; no replay runbook</td>
+</tr>
+<tr>
+<td>High-fanout events / replay</td>
+<td><code>Kafka</code> + consumer groups</td>
+<td>Hot partitions; consumer lag; schema drift</td>
+</tr>
+<tr>
+<td>OLTP business records</td>
+<td><code>PostgreSQL</code>/<code>MySQL</code></td>
+<td>Hot write paths/keys; ignoring <code>p99</code></td>
+</tr>
+<tr>
+<td>Search from primary DB data</td>
+<td><code>OpenSearch</code> + CDC/queue indexing</td>
+<td>Read-your-write gaps; reindex cost</td>
+</tr>
+<tr>
+<td>Analytics scans/aggregations</td>
+<td><code>ClickHouse</code>/<code>BigQuery</code></td>
+<td>Using analytics store as OLTP</td>
+</tr>
+<tr>
+<td>File upload/media pipeline</td>
+<td>pre-signed <code>S3</code>/<code>MinIO</code> + queue + worker</td>
+<td>API bottleneck; scan/thumbnail backlog</td>
+</tr>
+<tr>
+<td>Checkout / payment flow</td>
+<td>OLTP + idempotency keys + outbox/queue/saga</td>
+<td>Duplicate side effects; weak compensation boundaries</td>
+</tr>
+<tr>
+<td>Login/public API protection</td>
+<td>Gateway (<code>Envoy</code>) + rate limits + audit logs</td>
+<td>Bot spikes; bad lockouts; weak abuse controls</td>
+</tr>
+<tr>
+<td>Internal service calls</td>
+<td><code>REST</code> (compatibility), <code>gRPC</code> (low-latency/streaming)</td>
+<td>Version drift (<code>REST</code>); client/tool fit (<code>gRPC</code>)</td>
+</tr>
+<tr>
+<td>Observability baseline</td>
+<td><code>OpenTelemetry</code> + <code>Prometheus</code> + <code>Grafana</code> + logs/traces</td>
+<td>Missing correlation IDs; infra-only alerts</td>
+</tr>
+<tr>
+<td>Deploy + schema rollout</td>
+<td>Canary/blue-green + flags + expand/contract</td>
+<td>One-metric canaries; schema-incompatible rollback</td>
+</tr>
+<tr>
+<td>Time-sensitive auth/events</td>
+<td>Server timestamps + NTP</td>
+<td>Clock skew breaks expiry/order assumptions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="chapter-2-event-driven-patterns">Chapter 2: Event-Driven Patterns</h2>
+<p>Definition-first fit/risk notes for async systems.</p>
+<h2 id="1-event-driven-architecture">1) Event-Driven Architecture</h2>
+<p>Publish events; consumers react asynchronously.
+- Fit: Async fanout, loose coupling, add consumers without changing producers.
+- Risk: Duplicates, ordering gaps, schema drift, weak tracing without event/correlation IDs.
+- Example: <code>OrderPlaced</code> triggers inventory, billing, notifications.
+- Not fit: Single-service CRUD with strict synchronous consistency.</p>
+<h2 id="2-saga-pattern-choreography-vs-orchestration">2) Saga Pattern (Choreography vs Orchestration)</h2>
+<p>One large transaction becomes local async transactions plus compensation.
+- Fit: Cross-service workflow without 2PC; choreography for small/simple flows, orchestration for visibility/sequence control.
+- Risk: Partial completion if compensation logic is incomplete or non-idempotent.
+- Example: Travel booking reserves flight/hotel, charges card; failed step triggers compensation.
+- Not fit: One DB transaction solves it, or steps cannot be compensated safely.</p>
+<h2 id="3-event-sourcing-and-when-not-to-use-it">3) Event Sourcing (and when not to use it)</h2>
+<p>Store immutable events as the source of truth; rebuild state from the stream.
+- Fit: Audit/history/replay matters; temporal debugging and domain history are core needs.
+- DB: Read state is projection-derived (often with snapshots for long streams).
+- Risk: Projection lag, replay cost, versioning mistakes, higher operational complexity.
+- Example: Account state from <code>Created</code>, <code>Debited</code>, <code>Credited</code>, <code>Closed</code>.
+- Not fit: CRUD apps that only need current state.</p>
+<h2 id="4-cqrs-command-query-responsibility-segregation">4) CQRS (Command Query Responsibility Segregation)</h2>
+<p>Separate command (write) and query (read) models.
+- Fit: Read-heavy systems or query shapes that need denormalized views while writes need strict rules.
+- DB: Read projections/stores can differ from the write model; expect read lag.
+- Risk: Stale reads, projection drift, dual-model complexity.
+- Example: Catalog writes to OLTP model; search/list pages read a denormalized projection.
+- Not fit: One model serves reads and writes well.</p>
+<h2 id="5-circuit-breaker-with-retries-and-timeouts">5) Circuit Breaker (with Retries and Timeouts)</h2>
+<p>Fail fast on unhealthy dependencies with timeouts, retries, and breaker state.
+- Fit: Remote calls where latency/failure can cascade; use short timeouts and capped backoff+jitter retries.
+- Risk: Retry storms/cascading failure from long timeouts, uncapped retries, or retrying unsafe side effects.
+- Example: Recommendations stalls; API times out, opens breaker, serves fallback.
+- Not fit: In-process calls or non-idempotent side effects without protection.</p>
+<h2 id="6-bulkhead-isolation-boundaries">6) Bulkhead (Isolation Boundaries)</h2>
+<p>Isolate capacity so one workload or dependency cannot starve a critical path.
+- Fit: Mixed critical and best-effort traffic; isolate worker pools, queues, DB/connection pools, and breaker state; reserve capacity for critical paths.
+- Risk: Shared global pools let one backlog or dependency cause a platform-wide outage.
+- Example: Email/webhook backlog fills workers and slows checkout requests.
+- Not fit: Very small systems with one dependency and no real contention.</p>
+<h2 id="7-outbox-cdc-reliable-event-publish">7) Outbox + CDC (Reliable Event Publish)</h2>
+<p>Make a DB write and follow-up event publish reliable without 2PC.
+- DB: Write the business row and publish intent in one local transaction (outbox), or stream durable changes from binlog/WAL (CDC).
+- Fit: Reliable event publish without 2PC; preserve ordering per aggregate when needed and dedupe by event ID/version.
+- Risk: "Write succeeded, event lost" gaps, duplicate publishes, relay backlog, or ordering mistakes if relay/consumer design is weak.
+- Example: Order row commits but <code>OrderPlaced</code> is missing unless publish intent is stored durably.
+- Not fit: Best-effort notifications can be lost, or no durable transaction boundary exists.</p>
+<h2 id="8-idempotency-exactly-once-illusion">8) Idempotency (Exactly-Once Illusion)</h2>
+<p>Return the same logical result when retries or replays repeat a write.
+- DB: Use durable dedupe state keyed by tenant/user + endpoint; keep TTL longer than retry/redelivery windows.
+- Fit: Practical exactly-once substitute when clients retry, queues redeliver, or timeouts hide the first result; store key + status/result and return the same logical result on replay.
+- Risk: Duplicate side effects or false dedupe from bad key scope/TTL.
+- Example: Payment times out, client retries with the same key, server returns the original result.
+- Not fit: Pure reads or handlers that cannot return a stable replay result.</p>
+<h2 id="9-rate-limiting-protect-dependencies">9) Rate Limiting (Protect Dependencies)</h2>
+<p>Cap request rate to protect dependencies and keep usage fair.
+- Fit: Shared APIs/dependencies under burst traffic, abuse, or unfair tenant usage; use edge/service limits (token bucket or window-based) and return <code>429</code> + <code>Retry-After</code> when possible.
+- Risk: Bad thresholds block healthy users; weak limits fail to protect dependencies.
+- Example: Login and public APIs need protection during bot spikes.
+- Not fit: Low-volume trusted systems where limits add noise with little protection.</p>
+<h2 id="10-api-gateway-edge-auth-routing-throttling">10) API Gateway (Edge Auth, Routing, Throttling)</h2>
+<p>One edge entry point for auth, routing, throttling, and cross-cutting policy.
+- Fit: Many clients hit many services; centralize auth/authz, routing/versioning, quotas/rate limits, tracing, and cross-cutting policies while keeping domain logic in services.
+- Risk: The gateway becomes a bottleneck or a business-logic dumping ground.
+- Example: Web/mobile traffic enters a gateway for auth, routing, quotas, and request tracing.
+- Not fit: One small service where direct access is simpler.</p>
+<p>See also: <a href="#chapter-1-system-design-patterns">System Design Patterns</a></p>
+<hr />
+<h2 id="chapter-3-system-design-good-practices">Chapter 3: System Design Good Practices</h2>
+<p>Production anti-patterns and resilience defaults.</p>
+<h2 id="retry-safety-unbounded-retries-anti-pattern">Retry Safety: Unbounded Retries (Anti-Pattern)</h2>
+<h3 id="what-it-is">What it is</h3>
+<ul>
+<li>Retries without hard limits on attempts, total time, or concurrency.</li>
+<li>Often stacked across layers (client, gateway, service, queue redelivery).</li>
+</ul>
+<h3 id="when-to-use">When to use</h3>
+<ul>
+<li>Rarely.</li>
+<li>Only for short manual recovery scripts with strict scope, rate limits, and supervision.</li>
+</ul>
+<h3 id="when-not-to-use">When not to use</h3>
+<ul>
+<li>Any user-facing request path with latency expectations.</li>
+<li>Calls to overloaded or flaky dependencies.</li>
+<li>Non-idempotent operations (payments, emails, external effects) without safeguards.</li>
+</ul>
+<h3 id="failure-modes">Failure modes</h3>
+<ul>
+<li>Retry storms amplify outages.</li>
+<li>Backlogs and worker saturation raise tail latency.</li>
+<li>Missing idempotency creates duplicate side effects.</li>
+<li>Cascading failure as shared pools are consumed by retries.</li>
+</ul>
+<h3 id="metrics-to-watch">Metrics to watch</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retry rate; attempts per request/job</td>
+<td>Amplification risk</td>
+</tr>
+<tr>
+<td>Success-after-retry ratio</td>
+<td>Useful vs wasted retries</td>
+</tr>
+<tr>
+<td>Downstream <code>5xx</code> / timeout rate</td>
+<td>Dependency health</td>
+</tr>
+<tr>
+<td>Queue depth, worker saturation, lag</td>
+<td>Backlog pressure</td>
+</tr>
+<tr>
+<td><code>429</code> / <code>503</code>; circuit-breaker opens</td>
+<td>Overload / protection events</td>
+</tr>
+</tbody>
+</table>
+<h3 id="common-mistakes">Common mistakes</h3>
+<ul>
+<li>No max attempts or no total deadline.</li>
+<li>Fixed-delay retries without jitter.</li>
+<li>Retrying all errors (including validation/auth).</li>
+<li>Nested retries at multiple layers.</li>
+<li>Retrying after caller deadline expires.</li>
+<li>Retrying non-idempotent actions without idempotency keys.</li>
+</ul>
+<h3 id="small-real-example">Small real example</h3>
+<p>Order service calls payment provider:</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bad</td>
+<td>Retry forever on timeout in request handler</td>
+</tr>
+<tr>
+<td>Better</td>
+<td>Per-attempt timeout, max 2-3 retries, exponential backoff + jitter, total deadline, idempotency key, circuit breaker</td>
+</tr>
+</tbody>
+</table>
+<p>Minimal policy:
+- Retry transient errors only.
+- Bound attempts and total time.
+- Add jitter.
+- Propagate deadlines.
+- Emit retry metrics.</p>
+<h2 id="related-good-practices-retryresilience">Related Good Practices (Retry/Resilience)</h2>
+<ul>
+<li>Bounded retries with exponential backoff + jitter.</li>
+<li>Timeouts before retries.</li>
+<li>Idempotency keys for retryable side effects.</li>
+<li>Circuit breakers + concurrency limits to prevent overload amplification.</li>
+<li>Retry budgets to cap retry traffic.</li>
+</ul>
+<hr />
+<h2 id="chapter-4-common-system-design-problems">Chapter 4: Common System Design Problems</h2>
+<h2 id="availability-and-reliability">Availability and Reliability</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spiky traffic</td>
+<td>Autoscaling, queues, load shedding</td>
+</tr>
+<tr>
+<td>Hot dependency</td>
+<td>Timeouts, bounded retries, circuit breakers, caching</td>
+</tr>
+<tr>
+<td>Single region risk</td>
+<td>Multi-region failover, backups, DNS routing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-and-storage">Data and Storage</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Write scaling</td>
+<td>Partitioning/sharding, async writes</td>
+</tr>
+<tr>
+<td>Read scaling</td>
+<td>Caching, replicas, denormalized views</td>
+</tr>
+<tr>
+<td>Large files</td>
+<td>Object storage + CDN</td>
+</tr>
+</tbody>
+</table>
+<h2 id="consistency">Consistency</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strong vs eventual consistency</td>
+<td>Choose per domain; use sagas for workflows</td>
+</tr>
+<tr>
+<td>Concurrent updates</td>
+<td>Optimistic locking, idempotency keys</td>
+</tr>
+</tbody>
+</table>
+<h2 id="real-time">Real-Time</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Notifications/streams</td>
+<td>WebSockets, SSE, pub/sub</td>
+</tr>
+<tr>
+<td>Fanout</td>
+<td>Queue + workers; avoid N^2 broadcast</td>
+</tr>
+</tbody>
+</table>
 <h2 id="security">Security</h2>
-<ul>
-<li>AuthN/AuthZ, least privilege</li>
-<li>Secrets management</li>
-<li>Rate limiting and abuse prevention</li>
-</ul>
-<h2 id="observability">Observability</h2>
-<ul>
-<li>Metrics, logs, traces</li>
-<li>SLOs/SLAs</li>
-<li>Data quality monitors (freshness, completeness, drift)</li>
-<li>Capacity signals (p95/p99 latency, queue lag, disk growth, cardinality)</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auth at scale</td>
+<td>Centralized identity, token validation, scopes</td>
+</tr>
+<tr>
+<td>Abuse</td>
+<td>Rate limiting, WAF, bot detection</td>
+</tr>
+</tbody>
+</table>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h2 id="operations">Operations</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logs/metrics</td>
+<td>Centralized logs, tracing, SLOs</td>
+</tr>
+<tr>
+<td>Schema changes</td>
+<td>Expand/contract migrations, backfills</td>
+</tr>
+</tbody>
+</table>
+<h2 id="architecture-choices">Architecture Choices</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Patterns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monolith vs microservices</td>
+<td>Start modular; split when needed</td>
+</tr>
+<tr>
+<td>Sync vs async</td>
+<td>Async for slow or retryable work</td>
+</tr>
+<tr>
+<td>=======</td>
+<td></td>
+</tr>
+<tr>
+<td>## Observability</td>
+<td></td>
+</tr>
+<tr>
+<td>- Metrics, logs, traces</td>
+<td></td>
+</tr>
+<tr>
+<td>- SLOs/SLAs</td>
+<td></td>
+</tr>
+<tr>
+<td>- Data quality monitors (freshness, completeness, drift)</td>
+<td></td>
+</tr>
+<tr>
+<td>- Capacity signals (p95/p99 latency, queue lag, disk growth, cardinality)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="design-interview-flow-short">Design Interview Flow (Short)</h2>
 <ol>
 <li>Requirements and constraints.</li>
@@ -8966,9 +10322,480 @@
 <li>Data model, consistency, and durability choices.</li>
 <li>Scaling and partition strategy.</li>
 <li>Bottlenecks, failure modes, and operational runbooks.</li>
-<li>Trade-offs, costs, and next steps.</li>
+<li>Trade-offs, costs, and next steps.<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>7465c7d2fa4196c8c33c7b07d70017ba7e415ffe</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
 </ol>
-<p>Next: <a href="../../django/django/">Tips</a></p>
+<hr />
+<h2 id="chapter-5-distributed-systems-data-glossary">Chapter 5: Distributed Systems &amp; Data Glossary</h2>
+<p>Fast lookup for distributed-systems and database terms.</p>
+<h2 id="replication-and-consistency">Replication and Consistency</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Def</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read replicas</td>
+<td>Read-only copies of a primary for read scaling.</td>
+<td>Watch lag and staleness.</td>
+</tr>
+<tr>
+<td>Leader-Follower replication</td>
+<td>One leader accepts writes and replicates to followers.</td>
+<td>Failover and lag dominate ops.</td>
+</tr>
+<tr>
+<td>Multi-leader replication</td>
+<td>Multiple nodes accept writes and replicate among peers.</td>
+<td>Conflict resolution is the hard part.</td>
+</tr>
+<tr>
+<td>Logical replication</td>
+<td>Replicates logical row/table/event changes, not storage blocks.</td>
+<td>Useful for selective sync, CDC, upgrades.</td>
+</tr>
+<tr>
+<td>Physical replication</td>
+<td>Replicates storage pages or WAL streams.</td>
+<td>Fast for full replicas and failover, less flexible.</td>
+</tr>
+<tr>
+<td>Geo-replication</td>
+<td>Replication across regions for DR, latency, or isolation.</td>
+<td>Trades latency, consistency, conflicts, and cost.</td>
+</tr>
+<tr>
+<td>Quorum</td>
+<td>A read/write needs a minimum replica count.</td>
+<td>Defined by <code>R</code>/<code>W</code> choices.</td>
+</tr>
+<tr>
+<td>Consensus</td>
+<td>Protocols let nodes agree despite failures.</td>
+<td>Used for election and coordination.</td>
+</tr>
+<tr>
+<td>CAP theorem</td>
+<td>With a partition, choose consistency or availability.</td>
+<td>Partition tolerance is assumed.</td>
+</tr>
+<tr>
+<td>BASE</td>
+<td>Basically Available, Soft state, Eventual consistency.</td>
+<td>Availability-first model.</td>
+</tr>
+<tr>
+<td>ACID</td>
+<td>Atomicity, Consistency, Isolation, Durability.</td>
+<td>Transaction goal inside one DB boundary.</td>
+</tr>
+<tr>
+<td>Eventual consistency</td>
+<td>Reads can be stale but converge later.</td>
+<td>Fits feeds, analytics, async work.</td>
+</tr>
+<tr>
+<td>Strong consistency</td>
+<td>Reads return the latest committed write by the model.</td>
+<td>Needed for strict invariants.</td>
+</tr>
+<tr>
+<td>Snapshot isolation</td>
+<td>Transactions read a stable snapshot and avoid many conflicts.</td>
+<td>Write skew can still occur.</td>
+</tr>
+<tr>
+<td>MVCC (Multi-Version Concurrency Control)</td>
+<td>Stores row versions so reads and writes block less.</td>
+<td>Basis for snapshot isolation.</td>
+</tr>
+<tr>
+<td>Two-phase commit (2PC)</td>
+<td>Distributed commit with prepare and commit phases.</td>
+<td>Atomic but slow and fragile.</td>
+</tr>
+<tr>
+<td>Three-phase commit (3PC)</td>
+<td>2PC variant with an added phase to reduce blocking.</td>
+<td>Rare; sagas or consensus are often preferred.</td>
+</tr>
+<tr>
+<td>Exactly-once semantics</td>
+<td>An approximation built from retries, dedupe, and idempotency.</td>
+<td>Build on at-least-once plus idempotent handlers.</td>
+</tr>
+<tr>
+<td>Idempotency</td>
+<td>Repeats produce the same logical result for a request key.</td>
+<td>Essential for retries and redelivery.</td>
+</tr>
+<tr>
+<td>CDC (Change Data Capture)</td>
+<td>Streams DB changes to downstream systems.</td>
+<td>Often paired with an outbox.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="storage-internals-and-recovery">Storage Internals and Recovery</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Def</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Write-ahead logging (WAL)</td>
+<td>Persist changes to a log before data pages.</td>
+<td>Enables crash recovery and replication.</td>
+</tr>
+<tr>
+<td>Checkpointing</td>
+<td>Periodically persist a durable state snapshot.</td>
+<td>Cuts crash replay work.</td>
+</tr>
+<tr>
+<td>Compaction</td>
+<td>Rewrite/merge on-disk data to reclaim space and drop old versions.</td>
+<td>Core to LSM and log-structured systems.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="partitioning-sharding-and-placement">Partitioning, Sharding, and Placement</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Def</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clustering</td>
+<td>Multiple nodes operate as one system.</td>
+<td>Define role and failure model.</td>
+</tr>
+<tr>
+<td>Rebalancing</td>
+<td>Move data/traffic to even out load and storage.</td>
+<td>Triggered by topology or load changes.</td>
+</tr>
+<tr>
+<td>Resharding</td>
+<td>Change shard boundaries/count and move data.</td>
+<td>Costly; plan online moves and backpressure.</td>
+</tr>
+<tr>
+<td>Data locality</td>
+<td>Keep compute near the data it uses.</td>
+<td>Cuts latency and network cost.</td>
+</tr>
+<tr>
+<td>Hot partition</td>
+<td>One partition gets disproportionate traffic or data.</td>
+<td>Fix keys, spread writes, or cache.</td>
+</tr>
+<tr>
+<td>Split-brain</td>
+<td>Two parts of a system both believe they are leader.</td>
+<td>Prevent with quorum, election, fencing.</td>
+</tr>
+<tr>
+<td>Hash partitioning</td>
+<td>Hash a key to place data across partitions.</td>
+<td>Even spread, weak for range scans.</td>
+</tr>
+<tr>
+<td>Range partitioning</td>
+<td>Partition by key ranges.</td>
+<td>Great for range scans, can hot-spot.</td>
+</tr>
+<tr>
+<td>Time-series partitioning</td>
+<td>Partition by time windows.</td>
+<td>Helps retention and query pruning.</td>
+</tr>
+<tr>
+<td>Consistent hashing</td>
+<td>Hashing that minimizes key moves when nodes change.</td>
+<td>Used in caches and distributed KV.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scaling-and-reliability">Scaling and Reliability</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Def</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Failover</td>
+<td>Switch to a standby when the active node/service fails.</td>
+<td>Needs correct detection and client retries.</td>
+</tr>
+<tr>
+<td>High availability (HA)</td>
+<td>Keep service running through failures via redundancy and isolation.</td>
+<td>Built with failover and fault isolation.</td>
+</tr>
+<tr>
+<td>Horizontal scaling</td>
+<td>Add nodes/instances to increase capacity.</td>
+<td>Best fit for stateless and distributed systems.</td>
+</tr>
+<tr>
+<td>Vertical scaling</td>
+<td>Add CPU/RAM/storage to one node.</td>
+<td>Simple, but capped and expensive.</td>
+</tr>
+<tr>
+<td>Load balancing</td>
+<td>Distribute traffic across instances.</td>
+<td>Uses routing, health checks, and stickiness.</td>
+</tr>
+<tr>
+<td>Connection pooling</td>
+<td>Reuse DB/network connections across requests.</td>
+<td>Pool size must match backend limits.</td>
+</tr>
+<tr>
+<td>Caching</td>
+<td>Store hot data closer to callers.</td>
+<td>Define TTL, invalidation, and staleness.</td>
+</tr>
+<tr>
+<td>Backpressure</td>
+<td>Signal producers/callers to slow down under overload.</td>
+<td>Prevents queue growth and cascades.</td>
+</tr>
+<tr>
+<td>Circuit breaker</td>
+<td>Fail fast on unhealthy dependencies, then probe recovery.</td>
+<td>Reduces blast radius.</td>
+</tr>
+<tr>
+<td>Throttling</td>
+<td>Slow or cap processing rate to protect capacity.</td>
+<td>Can be per client, endpoint, or system.</td>
+</tr>
+<tr>
+<td>Rate limiting</td>
+<td>Enforce quotas over time windows.</td>
+<td>Supports fairness and abuse control.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-modeling-and-query-performance">Data Modeling and Query Performance</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Def</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normalization</td>
+<td>Structure relational data to reduce duplication and improve integrity.</td>
+<td>Better correctness, more joins.</td>
+</tr>
+<tr>
+<td>Denormalization</td>
+<td>Duplicate data or precompute views to speed reads.</td>
+<td>Faster reads, more sync/invalidation work.</td>
+</tr>
+<tr>
+<td>Indexing</td>
+<td>Extra structures that speed lookups, filters, joins, and sorts.</td>
+<td>Faster reads, higher write/storage cost.</td>
+</tr>
+<tr>
+<td>Secondary indexes</td>
+<td>Indexes on non-primary-key columns.</td>
+<td>Enable alternate access paths.</td>
+</tr>
+<tr>
+<td>Composite index</td>
+<td>Index on multiple columns.</td>
+<td>Column order matters.</td>
+</tr>
+<tr>
+<td>Covering index</td>
+<td>Index includes all columns a query needs.</td>
+<td>Avoids base-row fetches.</td>
+</tr>
+<tr>
+<td>Materialized views</td>
+<td>Stored query results refreshed periodically or incrementally.</td>
+<td>Useful for heavy aggregates.</td>
+</tr>
+<tr>
+<td>Bloom filter</td>
+<td>Probabilistic membership check with false positives only.</td>
+<td>Avoids costly misses.</td>
+</tr>
+<tr>
+<td>LSM tree</td>
+<td>Write-optimized storage with memtables, sorted runs, and compaction.</td>
+<td>Compaction-heavy design.</td>
+</tr>
+<tr>
+<td>B-tree</td>
+<td>Balanced tree for efficient point and range lookups.</td>
+<td>Common default index structure.</td>
+</tr>
+<tr>
+<td>Query planner</td>
+<td>DB component that picks a SQL execution plan.</td>
+<td>Bad plans cause latency spikes.</td>
+</tr>
+<tr>
+<td>Cost-based optimizer</td>
+<td>Planner that estimates candidate plan cost.</td>
+<td>Good statistics are required.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="concurrency-control-and-anomalies">Concurrency Control and Anomalies</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Def</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deadlock</td>
+<td>Transactions wait on each other indefinitely.</td>
+<td>DB aborts one; app retries safely.</td>
+</tr>
+<tr>
+<td>Lock escalation</td>
+<td>DB replaces many fine-grained locks with a coarser lock.</td>
+<td>Lowers lock overhead, lowers concurrency.</td>
+</tr>
+<tr>
+<td>Optimistic locking</td>
+<td>Assume low conflict and detect collisions at write/commit.</td>
+<td>Version checks suit low-conflict workloads.</td>
+</tr>
+<tr>
+<td>Pessimistic locking</td>
+<td>Lock rows/resources before updates.</td>
+<td>Safer for conflict-heavy writes, lower throughput.</td>
+</tr>
+<tr>
+<td>Dirty read</td>
+<td>Read data from an uncommitted transaction.</td>
+<td>Rollback can invalidate the read.</td>
+</tr>
+<tr>
+<td>Phantom read</td>
+<td>Re-running a query returns a different row set.</td>
+<td>Concurrent inserts/deletes changed the match set.</td>
+</tr>
+<tr>
+<td>Read skew</td>
+<td>Transaction reads related values from different times.</td>
+<td>Produces an inconsistent snapshot view.</td>
+</tr>
+<tr>
+<td>Write skew</td>
+<td>Concurrent writes each look valid but break an invariant together.</td>
+<td>Snapshot isolation can allow this.</td>
+</tr>
+<tr>
+<td>Data skew</td>
+<td>Uneven data distribution across partitions/nodes.</td>
+<td>Causes imbalance and slow work.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-platforms-and-schema-management">Data Platforms and Schema Management</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Def</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Federation</td>
+<td>Query/serve across independent systems without full centralization.</td>
+<td>Preserves autonomy; hurts joins, latency, reliability.</td>
+</tr>
+<tr>
+<td>Data lake</td>
+<td>Raw or semi-structured analytics storage, often object storage.</td>
+<td>Flexible ingest; governance must be added.</td>
+</tr>
+<tr>
+<td>Data warehouse</td>
+<td>Curated analytics store for SQL reporting and BI.</td>
+<td>Stronger schema and performance expectations.</td>
+</tr>
+<tr>
+<td>Columnar storage</td>
+<td>Stores data by column.</td>
+<td>Better compression and scans for OLAP.</td>
+</tr>
+<tr>
+<td>Row-based storage</td>
+<td>Stores full rows together.</td>
+<td>Better for OLTP point reads/writes.</td>
+</tr>
+<tr>
+<td>Data migration</td>
+<td>Move or transform data across schemas, systems, or regions.</td>
+<td>Plan validation, backfill, cutover, rollback.</td>
+</tr>
+<tr>
+<td>Schema evolution</td>
+<td>Change schemas over time while keeping compatibility.</td>
+<td>Prefer backward-compatible staged rollouts.</td>
+</tr>
+<tr>
+<td>Schema registry</td>
+<td>Service for versioned schemas and compatibility rules.</td>
+<td>Key for shared event contracts.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><a href="#chapter-2-event-driven-patterns">Chapter 2: Event-Driven Patterns</a></li>
+<li><a href="#chapter-1-system-design-patterns">Chapter 1: System Design Patterns</a></li>
+</ul>
 
 
 
